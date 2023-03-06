@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>HBOGM</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+		.cb{
+				position:fixed;
+				bottom:10px;
+				right:10px;
+				z-index:10000;
+			}
+	</style>
+
+</head>
+<body>
+
+
+<div id='map'></div>
+<!--<div class="cb">
+	<img src="lejant.png" />
+</div>-->
+
+<script>
+
+const _iller=[
+			{
+			"adi":"Diyarbakır",
+			"map":{
+				"type": "Feature",
+				"properties": {"party": "ktgr1"},
+				"geometry": {
+					"type": "Polygon",
+					"coordinates": [ [
+
+						[39.1494768,38.3033428],[39.1365192,38.2310326],[39.104365,38.2083323],[39.1240797,38.1903157],[39.1602636,38.1809271],[39.1930238,38.2065495],[39.2197104,38.206944],[39.247857,38.1817236],[39.2596873,38.1427674],[39.2386463,38.1224706],[39.2224573,38.0843899],[39.2288185,38.0615772],[39.2031708,38.059916],[39.175815,38.0308362],[39.1471027,38.0158115],[39.1111983,38.002989],[39.1460206,37.9924256],[39.1985803,38.0073833],[39.2749258,37.9710596],[39.3594457,37.9476717],[39.4016408,37.9548671],[39.4300876,37.916566],[39.5329255,37.8936208],[39.6356322,37.8228942],[39.7039711,37.7693952],[39.7079177,37.8435296],[39.7943065,37.8438836],[39.8402953,37.673177],[39.8367813,37.6154688],[39.8905384,37.5175186],[39.8915133,37.510388],[39.9014849,37.5115452],[39.9183212,37.5207341],[39.9379054,37.5173937],[39.9558995,37.5174964],[40.0219632,37.5241196],[40.0980722,37.5584745],[40.133395,37.5886848],[40.1906795,37.5405044],[40.2452534,37.5150893],[40.3494118,37.5240553],[40.3658767,37.5610496],[40.4346274,37.562123],[40.4443219,37.6256817],[40.6031088,37.5943703],[40.6468018,37.6307531],[40.6220205,37.6967415],[40.6701378,37.7362632],[40.7024873,37.6994963],[40.8394711,37.6941238],[40.8530362,37.6239561],[40.881752,37.619292],[40.9071034,37.6626226],[40.9664973,37.6821091],[41.0259364,37.7189544],[41.0317306,37.7654612],[40.9990617,37.7772221],[40.9883554,37.8280793],[41.0214558,37.8730386],[41.0380227,37.9193608],[41.0326234,37.9613494],[41.0854556,37.9551707],[41.0899393,37.9823716],[41.133397,37.9678449],[41.1730068,38.0341494],[41.2120825,38.0792103],[41.2055527,38.1222798],[41.2292501,38.2020766],[41.2331892,38.2218495],[41.2124052,38.2340694],[41.1888682,38.2473657],[41.1625791,38.2498711],[41.2084988,38.3461883],[41.2386959,38.3719732],[41.2307975,38.3961735],[41.2860954,38.4461982],[41.3160185,38.4526495],[41.3330469,38.4660871],[41.3546121,38.4625902],[41.3750102,38.4834186],[41.3748136,38.4945717],[41.3371491,38.4969102],[41.323276,38.5130575],[41.3142717,38.5415453],[41.276399,38.602249],[41.2754771,38.6318536],[41.2599028,38.646663],[41.232195,38.6540695],[41.2297281,38.6706648],[41.2176457,38.6765373],[41.2385195,38.7124239],[41.2386575,38.7367934],[41.212699,38.7311642],[41.146895,38.7246726],[41.0921028,38.7010065],[40.9495059,38.6644104],[40.9497045,38.640696],[40.8825226,38.6116758],[40.8379698,38.5960804],[40.8181583,38.563302],[40.7967435,38.5902275],[40.7725706,38.599973],[40.7434491,38.5894006],[40.7236478,38.6004516],[40.6922743,38.603219],[40.656956,38.6280548],[40.6337808,38.6248773],[40.6353316,38.5852156],[40.6080661,38.5680712],[40.5848257,38.5938414],[40.5361111,38.591694],[40.5076299,38.5949034],[40.4626549,38.6195666],[40.4466535,38.5906394],[40.463611,38.5617122],[40.4151534,38.542506],[40.3951419,38.5685148],[40.3551571,38.5367645],[40.365842,38.5033476],[40.3570253,38.4773524],[40.3064784,38.4812257],[40.2561378,38.459647],[40.1893291,38.4616885],[40.1903168,38.4378136],[40.1428632,38.4395067],[40.1440626,38.460098],[40.1040621,38.4795743],[40.0530696,38.468928],[39.9977549,38.4690882],[39.9754145,38.4412771],[39.9170095,38.4437016],[39.946518,38.4203163],[39.9320755,38.3947788],[39.814034,38.3878152],[39.6961532,38.3485774],[39.5353397,38.2292521],[39.4578632,38.3138818],[39.3036588,38.356112],[39.1494768,38.3033428]
+
+
+					 ] ]
+					}
+				}
+			}
+
+
+];
+
+
+
+
+
+const LeafIcon4 = L.Icon.extend({
+			options: {
+				
+				iconSize:     [10, 10],
+				shadowSize:   [10, 10],
+				iconAnchor:   [10, 10],
+				shadowAnchor: [10, 10],
+				popupAnchor:  [10,10]
+			}
+		});
+
+		const LeafIcon = L.Icon.extend({
+			options: {
+				
+				iconSize:     [10, 10],
+				shadowSize:   [10, 10],
+				iconAnchor:   [10, 10],
+				shadowAnchor: [10, 10],
+				popupAnchor:  [0,0]
+			}
+		});
+
+		const LeafIcon2 = L.Icon.extend({
+			options: {
+				
+				iconSize:     [30, 25],
+				shadowSize:   [15, 15],
+				iconAnchor:   [15, 15],
+				shadowAnchor: [15, 15],
+				popupAnchor:  [15,15]
+			}
+		});
+
+		const LeafIcon3 = L.Icon.extend({
+			options: {
+				
+				iconSize:     [20, 30],
+				shadowSize:   [40, 40],
+				iconAnchor:   [10, 10],
+				shadowAnchor: [40, 40],
+				popupAnchor:  [0, 0]
+			}
+		});
+
+		var greenIcon = new LeafIcon2({iconUrl: './images/leaf-green.png'});		//çadır
+		var redIcon = new LeafIcon({iconUrl: './images/leaf-red.png'});				//HEM
+		var orangeIcon = new LeafIcon2({iconUrl: './images/leaf-orange.png'});	//
+		var orangeIcon2 = new LeafIcon({iconUrl: './images/leaf-purp.png'});	//olg.
+		var orangeIcon3 = new LeafIcon3({iconUrl: './images/koord.png'}); //koordm
+		var orangeIcon4 = new LeafIcon3({iconUrl: './images/marker-icon.png'}); //destekm
+
+	////////////////ÇADIR////////////////////////////////
+		var cadirData=[
+
+			/*
+
+			{"aciklama":"DİYARBAKIR BAĞLAR ESNAF VE SANATKARLAR ODASI  0 ÇADIR","icon":greenIcon,"map":[37.84364, 39.9767]},
+			{"aciklama":"DİYARBAKIR SUR KURŞUNLU CAMİİ 0 ÇADIR","icon":greenIcon,"map":[37.91152, 40.24171]},
+			{"aciklama":"DİYARBAKIR KAYAPINAR PARK 75 0 ÇADIR","icon":greenIcon,"map":[37.9419, 40.1553]},
+			{"aciklama":"DİYARBAKIR SUR SİLVAN YOLU 0 ÇADIR","icon":greenIcon,"map":[37.93953, 40.28972]},
+			{"aciklama":"DİYARBAKIR BAĞLAR NEVRUZ 0 ÇADIR","icon":greenIcon,"map":[37.91348, 40.16239]},
+			{"aciklama":"DİYARBAKIR BAĞLAR KOŞUYOLU PARKI 0 ÇADIR","icon":greenIcon,"map":[37.92402, 40.21391]},
+			{"aciklama":"DİYARBAKIR KAYAPINAR KENT MEYDANI 0 ÇADIR","icon":greenIcon,"map":[37.94353, 40.16588]},
+			{"aciklama":"DİYARBAKIR YENİŞEHİR SÜMER PARKI  0 ÇADIR","icon":greenIcon,"map":[37.91281, 40.21863]}
+
+*/
+
+		];
+	
+	//////////////////KONTEYNERDATA//////////////////////
+	var kontaynerData=[
+		
+
+		//{"aciklama":"DİYARBAKIR KAYAPINAR AĞIZ VE DİŞ SAĞLIĞI HASTANESİ 0 KONTEYNIR","icon":orangeIcon,"map":[37.98621, 40.13137]},
+
+
+		
+		];
+	
+	//////////////////HEM//////////////////////
+	var HEMData=[
+
+
+{"aciklama":"BAĞLAR HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[37.92118183,40.181417274]},
+{"aciklama":"BİSMİL HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[37.850300701,40.672149453]},
+{"aciklama":"ÇERMİK HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.135381002,39.454104307]},
+{"aciklama":"ÇINAR HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[37.725254701,40.414498135]},
+{"aciklama":"ÇÜNGÜŞ HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.211694066,39.283995326]},
+{"aciklama":"DİCLE HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.369672662,40.067447183]},
+{"aciklama":"EĞİL HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.258878288,40.084119221]},
+{"aciklama":"ERGANİ HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.264910929,39.779739695]},
+{"aciklama":"HANİ HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.411063495,40.395332385]},
+{"aciklama":"HAZRO HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.248330598,40.776382476]},
+{"aciklama":"KAYAPINAR HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[37.935191216,40.1933125]},
+{"aciklama":"KOCAKÖY HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.292759507,40.5045438]},
+{"aciklama":"KULP HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.497249274,41.010583003]},
+{"aciklama":"LİCE MEHMET TOPRAK HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.454959418,40.642559656]},
+{"aciklama":"SİLVAN HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[38.149034937,41.008766442]},
+{"aciklama":"SUR HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[37.91478176,40.233822071]},
+{"aciklama":"DİYARBAKIR YENİŞEHİR HALK EĞİTİMİ MERKEZİ","icon":redIcon,"map":[37.917307841,40.233793573]}
+
+
+
+
+		];
+	//////////////////OLGUNLAŞTIRMAMERKEZLERİ//////////////////////
+		var olgunlastirmaData=[
+			{"aciklama":"ADANA OLGUNLAŞMA ENSTİTÜSÜ","icon":orangeIcon2,"map":[36.99651,35.32401]},
+/*
+			{"aciklama":"ANKARA OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[40.01196,32.85424]},
+			{"aciklama":"ANTALYA OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[36.88459,30.70553]},
+			{"aciklama":"BURSA OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[40.18808,29.07163]},
+			*/
+			{"aciklama":"DİYARBAKIR OLGUNLAŞMA ENSTİTÜSÜ","icon":orangeIcon2,"map":[38.2097,40.17743]},
+/*
+			{"aciklama":"ERZURUM OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[40.33159,41.28018]},
+			{"aciklama":"ESKİŞEHİR OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[39.76897,30.51615]},
+			*/
+			{"aciklama":"G.ANTEP NUREL ENVER TANER OLGUNLAŞMA ENSTİTÜSÜ","icon":orangeIcon2,"map":[37.04753,37.37416]},
+			/*
+			{"aciklama":"İST. BEYLERBEYİ SABANCI OLGUNLAŞMA ENSTiTÜSÜ","icon":redIcon,"map":[41.04373,29.04205]},
+			{"aciklama":"İST. BEYOĞLU REFİA ÖVÜÇ OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.03582,28.98222]},
+			{"aciklama":"İZMİR OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[38.43284,27.13983]},
+			*/
+			{"aciklama":"KAHRAMANMARAŞ OLGUNLAŞMA ENSTİTÜSÜ","icon":orangeIcon2,"map":[37.58754,36.92864]}
+			/*
+			{"aciklama":"KAYSERİ OLGUNLAŞMA ENSTİTÜSÜ ","icon":redIcon,"map":[38.7284,35.48613]},
+			{"aciklama":"KIRKLARELİ OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.84185,27.22653]},
+			{"aciklama":"KONYA OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[38.12413,32.49952]},
+			{"aciklama":"KÜTAHYA OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[39.42167,29.97841]},
+			{"aciklama":"MARDİN OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[37.52135,40.6973]},
+			{"aciklama":"MERSİN OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[36.87377,34.61088]},
+			{"aciklama":"MUĞLA OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[37.21768,28.35853]},
+			{"aciklama":"SAMSUN OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.28355,36.34031]},
+			{"aciklama":"SİVAS OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[39.74236,36.99518]},
+			{"aciklama":"TOKAT OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[40.31423,36.55271]},
+			{"aciklama":"TRABZON OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.00569,39.72451]},
+			{"aciklama":"VAN OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[38.58959,43.42588]},
+			{"aciklama":"BALIKESİR OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[39.64067,27.88185]},
+			{"aciklama":"EDİRNE OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.67384,26.55031]},
+			{"aciklama":"SİİRT OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[37.93731,41.94018]},
+			{"aciklama":"KASTAMONU OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.38132,33.77951]},
+			{"aciklama":"ZONGULDAK OLGUNLAŞMA ENSTİTÜSÜ","icon":redIcon,"map":[41.44993502,31.783075919]}
+			*/
+		];
+//////////////////KORDİNASYONMERKEZİ//////////////////////
+	var kordinasyonMerkeziData=[
+		
+
+		
+
+		
+
+
+			
+		];
+
+/////////////////DESTEKMERKZİDATA//////////////////////
+	var deskteMerkeziData=[
+
+			{
+				"aciklama":"Malatya Doğanşehir <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[38.09076627148296, 37.878126707414914]
+			},
+			{
+				"aciklama":"Adıyaman Merkez <br> Hayat Boyu Koordinasyon ve Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[37.76164, 38.268]
+			},
+			{
+				"aciklama":"Antakya İlkokulu <br> Hayat Boyu Koordinasyon ve Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[36.2209563996872, 36.15474291319088]
+			},
+			{
+				"aciklama":"Antakya Yeni Stadyum <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[36.194468796896366, 36.12448329951912]
+			},
+
+			{
+				"aciklama":"Antakya Saraycık  <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[36.235396797376765, 36.127330436186405]
+			},
+			{
+				"aciklama":"Hatay Defne Orhanlı  <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[36.19848641787138, 36.10528745551948]
+			},
+			{
+				"aciklama":"Hatay Kırıkhan Menderes Çadır Kenti  <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[36.51601466178805, 36.374452901063414]
+			},
+			{
+				"aciklama":"Kahramanmaraş Dulkadiroğlu Kafum   <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[37.558612350901576, 36.923232569048906]
+			},
+			{
+				"aciklama":"Kahramanmaraş Dulkadiroğlu Kafum   <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[37.558612350901576, 36.923232569048906]
+			},
+			{
+				"aciklama":"Kahramanmaraş 12 Şubat  <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[37.60133168381017, 36.86140742661605]
+			},
+			{
+				"aciklama":"Kahramanmaraş Dulkadiroğlu Atatürk Parkı  <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[37.556726106972725, 36.92293152671972]
+			},
+			{
+				"aciklama":"Kahramanmaraş 12 Şubat Ziraat Fakültesi   <br> Hayat Boyu Destek Merkezi ",
+				"icon":orangeIcon4,
+				"map":[37.588579018005966, 36.81785598882209]
+			}
+
+
+
+
+
+			
+		];
+
+
+
+		const cadir = L.layerGroup();
+		var cardList=[];
+		cadirData.forEach(function(kont,index){
+			cardList[index]=L.marker(kont.map,{icon: kont.icon}).bindPopup(kont.aciklama).addTo(cadir);
+		});
+
+		const destekMerkezi = L.layerGroup();
+		var destekMerkeziList=[];
+		deskteMerkeziData.forEach(function(kont,index){
+			destekMerkeziList[index]=L.marker(kont.map,{icon: kont.icon}).bindPopup(kont.aciklama).addTo(destekMerkezi);
+		});
+		const konteyner = L.layerGroup();
+		var kontainerList=[];
+		kontaynerData.forEach(function(kont,index){
+			kontainerList[index]=L.marker(kont.map,{icon: kont.icon}).bindPopup(kont.aciklama).addTo(konteyner);
+		});
+		const kordinasyonMerkezi = L.layerGroup();
+		var kordinasyonMerkeziList=[];
+		kordinasyonMerkeziData.forEach(function(kont,index){
+			kordinasyonMerkeziList[index]=L.marker(kont.map,{icon: kont.icon}).bindPopup(kont.aciklama).addTo(kordinasyonMerkezi);
+		});
+		const HEM = L.layerGroup();
+		var HEMList=[];
+		HEMData.forEach(function(kont,index){
+			HEMList[index]=L.marker(kont.map,{icon: kont.icon}).bindPopup(kont.aciklama).addTo(HEM);
+		});
+		const olgunlastirma = L.layerGroup();
+		var oglunlastirmaList=[];
+		olgunlastirmaData.forEach(function(kont,index){
+			oglunlastirmaList[index]=L.marker(kont.map,{icon: kont.icon}).bindPopup(kont.aciklama).addTo(olgunlastirma);
+		});
+
+
+
+
+		const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+		const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+		const streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize:512, zoomOffset: -1, attribution: mbAttr});
+		const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		});
+		const map = L.map('map', {
+			center: [37.91152, 40.24171],
+			zoom: 9.2,
+			layers: [osm, cadir,destekMerkezi,konteyner,kordinasyonMerkezi,HEM,olgunlastirma]
+		});
+
+		//////////////////////////////
+				// const pazarcik = L.layerGroup();
+				var _iller_=[];
+				_iller.forEach(function(ilData,index){
+					_iller_[index]=L.geoJSON(ilData.map, {
+					style: function(feature) {
+						switch (feature.properties.party) {
+							case 'ktgr1': return {color: "#FA8072"};
+							case 'ktgr2':   return {color: "#FA8072"};
+							case 'ktgr3':   return {color: "#FA8072"};
+							}
+						}
+					}).addTo(map);
+				});
+		////////////////////////////////
+
+
+		const baseLayers = {
+		//	'OpenStreetMap': osm,
+		//	'Streets': streets
+		};
+		const overlays = {
+		//'<img src=koord.png width=15 height=15></img>Kordinasyon Merkezi':kordinasyonMerkezi,
+			'Destek ve Koordinasyon  Merkezi':destekMerkezi,
+			//'<img src=leaf-green.png width=15 height=15></img>Geçici Yerleşke': cadir,
+			'Hayat Boyu Öğrenme Kurumları <br><HR><a href=./index.html>GENEL</a><br><a href=./maras.html>Kahramanmaraş</a><br><a href=./hatay.html>Hatay</a><br><a href=./adiyaman.html>Adıyaman</a><br><a href=./malatya.html>Malatya</a><br><a href=./dbakir.html>Diyarbakır</a><br><a href=./gantep.html>Gaziantep</a><br><a href=./osmaniye.html>Osmaniye</a><br><a href=./urfa.html>Şanlıurfa</a><br><a href=./kilis.html>Kilis</a><br><a href=./adana.html>Adana</a>':HEM,
+			
+		};
+		//map.removeLayer(kordinasyonMerkezi);
+		//map.removeLayer(destekMerkezi);
+		//map.removeLayer(konteyner);
+		//map.removeLayer(cadir);
+		map.removeLayer(olgunlastirma);
+		//map.removeLayer(HEM);
+
+		
+		const layerControl = L.control.layers(baseLayers, overlays, 
+    {
+
+        collapsed: false,
+        autoZIndex: false
+    }).addTo(map);
+
+		
+
+</script>
+
+
+</body>
+</html>
