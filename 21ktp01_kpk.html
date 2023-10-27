@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kral Şakir AR - Kapak</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+    <!-- REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="webcomponents-loader.js"></script>
+
+    <!-- OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="intersection-observer.js"></script>
+
+    <!-- OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="ResizeObserver.js"></script>
+
+    <!-- OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
+    <!--<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>-->
+
+    <!-- OPTIONAL: Include prismatic.js for Magic Leap support -->
+    <script src="prismatic.min.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177572342-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177572342-1');
+</script>
+<!-- /Analytics -->
+
+
+
+    <!-- pfc sync between audio time and model-viewer animation time -->
+    <script>
+        function Sync(selector, audioSelector) {
+            var checkExist = setInterval(function () {
+                if (document.querySelector(selector) != null) {
+                    var modelViewer = document.querySelector(selector);
+                    var sound = document.querySelector(audioSelector);
+
+                    sound.addEventListener("timeupdate", () => {
+                        modelViewer.currentTime = sound.currentTime;
+                    });
+
+
+                    var promise = sound.play();
+                    if (promise !== undefined) {
+                        promise
+                            .then(_ => {
+                                // Autoplay started!
+                            })
+                            .catch(error => {
+                                // Autoplay was prevented.
+                                // Show a "Play" button so that user can start playback.
+                            });
+                    }
+
+
+                    clearInterval(checkExist);
+                }
+            }, 1000);
+        }
+    </script>
+
+
+    <model-viewer 
+        src="models/AR_1_butun_yeni_v04_lowpoly_8.glb?sound=sounds/AR_1_TUR_FINAL_MIX.mp3.ogg"
+        ios-src="models/AR_1_Son_ik2_sound.usdz?sound=sounds/AR_1_TUR_FINAL_MIX.mp3.mp3"
+        poster="images/kral_sakir_logo_yazili.png"
+        loading="eager"
+        ar 
+        ar-status="not-presenting"
+        ar-placement="floor"
+        ar-scale="auto"
+        autoplay 
+        camera-controls 
+        exposure="1" 
+        scale=".3 .3 .3" 
+        alt="..." 
+        id="modelviewer" 
+        camera-orbit="0deg 60deg 0deg 5m"
+        min-camera-orbit="auto auto auto" 
+        max-camera-orbit="auto auto auto" 
+        min-field-of-view="auto"
+        max-field-of-view="auto" 
+        shadow-softness="1.1" 
+        shadow-intensity="1"
+        style="position:absolute; left:0; top:0; margin:0; padding:0; width:100%; height:100%; background-color: rgb(190, 190, 190); --progress-bar-color: rgb(255, 0, 0); --progress-bar-height: 10px; ">
+
+        <button 
+            id="ar-button" 
+            slot="ar-button" 
+            style="background-color: transparent; border-radius: 4px; border: none; position: absolute; bottom: 20px; right: 20px; text-align: right; ">
+            <img src="images/ar_icon_red.png" width="50px"><br />BAŞLAT
+        </button>
+
+    </model-viewer>
+
+    <section class="attribution">
+        <span>
+            <span><audio controls autoplay loop id="sound">
+                    <source src="sounds/AR_1_TUR_FINAL_MIX.mp3.ogg" type="audio/ogg">
+                    <source src="sounds/AR_1_TUR_FINAL_MIX.mp3.mp3" type="audio/mp3">
+                </audio></span>
+        </span>
+    </section>
+
+    <script>
+        Sync("#modelviewer", "#sound");
+    </script>
+
+    <!-- Include both scripts below to support all browsers! -->
+    <!-- Import the component -->
+    <script type="module" src="model-viewer.js"></script>
+    <script nomodule src="model-viewer-legacy.js"></script>
+</body>
+
+</html>
