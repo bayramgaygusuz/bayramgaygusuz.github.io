@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebXR Uygulaması</title>
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- VRButton.js CDN -->
+    <script src="https://threejs.org/examples/jsm/webxr/VRButton.js"></script>
+</head>
+<body>
+    <script>
+    // WebXR API'sini kullanmak için gerekli olanları yüklemek
+    // import { VRButton } from 'three/examples/jsm/webxr/VRButton.js'; // Bu satır CDN ile yükleniyor
+
+    // Sahne, kamera ve renderer oluşturma
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.xr.enabled = true;
+    document.body.appendChild(VRButton.createButton(renderer));
+
+    // 3D objeleri sahneye eklemek için fonksiyon
+    function loadModels() {
+        // Burada, dışarıdan yüklenecek 3D modellerin yükleme işlemleri yapılacak
+        // Örnek: GLTFLoader kullanarak modelleri yüklemek
+    }
+
+    // Animasyon döngüsü
+    function animate() {
+        renderer.setAnimationLoop(render);
+    }
+
+    function render() {
+        renderer.render(scene, camera);
+    }
+
+    // Uygulamayı başlat
+    loadModels();
+    animate();
+    </script>
+</body>
+</html>
