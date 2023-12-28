@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sanal Salon</title>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://threejs.org/examples/jsm/webxr/VRButton.js"></script>
+    <!-- Ekstra kontroller için gerekli kütüphaneleri buraya ekleyin -->
+</head>
+<body>
+    <script>
+        let camera, scene, renderer, stlLoader, controller;
+
+        init();
+        animate();
+
+        function init() {
+            // Three.js sahnesi, kamera ve renderer ayarları
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10);
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.xr.enabled = true;
+            document.body.appendChild(renderer.domElement);
+            document.body.appendChild(VRButton.createButton(renderer));
+
+            // STL Loader
+            stlLoader = new THREE.STLLoader();
+
+            // Koltuk modelini yükleme
+            stlLoader.load('koltuk.stl', function (geometry) {
+                const material = new THREE.MeshNormalMaterial();
+                const mesh = new THREE.Mesh(geometry, material);
+                mesh.scale.set(0.01, 0.01, 0.01); // Boyut ayarlaması
+                scene.add(mesh);
+            });
+
+            // Kontroller ve etkileşimler
+            controller = renderer.xr.getController(0);
+            controller.addEventListener('selectstart', onSelectStart);
+            controller.addEventListener('selectend', onSelectEnd);
+            scene.add(controller);
+
+            // Pencere yeniden boyutlandırıldığında güncelleme
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function onSelectStart(event) {
+            // Nesneyi seçme ve hareket ettirme işlemleri
+        }
+
+        function onSelectEnd(event) {
+            // Nesne bırakıldığında işlemler
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate() {
+            renderer.setAnimationLoop(render);
+        }
+
+        function render() {
+            renderer.render(scene, camera);
+        }
+    </script>
+</body>
+</html>
