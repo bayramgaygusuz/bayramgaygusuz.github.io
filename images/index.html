@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miro Like Button Extension</title>
+</head>
+<body>
+    <button id="like-button">Beğen</button>
+    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script>
+        miro.onReady(() => {
+            const likeButton = document.getElementById('like-button');
+
+            likeButton.addEventListener('click', async () => {
+                const selectedWidgets = await miro.board.selection.get();
+                if (selectedWidgets.length > 0) {
+                    const widget = selectedWidgets[0];
+                    // Burada widget üzerinde bir "beğeni" sayısını artırabilirsiniz.
+                    // Örneğin, widget'ın metadatasını güncelleyerek.
+                    // Bu örnekte, metadatanın nasıl güncelleneceğini gösteriyoruz.
+                    const metadata = await miro.board.metadata.get(widget.id) || {};
+                    const likes = metadata.likes || 0;
+                    await miro.board.metadata.update(widget.id, { likes: likes + 1 });
+                    alert(`Bu öğe şimdi ${likes + 1} beğeni aldı!`);
+                } else {
+                    alert('Lütfen bir widget seçin.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
