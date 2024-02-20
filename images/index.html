@@ -6,28 +6,44 @@
     <title>Masa Galerisi</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .gallery-container {
-            position: relative;
-            max-width: 600px;
-            margin: auto;
-        }
+    .gallery-container {
+        position: relative;
+        margin: auto;
+    }
+    .image-info {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        width: 80%; /* Metin uzunluğunu sınırla */
+        text-align: center;
+        background-color: rgba(0,0,0,0.5); /* Metin okunabilirliğini artır */
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .like-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .like-button {
+        cursor: pointer;
+        font-size: 24px; /* Beğeni butonunun boyutunu artır */
+    }
+    .navigation {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
         .image-info {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
+            width: 95%; /* Daha küçük ekranlarda metin alanını genişlet */
         }
-        .like-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .like-button {
-            cursor: pointer;
-        }
-    </style>
+    }
+</style>
+
 </head>
 <body>
 
