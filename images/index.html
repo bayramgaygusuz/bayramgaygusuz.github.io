@@ -6,38 +6,35 @@
     <title>Masa Galerisi</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
         .gallery-container {
             position: relative;
             max-width: 600px;
             margin: auto;
         }
-        .navigation-btn {
+        .navigation-btn, .like-btn-container {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 24px;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
+            z-index: 2; /* Butonların resim üzerinde görünmesini sağlar */
         }
-        #prevBtn {
-            left: -45px;
-        }
-        #nextBtn {
-            right: -45px;
-        }
-        .like-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
+        .like-btn-container {
+            top: 10px; /* Üstten biraz boşluk */
+            left: 50%;
+            transform: translateX(-50%);
         }
         .like-button {
             cursor: pointer;
             font-size: 24px;
+        }
+        #prevBtn {
+            left: 10px;
+        }
+        #nextBtn {
+            right: 10px;
+        }
+        .like-count {
+            margin-left: 8px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -45,18 +42,19 @@
 
 <div class="container py-5">
     <div class="gallery-container">
-        <button id="prevBtn" class="navigation-btn">←</button>
+        <button id="prevBtn" class="btn btn-light navigation-btn"><i class="bi bi-arrow-left-circle-fill"></i></button>
         <img id="image" src="masa1_1.jpg" alt="Masa Resmi" class="img-fluid">
-        <button id="nextBtn" class="navigation-btn">→</button>
-    </div>
-    <div class="like-container">
-        <span class="like-button">❤️</span>
-        <span id="likeCount" class="ms-2">0</span>
+        <button id="nextBtn" class="btn btn-light navigation-btn"><i class="bi bi-arrow-right-circle-fill"></i></button>
+        <div class="like-btn-container">
+            <button class="btn btn-danger like-button"><i class="bi bi-heart-fill"></i></button>
+            <span id="likeCount" class="like-count">0</span>
+        </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.js"></script>
 <script>
     let currentImageIndex = 1;
     let currentMasa = 1;
@@ -65,8 +63,7 @@
 
     const updateImage = () => {
         $("#image").attr("src", `masa${currentMasa}_${currentImageIndex}.jpg`);
-        // Beğeni sayısını sıfırla veya güncelle
-        $("#likeCount").text("0");
+        $("#likeCount").text("0"); // Beğeni sayısını güncelle
     };
 
     $("#prevBtn").click(() => {
