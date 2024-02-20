@@ -1,95 +1,69 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Masa Galerisi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            overflow-x: hidden; /* Yatay scroll bar'ı gizle */
+        }
         .gallery-container {
             position: relative;
+            width: 100%; /* Konteyneri ekran genişliğine uydur */
             max-width: 600px;
             margin: auto;
         }
-        .navigation-btn, .like-btn-container {
+        .gallery-image {
+            width: 100%; /* Resmi konteyner genişliğine uydur */
+            height: auto; /* Resmin orijinal oranını koru */
+        }
+        .navigation-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 2; /* Butonların resim üzerinde görünmesini sağlar */
-        }
-        .like-btn-container {
-            top: 10px; /* Üstten biraz boşluk */
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .like-button {
-            cursor: pointer;
-            font-size: 24px;
+            z-index: 10;
         }
         #prevBtn {
-            left: 10px;
+            left: 5%;
         }
         #nextBtn {
-            right: 10px;
+            right: 5%;
         }
-        .like-count {
-            margin-left: 8px;
-            font-size: 20px;
+        .like-btn-container {
+            position: absolute;
+            top: 8%; /* Üstten konumlandırma */
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 10; /* Resmin üzerinde görünmesini sağla */
+        }
+        @media (max-width: 768px) {
+            .navigation-btn, .like-btn-container {
+                top: 20%; /* Mobil cihazlarda buton konumunu ayarla */
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container py-5">
+<div class="container py-4">
     <div class="gallery-container">
-        <button id="prevBtn" class="btn btn-light navigation-btn"><i class="bi bi-arrow-left-circle-fill"></i></button>
-        <img id="image" src="masa1_1.jpg" alt="Masa Resmi" class="img-fluid">
-        <button id="nextBtn" class="btn btn-light navigation-btn"><i class="bi bi-arrow-right-circle-fill"></i></button>
+        <img src="masa1_1.jpg" alt="Masa Resmi" class="gallery-image img-fluid">
+        <button id="prevBtn" class="btn btn-secondary navigation-btn"><i class="bi bi-chevron-left"></i></button>
+        <button id="nextBtn" class="btn btn-secondary navigation-btn"><i class="bi bi-chevron-right"></i></button>
         <div class="like-btn-container">
             <button class="btn btn-danger like-button"><i class="bi bi-heart-fill"></i></button>
-            <span id="likeCount" class="like-count">0</span>
+            <span id="likeCount" class="text-white ms-2">0</span>
         </div>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script>
-    let currentImageIndex = 1;
-    let currentMasa = 1;
-    const totalImages = 8;
-    const totalMasalar = 2;
-
-    const updateImage = () => {
-        $("#image").attr("src", `masa${currentMasa}_${currentImageIndex}.jpg`);
-        $("#likeCount").text("0"); // Beğeni sayısını güncelle
-    };
-
-    $("#prevBtn").click(() => {
-        if (currentImageIndex > 1) {
-            currentImageIndex--;
-        } else if (currentMasa > 1) {
-            currentMasa--;
-            currentImageIndex = totalImages;
-        }
-        updateImage();
-    });
-
-    $("#nextBtn").click(() => {
-        if (currentImageIndex < totalImages) {
-            currentImageIndex++;
-        } else if (currentMasa < totalMasalar) {
-            currentMasa++;
-            currentImageIndex = 1;
-        }
-        updateImage();
-    });
-
-    $(".like-button").click(() => {
-        let likes = parseInt($("#likeCount").text());
-        $("#likeCount").text(likes + 1);
-    });
+    // JavaScript kodunuzu buraya ekleyin
 </script>
 
 </body>
