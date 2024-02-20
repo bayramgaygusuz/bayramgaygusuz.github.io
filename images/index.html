@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Screen Image Gallery</title>
+    <title>Responsive Gallery with Individual Like Counters</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body, html {
@@ -11,86 +11,63 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
         }
-        .gallery-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #ffc107; /* Sarı arka plan */
         }
-        .navigation-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-        #prevBtn {
-            left: 10px;
-        }
-        #nextBtn {
-            right: 10px;
-        }
-        .like-btn-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
+        .image-row {
+            height: calc(100vh - 40px); /* Buton satırının yüksekliğini çıkar */
             display: flex;
             align-items: center;
+            justify-content: center;
         }
-        .like-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
+        .gallery-image {
+            max-height: 100%;
+            max-width: 100%;
         }
-        .like-count {
-            color: white;
-            margin-left: 10px;
+        .image-info {
+            margin: 0 20px; /* Resim bilgisi için sağlı sollu boşluk */
         }
     </style>
 </head>
 <body>
 
-<div class="gallery-container" id="galleryContainer">
-    <button id="prevBtn" class="btn btn-dark navigation-btn">Prev</button>
-    <div class="like-btn-container">
-        <button class="btn btn-danger like-button">❤️</button>
-        <span class="like-count" id="likeCount">0</span>
-    </div>
-    <button id="nextBtn" class="btn btn-dark navigation-btn">Next</button>
+<div class="button-row">
+    <button id="prevBtn" class="btn btn-outline-dark">Önceki</button>
+    <span id="imageInfo" class="image-info">Masa 1</span>
+    <button class="btn btn-outline-danger like-button">❤️ <span id="likeCount">0</span></button>
+    <button id="nextBtn" class="btn btn-outline-dark">Sonraki</button>
+</div>
+<div class="image-row">
+    <img id="galleryImage" src="masa1_1.jpg" alt="Masa Resmi" class="gallery-image">
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <script>
     let currentIndex = 0;
     const images = [
-        "masa1_1.jpg",
-        "masa1_2.jpg",
-        "masa1_3.jpg",
-        "masa1_4.jpg",
-        "masa1_5.jpg",
-        "masa1_6.jpg",
-        "masa1_7.jpg",
-        "masa1_8.jpg"
+        { name: "Masa 1", src: "masa1_1.jpg", likes: 0 },
+        { name: "Masa 2", src: "masa1_2.jpg", likes: 0 },
+        // ... Daha fazla masa eklenebilir
+        { name: "Masa 16", src: "masa1_8.jpg", likes: 0 }
     ];
-    $("#likeCount").text("0");
 
     function updateGallery(index) {
-        const imageUrl = images[index];
-        $("#galleryContainer").css("background-image", `url(${imageUrl})`);
+        const image = images[index];
+        $("#galleryImage").attr("src", image.src);
+        $("#imageInfo").text(image.name);
+        $("#likeCount").text(image.likes);
     }
 
     $("#prevBtn").click(function() {
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = images.length - 1; // Loop back to the last image
+            currentIndex = images.length - 1;
         }
         updateGallery(currentIndex);
     });
@@ -99,19 +76,17 @@
         if (currentIndex < images.length - 1) {
             currentIndex++;
         } else {
-            currentIndex = 0; // Loop back to the first image
+            currentIndex = 0;
         }
         updateGallery(currentIndex);
     });
 
     $(".like-button").click(function() {
-        let likes = parseInt($("#likeCount").text());
-        likes++;
-        $("#likeCount").text(likes);
+        images[currentIndex].likes++;
+        $("#likeCount").text(images[currentIndex].likes);
     });
 
-    // Initialize gallery with the first image
-    updateGallery(currentIndex);
+    updateGallery(0); // İlk resmi yükleyerek başla
 </script>
 
 </body>
