@@ -3,76 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery with Google Sheets</title>
+    <title>Responsive Gallery with Validation</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Google Apps Script Web App URL'nizi aşağıya ekleyin -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVn0TbJO3DEVUJTtJILoPuWnGK8XRxrl2ZsZfSAx2Jrx2ejo5wMc7ZGK4NvzEA_vnv/exec';
+        
+        $(document).ready(function() {
+            $('#validateBtn').click(function() {
+                const tc = $('#tcInput').val();
+                $.ajax({
+                    url: scriptURL + '?action=validateTC&tc=' + tc,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.valid) {
+                            $('#loginSection').hide();
+                            loadGallery(); // Galeri içeriğini yükle
+                        } else {
+                            alert('Geçersiz TC Kimlik Numarası.');
+                        }
+                    },
+                    error: function() {
+                        alert('Doğrulama sırasında bir hata oluştu.');
+                    }
+                });
+            });
+        });
+
+        function loadGallery() {
+            $.ajax({
+                url: scriptURL + '?action=getMasaNames',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    const gallerySection = $('#gallerySection');
+                    gallerySection.empty(); // Önceki içeriği temizle
+
+                    data.masaNames.forEach((masaName, index) => {
+                        const imgSrc = `https://bayramgaygusuz.github.io/harezmi/${masaName}.jpg`; // Resimlerin URL'lerini oluştur
+                        const img = $('<img>').attr({
+                            src: imgSrc,
+                            alt: masaName,
+                            class: 'gallery-image'
+                        }).css({margin: '5px', width: '100px', height: '100px'});
+
+                        gallerySection.append(img);
+                    });
+
+                    $('#gallerySection').show();
+                },
+                error: function(err) {
+                    console.error('Galeri yüklenirken bir hata oluştu:', err);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
 <div id="loginSection" class="container">
     <h2>TC Kimlik No Doğrulama</h2>
-    <input type="text" id="tcInput" placeholder="TC Kimlik Numaranızı Giriniz" class="form-control">
+    <input type="text" id="tcInput" class="form-control" placeholder="TC Kimlik Numaranızı Giriniz">
     <button id="validateBtn" class="btn btn-primary mt-2">Giriş Yap</button>
 </div>
 
 <div id="gallerySection" class="container mt-4" style="display:none;">
     <!-- Galeri içeriği burada dinamik olarak oluşturulacak -->
 </div>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxVn0TbJO3DEVUJTtJILoPuWnGK8XRxrl2ZsZfSAx2Jrx2ejo5wMc7ZGK4NvzEA_vnv/exec';
-
-    function loadGallery() {
-        // Galeri içeriğini yüklemek için Apps Script'e istek yap
-        $.ajax({
-            url: scriptURL,
-            type: 'GET',
-            dataType: 'json',
-            success: function(data) {
-                const gallerySection = $('#gallerySection');
-                gallerySection.empty(); // Önceki içeriği temizle
-
-                data.masaNames.forEach((masaName, index) => {
-                    const img = $('<img>').attr({
-                        src: `masa${Math.floor(index / 8) + 1}_${(index % 8) + 1}.jpg`,
-                        alt: masaName,
-                        class: 'gallery-image'
-                    }).css({margin: '5px'});
-
-                    gallerySection.append(img);
-                });
-
-                $('#gallerySection').show();
-            },
-            error: function(err) {
-                console.error('Galeri yüklenirken bir hata oluştu:', err);
-            }
-        });
-    }
-
-    $(document).ready(function() {
-        $('#validateBtn').click(function() {
-            const tc = $('#tcInput').val();
-            // TC kimlik numarasının doğrulaması için Apps Script'e istek yap
-            $.ajax({
-                url: scriptURL + '?action=validateTC&tc=' + tc,
-                type: 'GET',
-                dataType: 'json',
-                success: function(response) {
-                    if (response.valid) {
-                        $('#loginSection').hide();
-                        loadGallery(); // Galeri içeriğini yükle
-                    } else {
-                        alert('Geçersiz TC Kimlik Numarası.');
-                    }
-                },
-                error: function() {
-                    alert('Doğrulama sırasında bir hata oluştu.');
-                }
-            });
-        });
-    });
-</script>
 
 </body>
 </html>
