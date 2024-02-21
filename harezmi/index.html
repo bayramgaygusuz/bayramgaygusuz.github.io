@@ -3,63 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Gallery with Validation</title>
+    <title>Gallery with Likes and Validation</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Google Apps Script Web App URL'nizi aşağıya ekleyin -->
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxO6IZ1Dz8ZKivToZOxYsTmrGmmLM58CEOGLOTn0Ds4FmUDMxSMt6GreCcriUabeGvv8g/exec';
-        
-        $(document).ready(function() {
-            $('#validateBtn').click(function() {
-                const tc = $('#tcInput').val();
-                $.ajax({
-                    url: scriptURL + '?action=validateTC&tc=' + tc,
-                    type: 'GET',
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.valid) {
-                            $('#loginSection').hide();
-                            loadGallery(); // Galeri içeriğini yükle
-                        } else {
-                            alert('Geçersiz TC Kimlik Numarası.');
-                        }
-                    },
-                    error: function() {
-                        alert('Doğrulama sırasında bir hata oluştu.');
-                    }
-                });
-            });
-        });
-
-        function loadGallery() {
-            $.ajax({
-                url: scriptURL + '?action=getMasaNames',
-                type: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    const gallerySection = $('#gallerySection');
-                    gallerySection.empty(); // Önceki içeriği temizle
-
-                    data.masaNames.forEach((masaName, index) => {
-                        const imgSrc = `https://bayramgaygusuz.github.io/harezmi/${masaName}.jpg`; // Resimlerin URL'lerini oluştur
-                        const img = $('<img>').attr({
-                            src: imgSrc,
-                            alt: masaName,
-                            class: 'gallery-image'
-                        }).css({margin: '5px', width: '100px', height: '100px'});
-
-                        gallerySection.append(img);
-                    });
-
-                    $('#gallerySection').show();
-                },
-                error: function(err) {
-                    console.error('Galeri yüklenirken bir hata oluştu:', err);
-                }
-            });
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
         }
-    </script>
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #ffc107; /* Sarı arka plan */
+        }
+        .image-row {
+            height: calc(100vh - 40px); /* Buton satırının yüksekliğini çıkar */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        .gallery-image {
+            transition: transform 0.5s ease;
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .image-row:hover .gallery-image {
+            transform: scale(1.5); /* Zoom effect on hover */
+        }
+        .image-info {
+            margin: 0 20px; /* Resim bilgisi için sağlı sollu boşluk */
+        }
+        .like-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .liked {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 
@@ -70,8 +57,85 @@
 </div>
 
 <div id="gallerySection" class="container mt-4" style="display:none;">
-    <!-- Galeri içeriği burada dinamik olarak oluşturulacak -->
+    <div class="button-row">
+        <button id="prevBtn" class="btn btn-outline-dark">Önceki</button>
+        <span id="imageInfo" class="image-info"></span>
+        <button id="likeBtn" class="btn btn-outline-danger like-button">❤️ <span id="likeCount">0</span></button>
+        <button id="nextBtn" class="btn btn-outline-dark">Sonraki</button>
+    </div>
+    <div class="image-row">
+        <img id="galleryImage" src="" alt="Masa Resmi" class="gallery-image">
+    </div>
 </div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxO6IZ1Dz8ZKivToZOxYsTmrGmmLM58CEOGLOTn0Ds4FmUDMxSMt6GreCcriUabeGvv8g/exec';
+    let currentIndex = 0;
+    let images = [];
+
+    function validateTC() {
+        const tc = $('#tcInput').val();
+        $.ajax({
+            url: scriptURL + '?action=validateTC&tc=' + tc,
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                if (response.valid) {
+                    $('#loginSection').hide();
+                    loadGallery();
+                } else {
+                    alert('Geçersiz TC Kimlik Numarası.');
+                }
+            }
+        });
+    }
+
+    function loadGallery() {
+        $.ajax({
+            url: scriptURL + '?action=getMasaNames',
+            type: 'GET',
+            success: function(response) {
+                const masaNames = response.masaNames;
+                images = masaNames.map((name, index) => ({
+                    name,
+                    src: `https://bayramgaygusuz.github.io/harezmi/${name}.jpg`,
+                    likes: 0, // Sayaç varsayılan olarak 0
+                    userLiked: false
+                }));
+                currentIndex = 0;
+                updateGallery(currentIndex);
+            }
+        });
+    }
+
+    function updateGallery(index) {
+        const image = images[index];
+        $('#galleryImage').attr('src', image.src);
+        $('#imageInfo').text(image.name);
+        $('#likeCount').text(image.likes);
+        // Beğeni durumuna göre 'liked' class'ını ekle/kaldır
+        $('#likeBtn').toggleClass('liked', image.userLiked);
+    }
+
+    $('#validateBtn').on('click', validateTC);
+
+    $('#prevBtn').on('click', function() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateGallery(currentIndex);
+    });
+
+    $('#nextBtn').on('click', function() {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateGallery(currentIndex);
+    });
+
+    $('#likeBtn').on('click', function() {
+        let image = images[currentIndex];
+        image.likes += !image.userLiked ? 1 : -1;
+        image.userLiked = !image.userLiked;
+        updateGallery(currentIndex);
+    });
+</script>
 
 </body>
 </html>
