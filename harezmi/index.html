@@ -139,9 +139,29 @@
         if (!image.userLiked) {
             image.likes++;
             image.userLiked = true;
+            var dosya = fopen('dosya.txt', 0);
+
+            if (dosya != -1)
+            {
+            var degisken = image.name+" : "+image.likes;
+
+            fwrite(dosya, degisken);
+
+            fclose(dosya);
+            }
         } else {
             image.likes--;
             image.userLiked = false;
+            var dosya = fopen('dosya.txt', 0);
+
+            if (dosya != -1)
+            {
+            var degisken = image.name+" : "+image.likes;
+
+            fwrite(dosya, degisken);
+
+            fclose(dosya);
+            }
         }
         updateGallery(currentIndex);
     });
