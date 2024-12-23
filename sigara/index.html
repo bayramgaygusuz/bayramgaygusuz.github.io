@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigarayı Bırakma Zamanlayıcısı</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    section {
+      height: 100vh;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to top, #cf4f53, #bf6c6e, #b47e7f, #a68c8d, #999999, #ffffff);
+      mix-blend-mode: color;
+      pointer-events: none;
+    }
+
+    video {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .content h2 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
+    .content p {
+      font-size: 1.5rem;
+    }
+
+    .smoke {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 5rem;
+      color: rgba(200, 200, 200, 0.5);
+      animation: smoke-rise 3s infinite;
+    }
+
+    @keyframes smoke-rise {
+      0% {
+        transform: translate(-50%, 0);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translate(-50%, -50px);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translate(-50%, -100px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <video autoplay loop muted src="file.mp4"></video>
+    <div class="content">
+      <h2>Bayram GAYGUSUZ</h2>
+      <h1>Sigarayı Bırakalı</h1>
+      <p id="timer">Hesaplanıyor...</p>
+    </div>
+  </section>
+
+  <script>
+    const quitDate = new Date("2024-12-24T00:00:00");
+
+    function updateTimer() {
+      const now = new Date();
+      let years = now.getFullYear() - quitDate.getFullYear();
+      let months = now.getMonth() - quitDate.getMonth();
+      let days = now.getDate() - quitDate.getDate();
+
+      if (days < 0) {
+        months -= 1;
+        const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += previousMonth.getDate();
+      }
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      const hours = Math.floor((now - quitDate) / (1000 * 60 * 60)) % 24;
+      const minutes = Math.floor((now - quitDate) / (1000 * 60)) % 60;
+      const seconds = Math.floor((now - quitDate) / 1000) % 60;
+
+      document.getElementById("timer").innerHTML =
+        `${years} yıl, ${months} ay, ${days} gün, <br> <span>${hours} saat, ${minutes} dakika, ${seconds} saniye geçti.</span>`;
+
+    }
+
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
