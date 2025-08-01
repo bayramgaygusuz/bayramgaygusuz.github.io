@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Yazım Komisyon Sistemi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1538 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .meb-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #c41e3a;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .header h1 { font-size: 28px; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header h2 { font-size: 20px; margin-bottom: 5px; opacity: 0.9; }
+        .header h3 { font-size: 16px; opacity: 0.8; }
+
+        .stats-bar {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            font-size: 14px;
+            color: #6c757d;
+            flex-wrap: wrap;
+        }
+
+        .stats span {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .save-button {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .save-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .save-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover { background: #e9ecef; color: #495057; }
+        .tab-button.active { background: white; color: #c41e3a; border-bottom: 3px solid #c41e3a; }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            min-height: 600px;
+        }
+
+        .tab-content.active { display: block; }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        .btn-add { background: linear-gradient(135deg, #28a745, #20c997); color: white; }
+        .btn-member { background: linear-gradient(135deg, #007bff, #0056b3); color: white; }
+        .btn-print { background: linear-gradient(135deg, #6c757d, #495057); color: white; }
+        .btn-yazar { background: linear-gradient(135deg, #ff6b35, #f7931e); color: white; }
+        .btn-uzman { background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Komisyon Grid */
+        .komisyon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .komisyon-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .komisyon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-color: #c41e3a;
+        }
+
+        .komisyon-header {
+            background: linear-gradient(135deg, #c41e3a, #8b1538);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .komisyon-baskan {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #8b4513;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .komisyon-body { padding: 20px; }
+
+        .komisyon-timeline {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .komisyon-status {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .status-aktif { background: #28a745; }
+        .status-beklemede { background: #ffc107; color: #333; }
+        .status-tamamlandi { background: #17a2b8; }
+        .status-gecikmiş { background: #dc3545; }
+
+        .uye-sections {
+            margin-bottom: 15px;
+        }
+
+        .uye-section {
+            margin-bottom: 15px;
+        }
+
+        .uye-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            padding: 4px 8px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .uye-list { list-style: none; }
+
+        .uye-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f3f4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .uye-item:last-child { border-bottom: none; }
+        .uye-info { flex: 1; }
+        .uye-name { font-weight: 600; color: #2c3e50; margin-bottom: 2px; }
+        .uye-details { font-size: 11px; color: #6c757d; }
+        .uye-alan { font-size: 10px; color: #007bff; font-weight: 600; }
+
+        .workload-badge {
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .workload-1 { background: #28a745; }
+        .workload-2 { background: #fd7e14; }
+        .workload-3 { background: #dc3545; }
+
+        .komisyon-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 11px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-baskan { background: #ffd700; color: #8b4513; }
+        .btn-edit { background: #007bff; color: white; }
+        .btn-delete { background: #dc3545; color: white; }
+
+        /* Üyeler Tablosu */
+        .members-container {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .filter-bar {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 14px;
+        }
+
+        .filter-select {
+            padding: 6px 10px;
+            border: 2px solid #e9ecef;
+            border-radius: 4px;
+            font-size: 13px;
+            min-width: 120px;
+        }
+
+        .members-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .members-table th {
+            background: #495057;
+            color: white;
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #343a40;
+        }
+
+        .members-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+
+        .members-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .members-table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        /* Modal stilleri */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active { display: flex; }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .modal-header h3 {
+            color: #c41e3a;
+            font-size: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #c41e3a;
+            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .member-card {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .member-card:hover {
+            border-color: #c41e3a;
+            background: #fff8f8;
+        }
+
+        .member-card.selected {
+            border-color: #c41e3a;
+            background: #c41e3a;
+            color: white;
+        }
+
+        .member-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .member-details {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .member-alan {
+            font-size: 11px;
+            font-weight: 600;
+            color: #007bff;
+            margin-top: 5px;
+        }
+
+        .member-card.selected .member-alan {
+            color: #ffd700;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            z-index: 3000;
+            animation: slideIn 0.3s ease;
+        }
+
+        .notification.success { background: #28a745; }
+        .notification.error { background: #dc3545; }
+        .notification.info { background: #007bff; }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+
+        @media print {
+            .action-buttons, .nav-tabs, .search-box, .stats-bar, .filter-bar, 
+            .komisyon-actions, .save-button, .controls {
+                display: none !important;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .komisyon-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #000;
+                background: white !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Başlık -->
+        <div class="header">
+            <div class="meb-logo">MEB</div>
+            <h1>T.C.</h1>
+            <h1>MİLLÎ EĞİTİM BAKANLIĞI</h1>
+            <h2>Ortaöğretim Genel Müdürlüğü</h2>
+            <h3>Kitap Yazım Komisyon Sistemi</h3>
+        </div>
+
+        <!-- İstatistik + Kontroller -->
+        <div class="stats-bar">
+            <div class="stats">
+                <div>Tarih: <span id="currentDate"></span></div>
+                <div>Aktif Komisyon: <span id="activeCount">0</span></div>
+                <div>Beklemede: <span id="pendingCount">0</span></div>
+                <div>Tamamlanan: <span id="completedCount">0</span></div>
+                <div>Toplam Üye: <span id="memberCount">0</span></div>
+            </div>
+            <div class="controls">
+                <button class="save-button" id="saveButton" onclick="saveChanges()" disabled>
+                    💾 Değişiklikleri Kaydet
+                </button>
+            </div>
+        </div>
+
+        <!-- Sekme Navigasyonu -->
+        <div class="nav-tabs">
+            <button class="tab-button active" onclick="switchTab('komisyonlar')">KOMİSYONLAR</button>
+            <button class="tab-button" onclick="switchTab('uyeler')">ÜYE LİSTESİ</button>
+            <button class="tab-button" onclick="switchTab('raporlar')">RAPORLAR</button>
+        </div>
+
+        <!-- Komisyonlar Sekmesi -->
+        <div id="komisyonlar" class="tab-content active">
+            <div class="action-buttons">
+                <button class="btn btn-add" onclick="openModal('komisyonModal')">
+                    ➕ Yeni Komisyon Oluştur
+                </button>
+                <button class="btn btn-print" onclick="printCurrentTab()">
+                    🖨️ Yazdır
+                </button>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Komisyonlarda ara..." 
+                       oninput="filterCommissions(this.value)">
+            </div>
+
+            <div class="komisyon-grid" id="komisyonGrid">
+                <!-- Komisyonlar buraya eklenecek -->
+            </div>
+        </div>
+
+        <!-- Üyeler Sekmesi -->
+        <div id="uyeler" class="tab-content">
+            <div class="action-buttons">
+                <button class="btn btn-member" onclick="openModal('uyeModal')">
+                    👤 Yeni Üye Ekle
+                </button>
+                <button class="btn btn-print" onclick="printCurrentTab()">
+                    🖨️ Yazdır
+                </button>
+            </div>
+
+            <div class="members-container">
+                <div class="filter-bar">
+                    <input type="text" class="search-input" placeholder="Ad, soyad, alan ara..." 
+                           id="memberSearchInput" oninput="filterMembers()">
+                    
+                    <div class="filter-group">
+                        <label>Rol:</label>
+                        <select class="filter-select" id="rolFilter" onchange="filterMembers()">
+                            <option value="">Tümü</option>
+                            <option value="YAZAR">Yazar</option>
+                            <option value="UZMAN">Uzman</option>
+                            <option value="BAŞKAN">Başkan</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Alan:</label>
+                        <select class="filter-select" id="alanFilter" onchange="filterMembers()">
+                            <option value="">Tümü</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>İş Yükü:</label>
+                        <select class="filter-select" id="workloadFilter" onchange="filterMembers()">
+                            <option value="">Tümü</option>
+                            <option value="1">Az (1)</option>
+                            <option value="2">Orta (2)</option>
+                            <option value="3+">Yoğun (3+)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="members-table" id="membersTable">
+                    <thead>
+                        <tr>
+                            <th>Ad-Soyad</th>
+                            <th>Görev Rolü</th>
+                            <th>Alan Uzmanlığı</th>
+                            <th>Kurum</th>
+                            <th>Telefon</th>
+                            <th>İş Yükü</th>
+                            <th>Aktif Komisyonlar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="membersTableBody">
+                        <!-- Üyeler buraya eklenecek -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Raporlar Sekmesi -->
+        <div id="raporlar" class="tab-content">
+            <div class="action-buttons">
+                <button class="btn btn-print" onclick="printCurrentTab()">
+                    🖨️ Raporu Yazdır
+                </button>
+            </div>
+            
+            <div id="raporContent">
+                <!-- Raporlar buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Komisyon Oluşturma Modalı -->
+    <div id="komisyonModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Yeni Komisyon Oluştur</h3>
+            </div>
+            <form id="komisyonForm">
+                <div class="form-group">
+                    <label class="form-label">Komisyon/Kitap Seçimi:</label>
+                    <select class="form-select" id="komisyonSelect" required>
+                        <option value="">Komisyon/Kitap seçiniz...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Yeni Komisyon/Kitap Adı:</label>
+                    <input type="text" class="form-input" id="yeniKomisyonAdi" 
+                           placeholder="Yeni komisyon adı (opsiyonel)">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Komisyon Türü:</label>
+                    <select class="form-select" id="komisyonTuru" required>
+                        <option value="">Tür seçiniz...</option>
+                        <option value="KITAP">Kitap Yazım</option>
+                        <option value="PROGRAM">Öğretim Programı</option>
+                        <option value="İNCELEME">İnceleme Komisyonu</option>
+                        <option value="REVİZYON">Revizyon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Başlangıç Tarihi:</label>
+                    <input type="date" class="form-input" id="baslangicTarihi" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Hedef Teslim Tarihi:</label>
+                    <input type="date" class="form-input" id="teslimTarihi">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Durum:</label>
+                    <select class="form-select" id="komisyonDurum" required>
+                        <option value="Aktif">Aktif</option>
+                        <option value="Beklemede">Beklemede</option>
+                        <option value="Tamamlandı">Tamamlandı</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Açıklama/Notlar:</label>
+                    <textarea class="form-input" id="komisyonNotlar" rows="3" 
+                              placeholder="Komisyon hakkında notlar..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn" onclick="closeModal('komisyonModal')" 
+                            style="background: #6c757d; color: white;">İptal</button>
+                    <button type="submit" class="btn btn-add">Komisyon Oluştur</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Üye Ekleme Modalı -->
+    <div id="uyeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Yeni Üye Ekle</h3>
+            </div>
+            <form id="uyeForm">
+                <div class="form-group">
+                    <label class="form-label">Ad-Soyad:</label>
+                    <input type="text" class="form-input" id="uyeAdSoyad" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">TC Kimlik No:</label>
+                    <input type="text" class="form-input" id="uyeTC" maxlength="11" 
+                           pattern="[0-9]{11}" placeholder="11 haneli TC kimlik numarası">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Görev Rolü:</label>
+                    <select class="form-select" id="uyeGorev" required>
+                        <option value="">Görev seçiniz...</option>
+                        <option value="YAZAR">Yazar</option>
+                        <option value="YAZAR - KOMİSYON BŞK.">Yazar - Komisyon Başkanı</option>
+                        <option value="GRAFİK TASARIM UZM.">Grafik Tasarım Uzmanı</option>
+                        <option value="DİJİTAL İÇERİK HAZIRLAMA">Dijital İçerik Hazırlama</option>
+                        <option value="ÖLÇME DEĞ. UZM.">Ölçme ve Değerlendirme Uzmanı</option>
+                        <option value="DİL UZMANI">Dil Uzmanı</option>
+                        <option value="PROGRAM GELİŞTİRME UZM.">Program Geliştirme Uzmanı</option>
+                        <option value="REHBERLİK UZMANI">Rehberlik Uzmanı</option>
+                        <option value="E-İÇERİK GELİŞTİRME UZM.">E-İçerik Geliştirme Uzmanı</option>
+                        <option value="GÖRSEL TASARIM UZM.">Görsel Tasarım Uzmanı</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Alan Uzmanlığı:</label>
+                    <input type="text" class="form-input" id="uyeAlan" required
+                           placeholder="Örn: Matematik, Türkçe, Biyoloji, Yapay Zeka...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Kurum/Okul:</label>
+                    <input type="text" class="form-input" id="uyeKurum" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Telefon:</label>
+                    <input type="tel" class="form-input" id="uyeTelefon" 
+                           placeholder="5XXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">E-posta:</label>
+                    <input type="email" class="form-input" id="uyeEmail">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">İl:</label>
+                    <input type="text" class="form-input" id="uyeIl" value="İSTANBUL" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">İlçe:</label>
+                    <input type="text" class="form-input" id="uyeIlce" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn" onclick="closeModal('uyeModal')" 
+                            style="background: #6c757d; color: white;">İptal</button>
+                    <button type="submit" class="btn btn-member">Üye Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Yazar/Uzman Ekleme Modalı -->
+    <div id="uyeEklemeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="uyeEklemeTitle">Komisyona Üye Ekle</h3>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <input type="text" placeholder="İsim, alan veya kuruma göre ara..." 
+                       style="width: 100%; padding: 10px; border: 2px solid #e9ecef; border-radius: 6px;" 
+                       oninput="filterMemberSelection(this.value)">
+            </div>
+            <div class="member-grid" id="memberSelectionGrid">
+                <!-- Üyeler buraya eklenecek -->
+            </div>
+            <div class="form-actions">
+                <button class="btn" onclick="closeModal('uyeEklemeModal')" 
+                        style="background: #6c757d; color: white;">İptal</button>
+                <button class="btn btn-add" onclick="addSelectedMembersToCommission()">
+                    Seçilen Üyeleri Ekle
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Başkan Seçimi Modalı -->
+    <div id="baskanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="baskanModalTitle">Komisyon Başkanı Seç</h3>
+            </div>
+            <div class="member-grid" id="baskanSelectionGrid">
+                <!-- Komisyon üyeleri buraya eklenecek -->
+            </div>
+            <div class="form-actions">
+                <button class="btn" onclick="closeModal('baskanModal')" 
+                        style="background: #6c757d; color: white;">İptal</button>
+                <button class="btn btn-add" onclick="setCommissionPresident()">
+                    Başkan Olarak Ata
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global değişkenler - Sistemin temel veri yapıları
+        let komisyonlar = {}; // Tüm komisyonları tutar
+        let uyeListesi = []; // Tüm üyeleri tutar
+        let komisyonListesi = []; // Mevcut komisyon/kitap adları
+        let selectedMembers = []; // Seçilen üyeler (modal için)
+        let selectedPresident = null; // Seçilen başkan
+        let currentCommissionId = null; // Üzerinde işlem yapılan komisyon
+        let hasChanges = false; // Değişiklik takibi
+
+        // Örnek komisyon/kitap listesi - SQL'den gelecek gibi
+        const ornekKomisyonlar = [
+            "Matematik 9. Sınıf Ders Kitabı",
+            "Türk Dili ve Edebiyatı 10. Sınıf",
+            "Fizik 11. Sınıf Ders Kitabı",
+            "Kimya 12. Sınıf Ders Kitabı",
+            "Biyoloji 9. Sınıf Ders Kitabı",
+            "Coğrafya 10. Sınıf Ders Kitabı",
+            "Tarih 11. Sınıf Ders Kitabı",
+            "Felsefe 12. Sınıf Ders Kitabı",
+            "İngilizce A1 Seviye",
+            "İngilizce A2 Seviye",
+            "Almanca A1 Seviye", 
+            "Fransızca A1 Seviye",
+            "Yapay Zeka ve Algoritmalar",
+            "Nesnelerin İnterneti",
+            "Robotik ve Kodlama",
+            "Dijital Vatandaşlık",
+            "Medya Okuryazarlığı",
+            "Girişimcilik ve İnovasyon",
+            "Çevre Bilimi",
+            "Sağlık Bilgisi ve Trafik Kültürü"
+        ];
+
+        // Örnek üye listesi - Gerçekçi verilerle
+        const ornekUyeler = [
+            {
+                "AD-SOYAD": "Dr. Ahmet YILMAZ",
+                "TC": "12345678901",
+                "GÖREV": "YAZAR - KOMİSYON BŞK.",
+                "ALAN": "Matematik",
+                "KURUM": "İstanbul Anadolu Lisesi",
+                "TLF": "5321234567",
+                "EMAIL": "ahmet.yilmaz@meb.gov.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "KADIKÖY"
+            },
+            {
+                "AD-SOYAD": "Ayşe KAYA",
+                "TC": "23456789012",
+                "GÖREV": "YAZAR",
+                "ALAN": "Türk Dili ve Edebiyatı",
+                "KURUM": "Atatürk Anadolu Lisesi",
+                "TLF": "5432123456",
+                "EMAIL": "ayse.kaya@meb.gov.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "ŞİŞLİ"
+            },
+            {
+                "AD-SOYAD": "Prof. Dr. Mehmet ÖZKAN",
+                "TC": "34567890123",
+                "GÖREV": "YAZAR - KOMİSYON BŞK.",
+                "ALAN": "Fizik",
+                "KURUM": "İstanbul Teknik Üniversitesi",
+                "TLF": "5543212345",
+                "EMAIL": "mehmet.ozkan@itu.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "SARIYER"
+            },
+            {
+                "AD-SOYAD": "Fatma DEMIR",
+                "TC": "45678901234",
+                "GÖREV": "DİL UZMANI",
+                "ALAN": "Türkçe Dil Bilgisi",
+                "KURUM": "MEB Talim Terbiye Kurulu",
+                "TLF": "5654321234",
+                "EMAIL": "fatma.demir@meb.gov.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEYOĞLU"
+            },
+            {
+                "AD-SOYAD": "Ali ÇETIN",
+                "TC": "56789012345",
+                "GÖREV": "GRAFİK TASARIM UZM.",
+                "ALAN": "Görsel Tasarım",
+                "KURUM": "Mimar Sinan Güzel Sanatlar Üniversitesi",
+                "TLF": "5765432123",
+                "EMAIL": "ali.cetin@msgsu.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEYOĞLU"
+            },
+            {
+                "AD-SOYAD": "Zeynep ARSLAN",
+                "TC": "67890123456",
+                "GÖREV": "ÖLÇME DEĞ. UZM.",
+                "ALAN": "Eğitimde Ölçme ve Değerlendirme",
+                "KURUM": "İstanbul Üniversitesi",
+                "TLF": "5876543212",
+                "EMAIL": "zeynep.arslan@istanbul.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "FATİH"
+            },
+            {
+                "AD-SOYAD": "Hasan KURT",
+                "TC": "78901234567",
+                "GÖREV": "PROGRAM GELİŞTİRME UZM.",
+                "ALAN": "Eğitim Programları",
+                "KURUM": "MEB Talim Terbiye Kurulu",
+                "TLF": "5987654321",
+                "EMAIL": "hasan.kurt@meb.gov.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "EMINÖNÜ"
+            },
+            {
+                "AD-SOYAD": "Elif ŞAHIN",
+                "TC": "89012345678",
+                "GÖREV": "REHBERLİK UZMANI",
+                "ALAN": "Psikolojik Danışmanlık",
+                "KURUM": "Boğaziçi Üniversitesi",
+                "TLF": "5098765432",
+                "EMAIL": "elif.sahin@boun.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEŞİKTAŞ"
+            },
+            {
+                "AD-SOYAD": "Dr. Can YILDIZ",
+                "TC": "90123456789",
+                "GÖREV": "YAZAR",
+                "ALAN": "Yapay Zeka",
+                "KURUM": "İstanbul Teknik Üniversitesi",
+                "TLF": "5109876543",
+                "EMAIL": "can.yildiz@itu.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "SARIYER"
+            },
+            {
+                "AD-SOYAD": "Gamze POLAT",
+                "TC": "01234567890",
+                "GÖREV": "DİJİTAL İÇERİK HAZIRLAMA",
+                "ALAN": "Eğitim Teknolojileri",
+                "KURUM": "Bahçeşehir Üniversitesi",
+                "TLF": "5210987654",
+                "EMAIL": "gamze.polat@bahcesehir.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEŞİKTAŞ"
+            },
+            {
+                "AD-SOYAD": "Dr. Murat AKSOY",
+                "TC": "13579246801",
+                "GÖREV": "YAZAR - KOMİSYON BŞK.",
+                "ALAN": "Kimya",
+                "KURUM": "İstanbul Üniversitesi",
+                "TLF": "5321987654",
+                "EMAIL": "murat.aksoy@istanbul.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "FATİH"
+            },
+            {
+                "AD-SOYAD": "Sibel ÖZTÜRK",
+                "TC": "24680135792",
+                "GÖREV": "YAZAR",
+                "ALAN": "Biyoloji",
+                "KURUM": "Galatasaray Lisesi",
+                "TLF": "5432987651",
+                "EMAIL": "sibel.ozturk@gsl.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEYOĞLU"
+            },
+            {
+                "AD-SOYAD": "Kemal BULUT",
+                "TC": "35791357913",
+                "GÖREV": "GÖRSEL TASARIM UZM.",
+                "ALAN": "Grafik Tasarım",
+                "KURUM": "Yıldız Teknik Üniversitesi",
+                "TLF": "5543987621",
+                "EMAIL": "kemal.bulut@ytu.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEŞİKTAŞ"
+            },
+            {
+                "AD-SOYAD": "Pınar GÜNEY",
+                "TC": "46802468024",
+                "GÖREV": "E-İÇERİK GELİŞTİRME UZM.",
+                "ALAN": "Uzaktan Eğitim",
+                "KURUM": "Anadolu Üniversitesi",
+                "TLF": "5654987321",
+                "EMAIL": "pinar.guney@anadolu.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "KADIKÖY"
+            },
+            {
+                "AD-SOYAD": "Dr. Okan YAVAŞ",
+                "TC": "57913579135",
+                "GÖREV": "YAZAR",
+                "ALAN": "Coğrafya",
+                "KURUM": "İstanbul Üniversitesi",
+                "TLF": "5765987124",
+                "EMAIL": "okan.yavas@istanbul.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "FATİH"
+            },
+            {
+                "AD-SOYAD": "Neslihan KARA",
+                "TC": "68024680246",
+                "GÖREV": "DİL UZMANI",
+                "ALAN": "İngilizce",
+                "KURUM": "Boğaziçi Üniversitesi",
+                "TLF": "5876987654",
+                "EMAIL": "neslihan.kara@boun.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEŞİKTAŞ"
+            },
+            {
+                "AD-SOYAD": "Emre ASLAN",
+                "TC": "79135791357",
+                "GÖREV": "YAZAR",
+                "ALAN": "Tarih",
+                "KURUM": "Kabataş Erkek Lisesi",
+                "TLF": "5987987321",
+                "EMAIL": "emre.aslan@kabalise.gov.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEYOĞLU"
+            },
+            {
+                "AD-SOYAD": "Burcu ÖNDER",
+                "TC": "80246802468",
+                "GÖREV": "REHBERLİK UZMANI",
+                "ALAN": "Özel Eğitim",
+                "KURUM": "Marmara Üniversitesi",
+                "TLF": "5098987654",
+                "EMAIL": "burcu.onder@marmara.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "KADIKÖY"
+            },
+            {
+                "AD-SOYAD": "Dr. Serkan YAKAR",
+                "TC": "91357913579",
+                "GÖREV": "YAZAR - KOMİSYON BŞK.",
+                "ALAN": "Felsefe",
+                "KURUM": "İstanbul Üniversitesi",
+                "TLF": "5109987123",
+                "EMAIL": "serkan.yakar@istanbul.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "FATİH"
+            },
+            {
+                "AD-SOYAD": "Gülnur AVCI",
+                "TC": "02468024680",
+                "GÖREV": "ÖLÇME DEĞ. UZM.",
+                "ALAN": "İstatistik ve Analiz",
+                "KURUM": "Yıldız Teknik Üniversitesi",
+                "TLF": "5210987321",
+                "EMAIL": "gulnur.avci@ytu.edu.tr",
+                "İL": "İSTANBUL",
+                "İLÇE": "BEŞİKTAŞ"
+            }
+        ];
+
+        // Sayfa yüklendiğinde çalışacak fonksiyonlar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tarih güncelleme
+            updateCurrentDate();
+            
+            // Veri listelerini başlat
+            uyeListesi = [...ornekUyeler]; // Kopyasını al
+            komisyonListesi = [...ornekKomisyonlar]; // Kopyasını al
+            
+            // Örnek komisyonlar oluştur
+            createSampleCommissions();
+            
+            // UI'ı güncelle
+            updateAllUI();
+            
+            // Form event listener'ları ekle
+            setupFormListeners();
+            
+            showNotification('Sistem başlatıldı! Komisyon sistemi kullanıma hazır.', 'success');
+        });
+
+        // Örnek komisyonlar oluştur
+        function createSampleCommissions() {
+            // Matematik komisyonu
+            komisyonlar["matematik-9"] = {
+                id: "matematik-9",
+                ad: "Matematik 9. Sınıf Ders Kitabı",
+                tur: "KITAP",
+                baslangic: "2025-01-15",
+                teslim: "2025-06-30",
+                durum: "Aktif",
+                notlar: "İlk taslak hazırlanıyor, grafikler ekleniyor.",
+                baskan: uyeListesi.find(u => u["AD-SOYAD"] === "Dr. Ahmet YILMAZ"),
+                yazarlar: [
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Dr. Ahmet YILMAZ")
+                ].filter(Boolean),
+                uzmanlar: [
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Zeynep ARSLAN"),
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Ali ÇETIN")
+                ].filter(Boolean)
+            };
+
+            // Türkçe komisyonu
+            komisyonlar["turkce-10"] = {
+                id: "turkce-10",
+                ad: "Türk Dili ve Edebiyatı 10. Sınıf",
+                tur: "KITAP",
+                baslangic: "2024-12-01",
+                teslim: "2025-05-15",
+                durum: "Aktif",
+                notlar: "Metin seçimi tamamlandı, açıklamalar yazılıyor.",
+                baskan: uyeListesi.find(u => u["AD-SOYAD"] === "Ayşe KAYA"),
+                yazarlar: [
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Ayşe KAYA")
+                ].filter(Boolean),
+                uzmanlar: [
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Fatma DEMIR"),
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Kemal BULUT")
+                ].filter(Boolean)
+            };
+
+            // Yapay Zeka komisyonu
+            komisyonlar["yapay-zeka"] = {
+                id: "yapay-zeka",
+                ad: "Yapay Zeka ve Algoritmalar",
+                tur: "PROGRAM",
+                baslangic: "2024-11-20",
+                teslim: "2025-04-30",
+                durum: "Beklemede",
+                notlar: "Uzman görüşü bekleniyor, müfredat revize ediliyor.",
+                baskan: uyeListesi.find(u => u["AD-SOYAD"] === "Dr. Can YILDIZ"),
+                yazarlar: [
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Dr. Can YILDIZ")
+                ].filter(Boolean),
+                uzmanlar: [
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Gamze POLAT"),
+                    uyeListesi.find(u => u["AD-SOYAD"] === "Hasan KURT")
+                ].filter(Boolean)
+            };
+        }
+
+        // Form event listener'larını ayarla
+        function setupFormListeners() {
+            // Komisyon formu
+            const komisyonForm = document.getElementById('komisyonForm');
+            if (komisyonForm) {
+                komisyonForm.addEventListener('submit', handleKomisyonSubmit);
+            }
+            
+            // Üye formu
+            const uyeForm = document.getElementById('uyeForm');
+            if (uyeForm) {
+                uyeForm.addEventListener('submit', handleUyeSubmit);
+            }
+
+            // Başlangıç tarihi varsayılan olarak bugün
+            const baslangicTarihi = document.getElementById('baslangicTarihi');
+            if (baslangicTarihi) {
+                baslangicTarihi.value = getCurrentDate();
+            }
+        }
+
+        // Tüm UI'ı güncelle
+        function updateAllUI() {
+            // Komisyonları render et
+            renderCommissions();
+            
+            // Üyeler tablosunu oluştur
+            createMembersTable();
+            
+            // İstatistikleri güncelle
+            updateStats();
+            
+            // Form listelerini doldur
+            populateFormLists();
+            
+            // Raporları güncelle
+            updateReports();
+        }
+
+        // Komisyonları render et
+        function renderCommissions() {
+            const container = document.getElementById('komisyonGrid');
+            container.innerHTML = '';
+
+            const komisyonArray = Object.values(komisyonlar).sort((a, b) => a.ad.localeCompare(b.ad, 'tr'));
+
+            if (komisyonArray.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #6c757d; grid-column: 1 / -1;">
+                        <h3>Henüz komisyon oluşturulmamış</h3>
+                        <p>Yeni komisyon oluşturmak için "Yeni Komisyon Oluştur" butonunu kullanın.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            komisyonArray.forEach(komisyon => {
+                const card = createCommissionCard(komisyon);
+                container.appendChild(card);
+            });
+        }
+
+        // Komisyon kartı oluştur
+        function createCommissionCard(komisyon) {
+            const card = document.createElement('div');
+            card.className = 'komisyon-card';
+            card.setAttribute('data-id', komisyon.id);
+            card.setAttribute('data-name', komisyon.ad);
+
+            const timelineInfo = getTimelineInfo(komisyon.baslangic, komisyon.durum);
+            const statusClass = getStatusClass(komisyon.durum);
+
+            // Başkan bilgisi
+            const baskanHTML = komisyon.baskan ? 
+                `<div class="komisyon-baskan">
+                    👑 Başkan: ${komisyon.baskan["AD-SOYAD"]} (${komisyon.baskan.ALAN})
+                </div>` : 
+                `<div class="komisyon-baskan" style="background: #dc3545; color: white;">
+                    ⚠️ Başkan atanmamış
+                </div>`;
+
+            // Yazarlar listesi
+            const yazarlarHTML = komisyon.yazarlar.length > 0 ? 
+                komisyon.yazarlar.map(yazar => `
+                    <li class="uye-item">
+                        <div class="uye-info">
+                            <div class="uye-name">${yazar["AD-SOYAD"]}</div>
+                            <div class="uye-details">${yazar.GÖREV}</div>
+                            <div class="uye-alan">Alan: ${yazar.ALAN}</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 3px;">
+                            <span class="workload-badge workload-${getWorkloadClass(calculateWorkload(yazar["AD-SOYAD"]))}" 
+                                  title="${calculateWorkload(yazar["AD-SOYAD"])} komisyonda">
+                                ${calculateWorkload(yazar["AD-SOYAD"])}
+                            </span>
+                        </div>
+                    </li>
+                `).join('') : 
+                '<li class="uye-item"><div class="uye-info" style="text-align: center; color: #6c757d; font-style: italic;">Yazar eklenmemiş</div></li>';
+
+            // Uzmanlar listesi
+            const uzmanlarHTML = komisyon.uzmanlar.length > 0 ? 
+                komisyon.uzmanlar.map(uzman => `
+                    <li class="uye-item">
+                        <div class="uye-info">
+                            <div class="uye-name">${uzman["AD-SOYAD"]}</div>
+                            <div class="uye-details">${uzman.GÖREV}</div>
+                            <div class="uye-alan">Alan: ${uzman.ALAN}</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 3px;">
+                            <span class="workload-badge workload-${getWorkloadClass(calculateWorkload(uzman["AD-SOYAD"]))}" 
+                                  title="${calculateWorkload(uzman["AD-SOYAD"])} komisyonda">
+                                ${calculateWorkload(uzman["AD-SOYAD"])}
+                            </span>
+                        </div>
+                    </li>
+                `).join('') : 
+                '<li class="uye-item"><div class="uye-info" style="text-align: center; color: #6c757d; font-style: italic;">Uzman eklenmemiş</div></li>';
+
+            card.innerHTML = `
+                <div class="komisyon-header">
+                    <div style="flex: 1;">
+                        <div style="font-size: 14px; font-weight: 600;">${komisyon.ad}</div>
+                        <div style="font-size: 11px; opacity: 0.8; margin-top: 2px;">${komisyon.tur}</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="komisyon-status ${statusClass}">${komisyon.durum}</span>
+                    </div>
+                </div>
+                <div class="komisyon-body">
+                    ${baskanHTML}
+                    
+                    <div class="komisyon-timeline">
+                        <span>${timelineInfo.indicator}</span>
+                        <span>📅 ${formatDate(komisyon.baslangic)} (${timelineInfo.text})</span>
+                        ${komisyon.teslim ? `<br><span>🎯 Teslim: ${formatDate(komisyon.teslim)}</span>` : ''}
+                    </div>
+                    
+                    <div class="uye-sections">
+                        <div class="uye-section">
+                            <div class="uye-section-title">
+                                <span>✍️ Yazarlar (${komisyon.yazarlar.length})</span>
+                                <button class="btn-small btn-yazar" onclick="openMemberSelection('${komisyon.id}', 'YAZAR')">+ Ekle</button>
+                            </div>
+                            <ul class="uye-list">${yazarlarHTML}</ul>
+                        </div>
+                        
+                        <div class="uye-section">
+                            <div class="uye-section-title">
+                                <span>🔬 Uzmanlar (${komisyon.uzmanlar.length})</span>
+                                <button class="btn-small btn-uzman" onclick="openMemberSelection('${komisyon.id}', 'UZMAN')">+ Ekle</button>
+                            </div>
+                            <ul class="uye-list">${uzmanlarHTML}</ul>
+                        </div>
+                    </div>
+                    
+                    <div class="komisyon-actions">
+                        <button class="btn-small btn-baskan" onclick="openPresidentSelection('${komisyon.id}')">
+                            👑 Başkan Seç
+                        </button>
+                        <button class="btn-small btn-edit" onclick="editCommission('${komisyon.id}')">
+                            ✏️ Düzenle
+                        </button>
+                        <button class="btn-small btn-delete" onclick="deleteCommission('${komisyon.id}')">
+                            🗑️ Sil
+                        </button>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; border-left: 3px solid #007bff; padding: 8px; margin-top: 15px; font-style: italic; font-size: 11px; color: #495057; border-radius: 0 4px 4px 0;">
+                        ${komisyon.notlar || 'Not eklenmemiş.'}
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Üyeler tablosunu oluştur
+        function createMembersTable() {
+            const tbody = document.getElementById('membersTableBody');
+            tbody.innerHTML = '';
+            
+            // Filtreleme seçeneklerini oluştur
+            populateFilterOptions();
+            
+            uyeListesi.forEach(uye => {
+                const row = document.createElement('tr');
+                row.setAttribute('data-name', uye['AD-SOYAD'] || '');
+                row.setAttribute('data-gorev', uye.GÖREV || '');
+                row.setAttribute('data-alan', uye.ALAN || '');
+                
+                const workload = calculateWorkload(uye["AD-SOYAD"]);
+                const activeCommissions = getActiveCommissions(uye["AD-SOYAD"]);
+                
+                // Rol kategorisi belirleme
+                let rolKategori = 'UZMAN';
+                if (uye.GÖREV.includes('YAZAR')) rolKategori = 'YAZAR';
+                if (uye.GÖREV.includes('BŞK') || uye.GÖREV.includes('BAŞKAN')) rolKategori = 'BAŞKAN';
+                
+                row.setAttribute('data-rol', rolKategori);
+                row.setAttribute('data-workload', workload > 3 ? '3+' : workload.toString());
+                
+                row.innerHTML = `
+                    <td><strong>${uye['AD-SOYAD'] || ''}</strong></td>
+                    <td>${uye.GÖREV || ''}</td>
+                    <td><span style="color: #007bff; font-weight: 600;">${uye.ALAN || ''}</span></td>
+                    <td>${uye.KURUM || ''}</td>
+                    <td>${formatPhoneNumber(uye.TLF)}</td>
+                    <td>
+                        <span class="workload-badge workload-${getWorkloadClass(workload)}">${workload}</span>
+                    </td>
+                    <td style="font-size: 11px; color: #6c757d;">
+                        ${activeCommissions.length > 0 ? activeCommissions.join(', ') : 'Komisyonda değil'}
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+            
+            console.log('✅ Üyeler tablosu oluşturuldu:', uyeListesi.length, 'kişi');
+        }
+
+        // Aktif komisyonları getir (üye için)
+        function getActiveCommissions(uyeAdi) {
+            const activeComms = [];
+            Object.values(komisyonlar).forEach(komisyon => {
+                if (komisyon.durum === 'Aktif') {
+                    const allMembers = [
+                        ...(komisyon.yazarlar || []),
+                        ...(komisyon.uzmanlar || []),
+                        komisyon.baskan
+                    ].filter(Boolean);
+                    
+                    if (allMembers.some(member => member["AD-SOYAD"] === uyeAdi)) {
+                        activeComms.push(komisyon.ad.substring(0, 30) + (komisyon.ad.length > 30 ? '...' : ''));
+                    }
+                }
+            });
+            return activeComms;
+        }
+
+        // Filtre seçeneklerini doldur
+        function populateFilterOptions() {
+            const alanlar = [...new Set(uyeListesi.map(u => u.ALAN).filter(Boolean))].sort();
+            const alanSelect = document.getElementById('alanFilter');
+            
+            if (alanSelect) {
+                alanSelect.innerHTML = '<option value="">Tümü</option>';
+                alanlar.forEach(alan => {
+                    alanSelect.innerHTML += `<option value="${alan}">${alan}</option>`;
+                });
+            }
+        }
+
+        // Form listelerini doldur
+        function populateFormLists() {
+            const komisyonSelect = document.getElementById('komisyonSelect');
+            if (komisyonSelect) {
+                komisyonSelect.innerHTML = '<option value="">Komisyon/Kitap seçiniz...</option>';
+                
+                komisyonListesi.forEach(komisyon => {
+                    const option = document.createElement('option');
+                    option.value = komisyon;
+                    option.textContent = komisyon;
+                    komisyonSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Yardımcı fonksiyonlar
+        function calculateDaysElapsed(startDate) {
+            const start = new Date(startDate);
+            const today = new Date();
+            return Math.floor((today - start) / (1000 * 60 * 60 * 24));
+        }
+
+        function getTimelineInfo(startDate, status) {
+            const days = calculateDaysElapsed(startDate);
+            let indicator = '';
+            let text = '';
+            
+            if (status === 'Tamamlandı') {
+                indicator = '✅';
+                text = `${days} günde tamamlandı`;
+            } else if (status === 'Beklemede') {
+                indicator = '⏸️';
+                text = `${days} gündür beklemede`;
+            } else if (days > 90) {
+                indicator = '🔴';
+                text = `${days} gün geçti (GECİKMİŞ!)`;
+            } else if (days > 30) {
+                indicator = '🟡';
+                text = `${days} gün geçti`;
+            } else {
+                indicator = '🟢';
+                text = `${days} gün geçti`;
+            }
+            
+            return { indicator, text, days };
+        }
+
+        function getStatusClass(status) {
+            switch(status) {
+                case 'Aktif': return 'status-aktif';
+                case 'Beklemede': return 'status-beklemede';
+                case 'Tamamlandı': return 'status-tamamlandi';
+                case 'Gecikmiş': return 'status-gecikmiş';
+                default: return 'status-aktif';
+            }
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('tr-TR');
+        }
+
+        function formatPhoneNumber(phone) {
+            if (!phone) return '';
+            const cleaned = phone.toString().replace(/\D/g, '');
+            
+            if (cleaned.length === 11 && cleaned.startsWith('0')) {
+                return `${cleaned.substr(0,4)} ${cleaned.substr(4,3)} ${cleaned.substr(7,2)} ${cleaned.substr(9,2)}`;
+            } else if (cleaned.length === 10) {
+                return `0${cleaned.substr(0,3)} ${cleaned.substr(3,3)} ${cleaned.substr(6,2)} ${cleaned.substr(8,2)}`;
+            }
+            return cleaned;
+        }
+
+        function getCurrentDate() {
+            return new Date().toISOString().split('T')[0];
+        }
+
+        function updateCurrentDate() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('tr-TR');
+            document.getElementById('currentDate').textContent = dateStr;
+        }
+
+        function calculateWorkload(uyeAdi) {
+            let count = 0;
+            Object.values(komisyonlar).forEach(komisyon => {
+                const allMembers = [
+                    ...(komisyon.yazarlar || []),
+                    ...(komisyon.uzmanlar || []),
+                    komisyon.baskan
+                ].filter(Boolean);
+                
+                if (allMembers.some(member => member["AD-SOYAD"] === uyeAdi)) {
+                    count++;
+                }
+            });
+            return count;
+        }
+
+        function getWorkloadClass(workload) {
+            if (workload <= 1) return '1';
+            if (workload === 2) return '2';
+            return '3';
+        }
+
+        // İstatistikleri güncelle
+        function updateStats() {
+            let activeCount = 0, pendingCount = 0, completedCount = 0;
+            
+            Object.values(komisyonlar).forEach(komisyon => {
+                switch(komisyon.durum) {
+                    case 'Aktif': activeCount++; break;
+                    case 'Beklemede': pendingCount++; break;
+                    case 'Tamamlandı': completedCount++; break;
+                }
+            });
+            
+            document.getElementById('activeCount').textContent = activeCount;
+            document.getElementById('pendingCount').textContent = pendingCount;
+            document.getElementById('completedCount').textContent = completedCount;
+            document.getElementById('memberCount').textContent = uyeListesi.length;
+        }
+
+        // Sekme değiştir
+        function switchTab(tabName) {
+            // Tüm sekme içeriklerini gizle
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Tüm sekme butonlarını pasifleştir
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Seçilen sekmeyi aktif yap
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Üye filtreleme
+        function filterMembers() {
+            const searchTerm = document.getElementById('memberSearchInput').value.toLowerCase();
+            const rolFilter = document.getElementById('rolFilter').value;
+            const alanFilter = document.getElementById('alanFilter').value;
+            const workloadFilter = document.getElementById('workloadFilter').value;
+            
+            const rows = document.querySelectorAll('#membersTableBody tr');
+            
+            rows.forEach(row => {
+                const name = row.getAttribute('data-name').toLowerCase();
+                const rol = row.getAttribute('data-rol');
+                const alan = row.getAttribute('data-alan');
+                const workload = row.getAttribute('data-workload');
+                const text = row.textContent.toLowerCase();
+                
+                const matchesSearch = searchTerm === '' || text.includes(searchTerm);
+                const matchesRol = rolFilter === '' || rol === rolFilter;
+                const matchesAlan = alanFilter === '' || alan === alanFilter;
+                const matchesWorkload = workloadFilter === '' || workload === workloadFilter;
+                
+                row.style.display = matchesSearch && matchesRol && matchesAlan && matchesWorkload ? '' : 'none';
+            });
+        }
+
+        // Komisyon filtreleme
+        function filterCommissions(searchTerm) {
+            const cards = document.querySelectorAll('.komisyon-card');
+            
+            cards.forEach(card => {
+                const komisyonAdi = card.getAttribute('data-name').toLowerCase();
+                const uyeMetinleri = Array.from(card.querySelectorAll('.uye-name, .uye-details, .uye-alan'))
+                    .map(el => el.textContent.toLowerCase()).join(' ');
+                
+                const matchesSearch = searchTerm === '' || 
+                    komisyonAdi.includes(searchTerm.toLowerCase()) || 
+                    uyeMetinleri.includes(searchTerm.toLowerCase());
+                
+                card.style.display = matchesSearch ? 'block' : 'none';
+            });
+        }
+
+        // Değişiklikleri kaydet
+        function saveChanges() {
+            showNotification('Değişiklikler kaydedildi! (Demo modunda)', 'success');
+            document.getElementById('saveButton').disabled = true;
+            hasChanges = false;
+        }
+
+        // Değişiklik işaretleme
+        function markAsChanged() {
+            hasChanges = true;
+            document.getElementById('saveButton').disabled = false;
+            document.getElementById('saveButton').style.background = 'linear-gradient(135deg, #dc3545, #c82333)';
+        }
+
+        // Modal işlemleri
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            const formId = modalId.replace('Modal', 'Form');
+            const form = document.getElementById(formId);
+            if (form) {
+                form.reset();
+            }
+            
+            // Seçim listelerini temizle
+            selectedMembers = [];
+            selectedPresident = null;
+        }
+
+        // Yazdırma
+        function printCurrentTab() {
+            window.print();
+        }
+
+        // Üye seçimi modalı aç (Yazar/Uzman)
+        function openMemberSelection(komisyonId, memberType) {
+            currentCommissionId = komisyonId;
+            selectedMembers = [];
+            
+            const modal = document.getElementById('uyeEklemeModal');
+            const title = document.getElementById('uyeEklemeTitle');
+            const grid = document.getElementById('memberSelectionGrid');
+            
+            title.textContent = `${memberType === 'YAZAR' ? 'Yazar' : 'Uzman'} Ekle - ${komisyonlar[komisyonId].ad}`;
+            
+            // Mevcut üyeleri al
+            const currentMembers = [
+                ...(komisyonlar[komisyonId].yazarlar || []),
+                ...(komisyonlar[komisyonId].uzmanlar || []),
+                komisyonlar[komisyonId].baskan
+            ].filter(Boolean).map(u => u["AD-SOYAD"]);
+            
+            // Uygun üyeleri filtrele
+            const availableMembers = uyeListesi.filter(uye => {
+                if (currentMembers.includes(uye["AD-SOYAD"])) return false;
+                
+                if (memberType === 'YAZAR') {
+                    return uye.GÖREV.includes('YAZAR');
+                } else {
+                    return !uye.GÖREV.includes('YAZAR') || uye.GÖREV.includes('UZM');
+                }
+            });
+            
+            // Grid'i doldur
+            grid.innerHTML = availableMembers.map(uye => `
+                <div class="member-card" onclick="toggleMemberSelection(this, '${uye["AD-SOYAD"]}')">
+                    <div class="member-name">${uye["AD-SOYAD"]}</div>
+                    <div class="member-details">${uye.GÖREV}</div>
+                    <div class="member-alan">Alan: ${uye.ALAN}</div>
+                    <div style="font-size: 10px; color: #6c757d; margin-top: 5px;">
+                        İş Yükü: ${calculateWorkload(uye["AD-SOYAD"])} | ${uye.KURUM}
+                    </div>
+                </div>
+            `).join('');
+            
+            modal.classList.add('active');
+        }
+
+        // Üye seçimi toggle
+        function toggleMemberSelection(element, memberName) {
+            if (element.classList.contains('selected')) {
+                element.classList.remove('selected');
+                selectedMembers = selectedMembers.filter(name => name !== memberName);
+            } else {
+                element.classList.add('selected');
+                selectedMembers.push(memberName);
+            }
+        }
+
+        // Seçilen üyeleri komisyona ekle
+        function addSelectedMembersToCommission() {
+            if (selectedMembers.length === 0) {
+                showNotification('Lütfen en az bir üye seçiniz!', 'error');
+                return;
+            }
+            
+            const komisyon = komisyonlar[currentCommissionId];
+            
+            selectedMembers.forEach(memberName => {
+                const uye = uyeListesi.find(u => u["AD-SOYAD"] === memberName);
+                if (uye) {
+                    if (uye.GÖREV.includes('YAZAR')) {
+                        komisyon.yazarlar.push(uye);
+                    } else {
+                        komisyon.uzmanlar.push(uye);
+                    }
+                }
+            });
+            
+            // UI'ı güncelle
+            renderCommissions();
+            createMembersTable();
+            updateStats();
+            markAsChanged();
+            
+            closeModal('uyeEklemeModal');
+            showNotification(`${selectedMembers.length} üye komisyona eklendi!`, 'success');
+        }
+
+        // Başkan seçimi modalı aç
+        function openPresidentSelection(komisyonId) {
+            currentCommissionId = komisyonId;
+            selectedPresident = null;
+            
+            const modal = document.getElementById('baskanModal');
+            const title = document.getElementById('baskanModalTitle');
+            const grid = document.getElementById('baskanSelectionGrid');
+            
+            title.textContent = `Başkan Seç - ${komisyonlar[komisyonId].ad}`;
+            
+            // Komisyon üyelerini al
+            const komisyonUyeleri = [
+                ...(komisyonlar[komisyonId].yazarlar || []),
+                ...(komisyonlar[komisyonId].uzmanlar || [])
+            ];
+            
+            if (komisyonUyeleri.length === 0) {
+                grid.innerHTML = '<div style="text-align: center; color: #6c757d; padding: 40px;">Komisyonda henüz üye yok. Önce üye ekleyin.</div>';
+            } else {
+                grid.innerHTML = komisyonUyeleri.map(uye => `
+                    <div class="member-card" onclick="selectPresident(this, '${uye["AD-SOYAD"]}')">
+                        <div class="member-name">${uye["AD-SOYAD"]}</div>
+                        <div class="member-details">${uye.GÖREV}</div>
+                        <div class="member-alan">Alan: ${uye.ALAN}</div>
+                        <div style="font-size: 10px; color: #6c757d; margin-top: 5px;">
+                            ${uye.KURUM}
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            modal.classList.add('active');
+        }
+
+        // Başkan seç
+        function selectPresident(element, memberName) {
+            document.querySelectorAll('#baskanSelectionGrid .member-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            element.classList.add('selected');
+            selectedPresident = memberName;
+        }
+
+        // Başkanı ata
+        function setCommissionPresident() {
+            if (!selectedPresident) {
+                showNotification('Lütfen bir başkan seçiniz!', 'error');
+                return;
+            }
+            
+            const komisyon = komisyonlar[currentCommissionId];
+            const uye = uyeListesi.find(u => u["AD-SOYAD"] === selectedPresident);
+            
+            if (uye) {
+                komisyon.baskan = uye;
+                
+                // UI'ı güncelle
+                renderCommissions();
+                updateStats();
+                markAsChanged();
+                
+                closeModal('baskanModal');
+                showNotification(`${selectedPresident} başkan olarak atandı!`, 'success');
+            }
+        }
+
+        // Üye seçimi filtreleme
+        function filterMemberSelection(searchTerm) {
+            const cards = document.querySelectorAll('#memberSelectionGrid .member-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm.toLowerCase()) ? 'block' : 'none';
+            });
+        }
+
+        // Komisyon form submit işlemi
+        function handleKomisyonSubmit(e) {
+            e.preventDefault();
+            
+            const komisyonAdi = document.getElementById('komisyonSelect')?.value || document.getElementById('yeniKomisyonAdi')?.value;
+            const tur = document.getElementById('komisyonTuru')?.value;
+            const baslangic = document.getElementById('baslangicTarihi')?.value;
+            const teslim = document.getElementById('teslimTarihi')?.value;
+            const durum = document.getElementById('komisyonDurum')?.value;
+            const notlar = document.getElementById('komisyonNotlar')?.value;
+            
+            if (!komisyonAdi || !tur || !baslangic) {
+                showNotification('Lütfen gerekli alanları doldurun!', 'error');
+                return;
+            }
+            
+            // ID oluştur
+            const komisyonId = komisyonAdi.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-');
+            
+            if (komisyonlar[komisyonId]) {
+                showNotification('Bu komisyon zaten mevcut!', 'error');
+                return;
+            }
+            
+            // Yeni komisyon oluştur
+            komisyonlar[komisyonId] = {
+                id: komisyonId,
+                ad: komisyonAdi,
+                tur: tur,
+                baslangic: baslangic,
+                teslim: teslim,
+                durum: durum,
+                notlar: notlar,
+                baskan: null,
+                yazarlar: [],
+                uzmanlar: []
+            };
+            
+            // Yeni komisyon adı ise listeye ekle
+            if (document.getElementById('yeniKomisyonAdi')?.value) {
+                komisyonListesi.push(komisyonAdi);
+                populateFormLists();
+            }
+            
+            // UI'ı güncelle
+            renderCommissions();
+            updateStats();
+            markAsChanged();
+            closeModal('komisyonModal');
+            
+            showNotification('Komisyon başarıyla oluşturuldu!', 'success');
+        }
+
+        // Üye form submit işlemi
+        function handleUyeSubmit(e) {
+            e.preventDefault();
+            
+            const adSoyad = document.getElementById('uyeAdSoyad')?.value;
+            const tc = document.getElementById('uyeTC')?.value;
+            const gorev = document.getElementById('uyeGorev')?.value;
+            const alan = document.getElementById('uyeAlan')?.value;
+            const kurum = document.getElementById('uyeKurum')?.value;
+            const telefon = document.getElementById('uyeTelefon')?.value;
+            const email = document.getElementById('uyeEmail')?.value;
+            const il = document.getElementById('uyeIl')?.value;
+            const ilce = document.getElementById('uyeIlce')?.value;
+            
+            if (!adSoyad || !gorev || !alan || !kurum || !il || !ilce) {
+                showNotification('Lütfen gerekli alanları doldurun!', 'error');
+                return;
+            }
+            
+            // Aynı isimde üye var mı kontrol et
+            if (uyeListesi.some(u => u['AD-SOYAD'] === adSoyad)) {
+                showNotification('Bu isimde bir üye zaten kayıtlı!', 'error');
+                return;
+            }
+            
+            // Yeni üye ekle
+            const yeniUye = {
+                'AD-SOYAD': adSoyad,
+                'TC': tc,
+                'GÖREV': gorev,
+                'ALAN': alan,
+                'KURUM': kurum,
+                'TLF': telefon,
+                'EMAIL': email,
+                'İL': il,
+                'İLÇE': ilce
+            };
+            
+            uyeListesi.push(yeniUye);
+            
+            // Tabloyu güncelle
+            createMembersTable();
+            updateStats();
+            markAsChanged();
+            closeModal('uyeModal');
+            
+            showNotification('Yeni üye başarıyla eklendi!', 'success');
+        }
+
+        // Komisyon düzenleme
+        function editCommission(komisyonId) {
+            showNotification('Komisyon düzenleme özelliği geliştiriliyor...', 'info');
+        }
+
+        // Komisyon silme
+        function deleteCommission(komisyonId) {
+            const komisyon = komisyonlar[komisyonId];
+            if (confirm(`"${komisyon.ad}" komisyonunu tamamen silmek istediğinizden emin misiniz?`)) {
+                delete komisyonlar[komisyonId];
+                
+                renderCommissions();
+                createMembersTable();
+                updateStats();
+                markAsChanged();
+                
+                showNotification('Komisyon silindi!', 'success');
+            }
+        }
+
+        // Raporları güncelle
+        function updateReports() {
+            const container = document.getElementById('raporContent');
+            
+            const totalCommissions = Object.keys(komisyonlar).length;
+            const activeCommissions = Object.values(komisyonlar).filter(k => k.durum === 'Aktif').length;
+            const completedCommissions = Object.values(komisyonlar).filter(k => k.durum === 'Tamamlandı').length;
+            
+            // İş yükü analizi
+            const workloadAnalysis = uyeListesi.map(uye => ({
+                name: uye["AD-SOYAD"],
+                workload: calculateWorkload(uye["AD-SOYAD"]),
+                role: uye.GÖREV,
+                area: uye.ALAN
+            })).sort((a, b) => b.workload - a.workload);
+            
+            const highWorkload = workloadAnalysis.filter(u => u.workload >= 3);
+            const lowWorkload = workloadAnalysis.filter(u => u.workload === 0);
+            
+            container.innerHTML = `
+                <h2>Komisyon Sistemi Raporu</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff;">
+                        <h3>Genel İstatistikler</h3>
+                        <p><strong>Toplam Komisyon:</strong> ${totalCommissions}</p>
+                        <p><strong>Aktif Komisyon:</strong> ${activeCommissions}</p>
+                        <p><strong>Tamamlanan:</strong> ${completedCommissions}</p>
+                        <p><strong>Toplam Üye:</strong> ${uyeListesi.length}</p>
+                    </div>
+                    
+                    <div style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107;">
+                        <h3>Yoğun İş Yükü (3+ Komisyon)</h3>
+                        ${highWorkload.length > 0 ? 
+                            highWorkload.map(u => `<p>${u.name} (${u.workload})</p>`).join('') :
+                            '<p>Yoğun iş yükü olan üye yok.</p>'
+                        }
+                    </div>
+                    
+                    <div style="background: #d1ecf1; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8;">
+                        <h3>Atanmayan Üyeler</h3>
+                        ${lowWorkload.length > 0 ? 
+                            lowWorkload.map(u => `<p>${u.name} (${u.area})</p>`).join('') :
+                            '<p>Tüm üyeler en az bir komisyonda.</p>'
+                        }
+                    </div>
+                </div>
+                
+                <h3>Komisyon Detayları</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                    <thead>
+                        <tr style="background: #495057; color: white;">
+                            <th style="padding: 10px; text-align: left;">Komisyon Adı</th>
+                            <th style="padding: 10px; text-align: left;">Tür</th>
+                            <th style="padding: 10px; text-align: left;">Durum</th>
+                            <th style="padding: 10px; text-align: left;">Başkan</th>
+                            <th style="padding: 10px; text-align: left;">Yazar Sayısı</th>
+                            <th style="padding: 10px; text-align: left;">Uzman Sayısı</th>
+                            <th style="padding: 10px; text-align: left;">Başlangıç</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${Object.values(komisyonlar).map(k => `
+                            <tr style="border-bottom: 1px solid #dee2e6;">
+                                <td style="padding: 8px;">${k.baskan ? k.baskan["AD-SOYAD"] : 'Atanmamış'}</td>
+                                <td style="padding: 8px;">${k.yazarlar.length}</td>
+                                <td style="padding: 8px;">${k.uzmanlar.length}</td>
+                                <td style="padding: 8px;">${formatDate(k.baslangic)}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        // Bildirim sistemi
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // ESC tuşu ile modal kapatma
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                selectedMembers = [];
+                selectedPresident = null;
+            }
+        });
+
+        // Sayfa kapatılırken uyarı
+        window.addEventListener('beforeunload', function(e) {
+            if (hasChanges) {
+                e.preventDefault();
+                e.returnValue = 'Kaydedilmemiş değişiklikler var. Çıkmak istediğinizden emin misiniz?';
+            }
+        });
+    </script>
+</body>
+</html>.ad}</td>
+                                <td style="padding: 8px;">${k.tur}</td>
+                                <td style="padding: 8px;"><span class="komisyon-status ${getStatusClass(k.durum)}">${k.durum}</span></td>
+                                <td style="padding: 8px;">${k
