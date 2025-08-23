@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚽ Futbol Bilgi Arena</title>
+    <title>⚽ Futbol Bilgi Arena v2.0</title>
     <style>
         * {
             margin: 0;
@@ -76,7 +76,7 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .player-setup {
+        .game-settings {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
@@ -84,7 +84,74 @@
             margin: 0 auto;
         }
 
+        .setting-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .question-count-selector {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            justify-content: center;
+        }
+
+        .count-btn {
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .count-btn.selected {
+            border-color: #00ff88;
+            background: rgba(0, 255, 136, 0.3);
+            transform: scale(1.1);
+        }
+
+        .player-count-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .player-count-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .player-count-display {
+            font-size: 2em;
+            font-weight: bold;
+            color: #00ff88;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .player-card {
+            position: relative;
             background: rgba(255, 255, 255, 0.15);
             padding: 25px;
             border-radius: 15px;
@@ -124,6 +191,20 @@
             50% { transform: scale(1.05); }
         }
 
+        .remove-player {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b6b;
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
         input[type="text"] {
             width: 100%;
             padding: 15px;
@@ -154,6 +235,35 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .mute-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .mute-button:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        .mute-button.muted {
+            background: rgba(255, 107, 107, 0.8);
+        }
+
         .game-screen {
             max-width: 1000px;
             margin: 0 auto;
@@ -165,6 +275,8 @@
             align-items: center;
             margin-bottom: 30px;
             position: relative;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .player-info {
@@ -352,13 +464,17 @@
         }
 
         .final-scores {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             margin: 40px 0;
         }
 
         .final-score {
             text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
         }
 
         .final-score .avatar {
@@ -417,145 +533,8 @@
             to { box-shadow: 0 4px 25px rgba(118, 75, 162, 0.6); }
         }
 
-        .game-settings {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .setting-card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 25px;
-            border-radius: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .question-count-selector {
-            display: flex;
-            gap: 15px;
-            margin: 15px 0;
-            justify-content: center;
-        }
-
-        .count-btn {
-            padding: 15px 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            color: white;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .count-btn.selected {
-            border-color: #00ff88;
-            background: rgba(0, 255, 136, 0.3);
-            transform: scale(1.1);
-        }
-
-        .player-count-selector {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .player-count-btn {
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            color: white;
-            font-size: 1.5em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .player-count-display {
-            font-size: 2em;
-            font-weight: bold;
-            color: #00ff88;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .mute-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5em;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .mute-button:hover {
-            background: rgba(0, 0, 0, 0.9);
-            transform: scale(1.1);
-        }
-
-        .mute-button.muted {
-            background: rgba(255, 107, 107, 0.8);
-        }
-
-        .players-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .add-player-btn {
-            background: linear-gradient(45deg, #00c9ff, #92fe9d);
-            border: 2px dashed rgba(255, 255, 255, 0.5);
-            padding: 40px 20px;
-            border-radius: 15px;
-            color: white;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .add-player-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-
-        .remove-player {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #ff6b6b;
-            border: none;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2em;
-        }
-
-        .player-card {
-            position: relative;
-        }
-
         @media (max-width: 768px) {
-            .player-setup {
+            .game-settings {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
@@ -570,8 +549,8 @@
             }
 
             .final-scores {
-                flex-direction: column;
-                gap: 30px;
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .logo {
@@ -580,6 +559,10 @@
 
             .question-text {
                 font-size: 1.4em;
+            }
+
+            .players-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -643,7 +626,6 @@
             <div class="game-screen">
                 <div class="game-header" id="game-header">
                     <!-- Oyuncular dinamik olarak eklenecek -->
-                    <div class="turn-indicator" id="turn-indicator">SİRADA: OYUNCU 1</div>
                 </div>
 
                 <div class="timer-bar">
@@ -689,7 +671,7 @@
 
         <!-- Developer Credit -->
         <div class="developer-credit">
-            ⚡ Powered by Aras Gaygusuz
+            ⚡ Powered by ArsanaGames
         </div>
     </div>
 
@@ -713,35 +695,85 @@
         // Mevcut karakterler
         const availableCharacters = ['⚽', '🏆', '👑', '🔥', '⭐', '💎', '🚀', '⚡', '🌟', '🎪', '🎨', '🎵', '🎯', '🎮', '🎸', '🎭'];
 
+        // Küfür filtresi
+        const bannedWords = [
+            'aptal', 'salak', 'ahmak', 'gerizekalı', 'mal', 'beyinsiz',
+            'dangalak', 'budala', 'kıro', 'it', 'köpek', 'eşşek'
+        ];
+
+        // Sorular
+        const allQuestions = [
+            {
+                "soru": "'Old Trafford' hangi kulübün stadyumudur?",
+                "secenekler": {
+                    "A": "Manchester United",
+                    "B": "Chelsea",
+                    "C": "Atletico Madrid",
+                    "D": "LA Galaxy"
+                },
+                "dogru": "A"
+            },
+            {
+                "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+                "secenekler": {
+                    "A": "Avustralya",
+                    "B": "Arjantin",
+                    "C": "Katar",
+                    "D": "Fransa"
+                },
+                "dogru": "D"
+            },
+            {
+                "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+                "secenekler": {
+                    "A": "11",
+                    "B": "10",
+                    "C": "9",
+                    "D": "12"
+                },
+                "dogru": "A"
+            },
+            {
+                "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+                "secenekler": {
+                    "A": "9.15 m",
+                    "B": "7.5 m",
+                    "C": "5 m",
+                    "D": "11 m"
+                },
+                "dogru": "A"
+            },
+            {
+                "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+                "secenekler": {
+                    "A": "Madrid",
+                    "B": "İstanbul",
+                    "C": "Manchester",
+                    "D": "Barselona"
+                },
+                "dogru": "A"
+            }
+        ];
+
         // Ses sistemi
         class SoundSystem {
             constructor() {
-                this.sounds = {};
-                this.backgroundMusic = null;
-                this.musicVolume = 0.1; // Çok daha sessiz
-                this.sfxVolume = 0.7;
-                this.initializeSounds();
-            }
-
-            initializeSounds() {
-                // Web Audio API ile ses üretimi
                 this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                
-                // Arkaplan müziği (Stadium atmosferi tarzı)
+                this.musicVolume = 0.1;
+                this.sfxVolume = 0.7;
+                this.backgroundMusic = null;
                 this.createBackgroundMusic();
             }
 
-            // Stadium atmosferi müziği (daha yumuşak)
             createBackgroundMusic() {
                 const oscillator1 = this.audioContext.createOscillator();
                 const oscillator2 = this.audioContext.createOscillator();
                 const gainNode = this.audioContext.createGain();
                 
-                // Stadium atmosferi için daha düşük frekanslar
                 oscillator1.frequency.setValueAtTime(80, this.audioContext.currentTime);
                 oscillator2.frequency.setValueAtTime(120, this.audioContext.currentTime);
-                oscillator1.type = 'sine';     // Yumuşak dalga
-                oscillator2.type = 'triangle'; // Doğal ses
+                oscillator1.type = 'sine';
+                oscillator2.type = 'triangle';
                 
                 gainNode.gain.setValueAtTime(0, this.audioContext.currentTime);
                 
@@ -752,53 +784,9 @@
                 this.backgroundMusic = { oscillator1, oscillator2, gainNode };
             }
 
-            // Doğru cevap sesi
-            playCorrectSound() {
-                if (gameState.isMuted) return;
-                this.playTone(523.25, 0.3, 'sine'); // C5
-                setTimeout(() => this.playTone(659.25, 0.3, 'sine'), 150); // E5
-                setTimeout(() => this.playTone(783.99, 0.4, 'sine'), 300); // G5
-            }
-
-            // Yanlış cevap sesi
-            playWrongSound() {
-                if (gameState.isMuted) return;
-                this.playTone(220, 0.5, 'sawtooth'); // A3
-                setTimeout(() => this.playTone(185, 0.3, 'sawtooth'), 150); // F#3
-                setTimeout(() => this.playTone(146.83, 0.6, 'sawtooth'), 300); // D3
-            }
-
-            // Buton tık sesi
-            playClickSound() {
-                if (gameState.isMuted) return;
-                this.playTone(800, 0.1, 'square');
-            }
-
-            // Timer uyarısı (kalp atışı)
-            playTickSound() {
-                if (gameState.isMuted) return;
-                this.playTone(1000, 0.1, 'sine');
-            }
-
-            // Zaman doldu alarmı
-            playTimeUpSound() {
-                if (gameState.isMuted) return;
-                for(let i = 0; i < 3; i++) {
-                    setTimeout(() => this.playTone(1760, 0.3, 'sawtooth'), i * 200);
-                }
-            }
-
-            // Kazanma fanfarı
-            playVictorySound() {
-                if (gameState.isMuted) return;
-                const notes = [523.25, 659.25, 783.99, 1046.50]; // C-E-G-C
-                notes.forEach((note, index) => {
-                    setTimeout(() => this.playTone(note, 0.5, 'sine'), index * 200);
-                });
-            }
-
-            // Genel ton çalma
             playTone(frequency, duration, type = 'sine') {
+                if (gameState.isMuted) return;
+                
                 const oscillator = this.audioContext.createOscillator();
                 const gainNode = this.audioContext.createGain();
                 
@@ -815,9 +803,41 @@
                 oscillator.stop(this.audioContext.currentTime + duration);
             }
 
-            // Arkaplan müziğini başlat
+            playCorrectSound() {
+                this.playTone(523.25, 0.3, 'sine');
+                setTimeout(() => this.playTone(659.25, 0.3, 'sine'), 150);
+                setTimeout(() => this.playTone(783.99, 0.4, 'sine'), 300);
+            }
+
+            playWrongSound() {
+                this.playTone(220, 0.5, 'sawtooth');
+                setTimeout(() => this.playTone(185, 0.3, 'sawtooth'), 150);
+                setTimeout(() => this.playTone(146.83, 0.6, 'sawtooth'), 300);
+            }
+
+            playClickSound() {
+                this.playTone(800, 0.1, 'square');
+            }
+
+            playTickSound() {
+                this.playTone(1000, 0.1, 'sine');
+            }
+
+            playTimeUpSound() {
+                for(let i = 0; i < 3; i++) {
+                    setTimeout(() => this.playTone(1760, 0.3, 'sawtooth'), i * 200);
+                }
+            }
+
+            playVictorySound() {
+                const notes = [523.25, 659.25, 783.99, 1046.50];
+                notes.forEach((note, index) => {
+                    setTimeout(() => this.playTone(note, 0.5, 'sine'), index * 200);
+                });
+            }
+
             startBackgroundMusic() {
-                if (gameState.isMuted || this.backgroundMusic.started) return;
+                if (gameState.isMuted || (this.backgroundMusic && this.backgroundMusic.started)) return;
                 
                 const { oscillator1, oscillator2, gainNode } = this.backgroundMusic;
                 
@@ -825,11 +845,9 @@
                 oscillator2.start();
                 this.backgroundMusic.started = true;
                 
-                // Yavaşça ses aç
                 gainNode.gain.exponentialRampToValueAtTime(this.musicVolume, this.audioContext.currentTime + 2);
             }
 
-            // Arkaplan müziğini durdur
             stopBackgroundMusic() {
                 if (this.backgroundMusic && this.backgroundMusic.started) {
                     const { gainNode } = this.backgroundMusic;
@@ -837,7 +855,6 @@
                 }
             }
 
-            // Mute/unmute
             toggleMute() {
                 gameState.isMuted = !gameState.isMuted;
                 if (gameState.isMuted) {
@@ -848,274 +865,13 @@
             }
         }
 
-        // Ses sistemi başlat
         let soundSystem = null;
 
-        // Ses sistemi başlatma (kullanıcı etkileşimi gerekli)
-        function initSoundSystem() {
-            if (!soundSystem) {
-                soundSystem = new SoundSystem();
-            }
-        }if (this.backgroundMusic) {
-                    const { oscillator1, oscillator2, gainNode } = this.backgroundMusic;
-                    
-                    oscillator1.start();
-                    oscillator2.start();
-                    
-                    // Yavaşça ses aç
-                    gainNode.gain.exponentialRampToValueAtTime(this.musicVolume, this.audioContext.currentTime + 2);
-                }
-            }
-
-            // Arkaplan müziğini durdur
-            stopBackgroundMusic() {
-                if (this.backgroundMusic) {
-                    const { oscillator1, oscillator2, gainNode } = this.backgroundMusic;
-                    
-                    gainNode.gain.exponentialRampToValueAtTime(0.001, this.audioContext.currentTime + 1);
-                    setTimeout(() => {
-                        oscillator1.stop();
-                        oscillator2.stop();
-                    }, 1000);
-                }
-            }
-        }
-
-        // Ses sistemi başlat
-        let soundSystem = null;
-
-        // Ses sistemi başlatma (kullanıcı etkileşimi gerekli)
         function initSoundSystem() {
             if (!soundSystem) {
                 soundSystem = new SoundSystem();
             }
         }
-
-        // Küfür filtresi
-        const bannedWords = [
-            'aptal', 'salak', 'ahmak', 'gerizekalı', 'mal', 'beyinsiz',
-            'dangalak', 'budala', 'kıro', 'it', 'köpek', 'eşşek'
-        ];
-
-        // Sorular JSON'dan yüklenecek (şimdilik örnek sorular)
-        const allQuestions = [
-  {
-    "soru": "'Old Trafford' hangi kulübün stadyumudur?",
-    "secenekler": {
-      "A": "Manchester United",
-      "B": "Chelsea",
-      "C": "Atletico Madrid",
-      "D": "LA Galaxy"
-    },
-    "dogru": "A",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "İngiltere",
-      "kupa": null,
-      "zorluk": "orta",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
-    "secenekler": {
-      "A": "Avustralya",
-      "B": "Arjantin",
-      "C": "Katar",
-      "D": "Fransa"
-    },
-    "dogru": "D",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Fransa",
-      "kupa": null,
-      "zorluk": "orta",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
-    "secenekler": {
-      "A": "Suudi Arabistan",
-      "B": "Arjantin",
-      "C": "Almanya",
-      "D": "Şili"
-    },
-    "dogru": "B",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Arjantin",
-      "kupa": null,
-      "zorluk": "orta",
-      "kita": "Güney Amerika",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Yedek kulübesinde kim oturur?",
-    "secenekler": {
-      "A": "Taraftarlar",
-      "B": "Top toplayıcılar",
-      "C": "Hakemler",
-      "D": "Yedek oyuncular ve teknik ekip"
-    },
-    "dogru": "D",
-    "kategoriler": {
-      "yil": null,
-      "ulke": null,
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": null,
-      "teknik": "kural"
-    }
-  },
-  {
-    "soru": "Mesut Özil hangi mevkide oynamasıyla bilinir?",
-    "secenekler": {
-      "A": "Kaleci",
-      "B": "Orta saha",
-      "C": "Defans",
-      "D": "Forvet"
-    },
-    "dogru": "B",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Almanya",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Liverpool kulübü hangi şehirde yer alır?",
-    "secenekler": {
-      "A": "Liverpool",
-      "B": "Madrid",
-      "C": "Amsterdam",
-      "D": "Münih"
-    },
-    "dogru": "A",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "İngiltere",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Robert Lewandowski hangi ülkenin milli oyuncusudur?",
-    "secenekler": {
-      "A": "İngiltere",
-      "B": "Avustralya",
-      "C": "Polonya",
-      "D": "Hırvatistan"
-    },
-    "dogru": "C",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Polonya",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Benfica kulübü hangi şehirde yer alır?",
-    "secenekler": {
-      "A": "Lizbon",
-      "B": "Madrid",
-      "C": "Liverpool",
-      "D": "Münih"
-    },
-    "dogru": "A",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Portekiz",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
-    "secenekler": {
-      "A": "Paris",
-      "B": "Porto",
-      "C": "Barselona",
-      "D": "Manchester"
-    },
-    "dogru": "A",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Fransa",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Milan kulübü hangi şehirde yer alır?",
-    "secenekler": {
-      "A": "Madrid",
-      "B": "Milano",
-      "C": "Barselona",
-      "D": "Liverpool"
-    },
-    "dogru": "B",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "İtalya",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  },
-  {
-    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
-    "secenekler": {
-      "A": "9.15 m",
-      "B": "7.5 m",
-      "C": "5 m",
-      "D": "11 m"
-    },
-    "dogru": "A",
-    "kategoriler": {
-      "yil": null,
-      "ulke": null,
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": null,
-      "teknik": "kural"
-    }
-  },
-  {
-    "soru": "Ajax kulübü hangi şehirde yer alır?",
-    "secenekler": {
-      "A": "Madrid",
-      "B": "Amsterdam",
-      "C": "Barselona",
-      "D": "Torino"
-    },
-    "dogru": "B",
-    "kategoriler": {
-      "yil": null,
-      "ulke": "Hollanda",
-      "kupa": null,
-      "zorluk": "kolay",
-      "kita": "Avrupa",
-      "teknik": null
-    }
-  }
-        ];
 
         // Ekran geçişleri
         function showScreen(screenId) {
@@ -1130,7 +886,7 @@
         }
 
         function showGameSettings() {
-            initSoundSystem(); // Ses sistemini başlat
+            initSoundSystem();
             showScreen('settings-screen');
             setupGameSettings();
         }
@@ -1145,9 +901,8 @@
             displayLeaderboard();
         }
 
-        // Oyun ayarları kurulumu
+        // Oyun ayarları
         function setupGameSettings() {
-            // Soru sayısı butonları
             document.querySelectorAll('.count-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     if (soundSystem) soundSystem.playClickSound();
@@ -1158,7 +913,6 @@
             });
         }
 
-        // Oyuncu sayısı değiştirme
         function changePlayerCount(delta) {
             if (soundSystem) soundSystem.playClickSound();
             const currentCount = gameState.players.length;
@@ -1167,7 +921,6 @@
             if (newCount < 2 || newCount > 8) return;
             
             if (delta > 0) {
-                // Oyuncu ekle
                 const newPlayer = {
                     name: '',
                     character: availableCharacters[newCount - 1],
@@ -1175,14 +928,13 @@
                 };
                 gameState.players.push(newPlayer);
             } else {
-                // Oyuncu çıkar
                 gameState.players.pop();
             }
             
             document.getElementById('player-count-display').textContent = gameState.players.length;
         }
 
-        // Oyuncu kartlarını oluştur
+        // Oyuncu kartları
         function setupPlayerCards() {
             const playersGrid = document.getElementById('players-grid');
             playersGrid.innerHTML = '';
@@ -1199,7 +951,6 @@
                 
                 playersGrid.appendChild(playerCard);
                 
-                // Karakter seçenekleri
                 const charGrid = document.getElementById(`player${index}-chars`);
                 const startIndex = index * 2;
                 
@@ -1219,37 +970,30 @@
                     charGrid.appendChild(charBtn);
                 }
                 
-                // İsim girişi event listener
                 document.getElementById(`player${index}-name`).addEventListener('input', checkStartButton);
             });
             
             checkStartButton();
         }
 
-        // Karakter seçimi
         function selectCharacter(playerIndex, character) {
             if (soundSystem) soundSystem.playClickSound();
             
-            // Önceki seçimi temizle
             document.querySelectorAll(`#player${playerIndex}-chars .character`).forEach(c => 
                 c.classList.remove('selected')
             );
             
-            // Yeni seçimi işaretle
             document.querySelector(`#player${playerIndex}-chars .character[data-char="${character}"]`).classList.add('selected');
             
-            // Game state'i güncelle
             gameState.players[playerIndex].character = character;
         }
 
-        // Oyuncu kaldırma
         function removePlayer(index) {
             if (soundSystem) soundSystem.playClickSound();
             gameState.players.splice(index, 1);
             setupPlayerCards();
         }
 
-        // Başlama butonunu kontrol et
         function checkStartButton() {
             const startBtn = document.getElementById('start-btn');
             let canStart = true;
@@ -1265,7 +1009,6 @@
             startBtn.style.opacity = canStart ? '1' : '0.5';
         }
 
-        // Mute/unmute butonu
         function toggleMute() {
             if (!soundSystem) return;
             
@@ -1281,62 +1024,8 @@
             }
         }
 
-        // Karakter seçimi
-        function setupCharacterSelection() {
-            // Player 1 karakterleri
-            document.querySelectorAll('#player1-chars .character').forEach(char => {
-                char.addEventListener('click', () => {
-                    document.querySelectorAll('#player1-chars .character').forEach(c => c.classList.remove('selected'));
-                    char.classList.add('selected');
-                    gameState.player1.character = char.dataset.char;
-                    checkStartButton();
-                });
-            });
-
-            // Player 2 karakterleri
-            document.querySelectorAll('#player2-chars .character').forEach(char => {
-                char.addEventListener('click', () => {
-                    document.querySelectorAll('#player2-chars .character').forEach(c => c.classList.remove('selected'));
-                    char.classList.add('selected');
-                    gameState.player2.character = char.dataset.char;
-                    checkStartButton();
-                });
-            });
-
-            // İlk karakterleri seç
-            document.querySelector('#player1-chars .character').click();
-            document.querySelector('#player2-chars .character').click();
-
-            // İsim kontrolleri
-            document.getElementById('player1-name').addEventListener('input', checkStartButton);
-            document.getElementById('player2-name').addEventListener('input', checkStartButton);
-        }
-
-        function checkStartButton() {
-            const p1Name = document.getElementById('player1-name').value.trim();
-            const p2Name = document.getElementById('player2-name').value.trim();
-            const startBtn = document.getElementById('start-btn');
-
-            if (p1Name && p2Name && !containsBannedWords(p1Name) && !containsBannedWords(p2Name)) {
-                startBtn.disabled = false;
-                startBtn.style.opacity = '1';
-            } else {
-                startBtn.disabled = true;
-                startBtn.style.opacity = '0.5';
-            }
-        }
-
-        function containsBannedWords(text) {
-            const normalizedText = text.toLowerCase()
-                .replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's')
-                .replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c');
-            
-            return bannedWords.some(word => normalizedText.includes(word));
-        }
-
         // Oyun başlatma
         function startGame() {
-            // Oyuncu bilgilerini güncelle
             gameState.players.forEach((player, index) => {
                 player.name = document.getElementById(`player${index}-name`).value.trim();
                 player.score = 0;
@@ -1344,14 +1033,10 @@
             
             gameState.currentQuestion = 0;
             gameState.currentPlayer = 0;
-
-            // Soruları karıştır
             gameState.questions = shuffleArray([...allQuestions]).slice(0, gameState.questionCount);
 
-            // Oyun header'ını oluştur
             createGameHeader();
 
-            // Arkaplan müziği başlat
             if (soundSystem && !gameState.isMuted) {
                 soundSystem.startBackgroundMusic();
             }
@@ -1360,12 +1045,10 @@
             loadNextQuestion();
         }
 
-        // Oyun header'ını oluştur
         function createGameHeader() {
             const gameHeader = document.getElementById('game-header');
             gameHeader.innerHTML = '';
             
-            // Oyuncu bilgileri
             gameState.players.forEach((player, index) => {
                 const playerInfo = document.createElement('div');
                 playerInfo.className = 'player-info';
@@ -1379,7 +1062,6 @@
                 `;
                 gameHeader.appendChild(playerInfo);
                 
-                // VS divider (sadece son oyuncu değilse)
                 if (index < gameState.players.length - 1) {
                     const vsDivider = document.createElement('div');
                     vsDivider.className = 'vs-divider';
@@ -1388,7 +1070,6 @@
                 }
             });
             
-            // Sıra göstergesi
             const turnIndicator = document.createElement('div');
             turnIndicator.className = 'turn-indicator';
             turnIndicator.id = 'turn-indicator';
@@ -1397,22 +1078,18 @@
             updateTurnIndicator();
         }
 
-        // Sıra göstergesini güncelle
         function updateTurnIndicator() {
             const turnIndicator = document.getElementById('turn-indicator');
             const currentPlayerName = gameState.players[gameState.currentPlayer].name;
             
-            // Tüm oyuncu kartlarını sıfırla
             gameState.players.forEach((_, index) => {
                 const playerInfo = document.getElementById(`player${index}-info`);
                 playerInfo.classList.remove('active', 'inactive');
             });
             
-            // Aktif oyuncuyu işaretle
             const activePlayerInfo = document.getElementById(`player${gameState.currentPlayer}-info`);
             activePlayerInfo.classList.add('active');
             
-            // Diğerlerini pasif yap
             gameState.players.forEach((_, index) => {
                 if (index !== gameState.currentPlayer) {
                     const playerInfo = document.getElementById(`player${index}-info`);
@@ -1422,7 +1099,6 @@
             
             turnIndicator.textContent = `SİRADA: ${currentPlayerName.toUpperCase()}`;
             
-            // Renk gradientini oyuncuya göre değiştir
             const colors = [
                 'linear-gradient(45deg, #00c9ff, #92fe9d)',
                 'linear-gradient(45deg, #ff6b6b, #ffd93d)',
@@ -1437,16 +1113,7 @@
             turnIndicator.style.background = colors[gameState.currentPlayer % colors.length];
         }
 
-        // Dizi karıştırma
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // Sonraki soruyu yükle
+        // Soru yükleme
         function loadNextQuestion() {
             if (gameState.currentQuestion >= gameState.questionCount) {
                 endGame();
@@ -1455,15 +1122,12 @@
 
             const question = gameState.questions[gameState.currentQuestion];
             
-            // Sıra göstergesini güncelle
             gameState.currentPlayer = gameState.currentQuestion % gameState.players.length;
             updateTurnIndicator();
             
-            // Soru bilgilerini güncelle
             document.getElementById('question-number').textContent = `Soru ${gameState.currentQuestion + 1}/${gameState.questionCount}`;
             document.getElementById('question-text').textContent = question.soru;
 
-            // Cevap seçeneklerini oluştur
             const answersGrid = document.getElementById('answers-grid');
             answersGrid.innerHTML = '';
 
@@ -1479,11 +1143,9 @@
                 answersGrid.appendChild(answerBtn);
             });
 
-            // Zamanlayıcıyı başlat
             startTimer();
         }
 
-        // Cevap seçimi
         function selectAnswer(selectedOption, correctAnswer) {
             if (!gameState.gameActive) return;
 
@@ -1492,7 +1154,6 @@
 
             const isCorrect = selectedOption === correctAnswer;
             
-            // Ses efektleri
             if (soundSystem) {
                 if (isCorrect) {
                     soundSystem.playCorrectSound();
@@ -1501,13 +1162,11 @@
                 }
             }
             
-            // Butonları devre dışı bırak
             document.querySelectorAll('.answer-btn').forEach(btn => {
                 btn.classList.add('disabled');
                 btn.onclick = null;
             });
             
-            // Cevap butonlarını güncelle
             document.querySelectorAll('.answer-btn').forEach(btn => {
                 if (btn.textContent.startsWith(selectedOption + ')')) {
                     btn.classList.add(isCorrect ? 'correct' : 'wrong');
@@ -1517,7 +1176,6 @@
                 }
             });
 
-            // Skor güncelleme
             const currentPlayer = gameState.players[gameState.currentPlayer];
             if (isCorrect) {
                 currentPlayer.score += 10;
@@ -1525,7 +1183,6 @@
                 currentPlayer.score -= 5;
             }
             
-            // Skor görüntüsünü güncelle
             document.getElementById(`player${gameState.currentPlayer}-score`).textContent = currentPlayer.score;
 
             setTimeout(() => {
@@ -1533,64 +1190,12 @@
             }, 2000);
         }
 
-        // Oyun bitişi
-        function endGame() {
-            // Arkaplan müziğini durdur
-            if (soundSystem) {
-                soundSystem.stopBackgroundMusic();
-            }
-
-            // En yüksek skoru bul
-            let highestScore = Math.max(...gameState.players.map(p => p.score));
-            let winners = gameState.players.filter(p => p.score === highestScore);
-            
-            let winnerText;
-            if (winners.length === 1) {
-                winnerText = `🎉 ${winners[0].name} Kazandı!`;
-            } else if (winners.length === gameState.players.length) {
-                winnerText = "🤝 Tam Beraberlik!";
-            } else {
-                winnerText = `🎉 ${winners.map(w => w.name).join(' & ')} Kazandı!`;
-            }
-
-            // Kazanma fanfarı
-            if (soundSystem) {
-                setTimeout(() => soundSystem.playVictorySound(), 500);
-            }
-
-            // Sonuç ekranını oluştur
-            createResultScreen(winnerText, winners.length === 1 ? winners[0] : null);
-
-            // Lider tablosuna kaydet
-            saveToLeaderboard(winners.length === 1 ? winners[0] : null);
-
-            showScreen('result-screen');
+        function nextQuestion() {
+            gameState.currentQuestion++;
+            loadNextQuestion();
         }
 
-        // Sonuç ekranını oluştur
-        function createResultScreen(winnerText, winner) {
-            document.getElementById('winner-text').textContent = winnerText;
-            document.getElementById('winner-crown').textContent = winner ? '👑' : '🤝';
-            
-            const finalScores = document.getElementById('final-scores');
-            finalScores.innerHTML = '';
-            
-            // Skorlara göre sırala
-            const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
-            
-            sortedPlayers.forEach(player => {
-                const finalScore = document.createElement('div');
-                finalScore.className = 'final-score';
-                finalScore.innerHTML = `
-                    <div class="avatar">${player.character}</div>
-                    <div class="name">${player.name}</div>
-                    <div class="score">${player.score}</div>
-                `;
-                finalScores.appendChild(finalScore);
-            });
-        }
-
-        // Zamanlayıcı
+        // Timer
         function startTimer() {
             gameState.timeLeft = 15;
             gameState.gameActive = true;
@@ -1600,7 +1205,6 @@
                 gameState.timeLeft--;
                 updateTimerBar();
 
-                // Son 5 saniyede kalp atışı sesi
                 if (gameState.timeLeft <= 5 && gameState.timeLeft > 0) {
                     if (soundSystem) soundSystem.playTickSound();
                 }
@@ -1621,10 +1225,10 @@
         function timeUp() {
             gameState.gameActive = false;
             
-            // Doğru cevabı göster
             const question = gameState.questions[gameState.currentQuestion];
             document.querySelectorAll('.answer-btn').forEach(btn => {
                 btn.onclick = null;
+                btn.classList.add('disabled');
                 if (btn.textContent.startsWith(question.dogru + ')')) {
                     btn.classList.add('correct');
                 }
@@ -1633,6 +1237,54 @@
             setTimeout(() => {
                 nextQuestion();
             }, 2000);
+        }
+
+        // Oyun bitişi
+        function endGame() {
+            if (soundSystem) {
+                soundSystem.stopBackgroundMusic();
+            }
+
+            let highestScore = Math.max(...gameState.players.map(p => p.score));
+            let winners = gameState.players.filter(p => p.score === highestScore);
+            
+            let winnerText;
+            if (winners.length === 1) {
+                winnerText = `🎉 ${winners[0].name} Kazandı!`;
+            } else if (winners.length === gameState.players.length) {
+                winnerText = "🤝 Tam Beraberlik!";
+            } else {
+                winnerText = `🎉 ${winners.map(w => w.name).join(' & ')} Kazandı!`;
+            }
+
+            if (soundSystem) {
+                setTimeout(() => soundSystem.playVictorySound(), 500);
+            }
+
+            createResultScreen(winnerText, winners.length === 1 ? winners[0] : null);
+            saveToLeaderboard(winners.length === 1 ? winners[0] : null);
+            showScreen('result-screen');
+        }
+
+        function createResultScreen(winnerText, winner) {
+            document.getElementById('winner-text').textContent = winnerText;
+            document.getElementById('winner-crown').textContent = winner ? '👑' : '🤝';
+            
+            const finalScores = document.getElementById('final-scores');
+            finalScores.innerHTML = '';
+            
+            const sortedPlayers = [...gameState.players].sort((a, b) => b.score - a.score);
+            
+            sortedPlayers.forEach(player => {
+                const finalScore = document.createElement('div');
+                finalScore.className = 'final-score';
+                finalScore.innerHTML = `
+                    <div class="avatar">${player.character}</div>
+                    <div class="name">${player.name}</div>
+                    <div class="score">${player.score}</div>
+                `;
+                finalScores.appendChild(finalScore);
+            });
         }
 
         // Lider tablosu
@@ -1650,20 +1302,16 @@
                 timestamp: Date.now()
             };
 
-            // Günlük lider tablosu
             if (!dailyLeaders[today]) dailyLeaders[today] = [];
             dailyLeaders[today].push(gameData);
 
-            // Haftalık lider tablosu
             if (!weeklyLeaders[thisWeek]) weeklyLeaders[thisWeek] = [];
             weeklyLeaders[thisWeek].push(gameData);
 
-            // Son 10 oyunu sakla (günlük)
             if (dailyLeaders[today].length > 10) {
                 dailyLeaders[today] = dailyLeaders[today].slice(-10);
             }
 
-            // Son 50 oyunu sakla (haftalık)
             if (weeklyLeaders[thisWeek].length > 50) {
                 weeklyLeaders[thisWeek] = weeklyLeaders[thisWeek].slice(-50);
             }
@@ -1679,12 +1327,11 @@
             const dailyLeaders = JSON.parse(localStorage.getItem('dailyLeaders') || '{}')[today] || [];
             const weeklyLeaders = JSON.parse(localStorage.getItem('weeklyLeaders') || '{}')[thisWeek] || [];
 
-            // Günlük liderler
             const dailyContainer = document.getElementById('daily-leaders');
             dailyContainer.innerHTML = '';
             
             if (dailyLeaders.length === 0) {
-                dailyContainer.innerHTML = '<div class="leaderboard-entry">Henüz oyun oynанmadı</div>';
+                dailyContainer.innerHTML = '<div class="leaderboard-entry">Henüz oyun oynanmadı</div>';
             } else {
                 const sortedDaily = [...dailyLeaders].sort((a, b) => {
                     const aMaxScore = Math.max(...a.players.map(p => p.score));
@@ -1710,12 +1357,11 @@
                 });
             }
 
-            // Haftalık liderler
             const weeklyContainer = document.getElementById('weekly-leaders');
             weeklyContainer.innerHTML = '';
             
             if (weeklyLeaders.length === 0) {
-                weeklyContainer.innerHTML = '<div class="leaderboard-entry">Henüz oyun oynанmadı</div>';
+                weeklyContainer.innerHTML = '<div class="leaderboard-entry">Henüz oyun oynanmadı</div>';
             } else {
                 const sortedWeekly = [...weeklyLeaders].sort((a, b) => {
                     const aMaxScore = Math.max(...a.players.map(p => p.score));
@@ -1742,7 +1388,31 @@
             }
         }
 
-        // Klavye kontrolleri
+        // Yardımcı fonksiyonlar
+        function getWeekString() {
+            const now = new Date();
+            const yearStart = new Date(now.getFullYear(), 0, 1);
+            const week = Math.ceil(((now - yearStart) / 86400000 + yearStart.getDay() + 1) / 7);
+            return `${now.getFullYear()}-W${week}`;
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function containsBannedWords(text) {
+            const normalizedText = text.toLowerCase()
+                .replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's')
+                .replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c');
+            
+            return bannedWords.some(word => normalizedText.includes(word));
+        }
+
+        // Event listeners
         document.addEventListener('keydown', (e) => {
             if (document.getElementById('game-screen').classList.contains('active') && gameState.gameActive) {
                 if (soundSystem) soundSystem.playClickSound();
@@ -1759,7 +1429,6 @@
             }
         });
 
-        // Tüm butonlara ses efekti ekle
         document.addEventListener('click', (e) => {
             if ((e.target.classList.contains('btn') || e.target.classList.contains('character') || 
                  e.target.classList.contains('count-btn') || e.target.classList.contains('player-count-btn')) 
@@ -1768,209 +1437,8 @@
             }
         });
 
-        // Sayfa yüklendiğinde
         document.addEventListener('DOMContentLoaded', () => {
             console.log('⚽ Futbol Bilgi Arena v2.0 Hazır!');
-            console.log('🎮 Yeni Özellikler: Çok oyunculu, soru sayısı seçimi, ses kontrolü');
-        });
-    </script>
-</body>
-</html>
-            } else if (p2Score > p1Score) {
-                winner = gameState.player2;
-                winnerText = `🎉 ${gameState.player2.name} Kazandı!`;
-            } else {
-                winner = null;
-                winnerText = "🤝 Berabere!";
-            }
-
-            // Kazanma fanfarı
-            if (soundSystem) {
-                setTimeout(() => soundSystem.playVictorySound(), 500);
-            }
-
-            // Sonuç ekranını güncelle
-            document.getElementById('winner-text').textContent = winnerText;
-            document.getElementById('winner-crown').textContent = winner ? '👑' : '🤝';
-            
-            document.getElementById('final-p1-name').textContent = gameState.player1.name;
-            document.getElementById('final-p2-name').textContent = gameState.player2.name;
-            document.getElementById('final-p1-avatar').textContent = gameState.player1.character;
-            document.getElementById('final-p2-avatar').textContent = gameState.player2.character;
-            document.getElementById('final-p1-score').textContent = p1Score;
-            document.getElementById('final-p2-score').textContent = p2Score;
-
-            // Lider tablosuna kaydet
-            saveToLeaderboard(winner, p1Score, p2Score);
-
-            showScreen('result-screen');
-        }
-
-        // Lider tablosu
-        function saveToLeaderboard(winner, p1Score, p2Score) {
-            const today = new Date().toDateString();
-            const thisWeek = getWeekString();
-
-            let dailyLeaders = JSON.parse(localStorage.getItem('dailyLeaders') || '{}');
-            let weeklyLeaders = JSON.parse(localStorage.getItem('weeklyLeaders') || '{}');
-
-            // Günlük lider tablosu
-            if (!dailyLeaders[today]) dailyLeaders[today] = [];
-            dailyLeaders[today].push({
-                player1: { name: gameState.player1.name, character: gameState.player1.character, score: p1Score },
-                player2: { name: gameState.player2.name, character: gameState.player2.character, score: p2Score },
-                winner: winner ? winner.name : 'Berabere',
-                timestamp: Date.now()
-            });
-
-            // Haftalık lider tablosu
-            if (!weeklyLeaders[thisWeek]) weeklyLeaders[thisWeek] = [];
-            weeklyLeaders[thisWeek].push({
-                player1: { name: gameState.player1.name, character: gameState.player1.character, score: p1Score },
-                player2: { name: gameState.player2.name, character: gameState.player2.character, score: p2Score },
-                winner: winner ? winner.name : 'Berabere',
-                timestamp: Date.now()
-            });
-
-            // Son 10 oyunu sakla (günlük)
-            if (dailyLeaders[today].length > 10) {
-                dailyLeaders[today] = dailyLeaders[today].slice(-10);
-            }
-
-            // Son 50 oyunu sakla (haftalık)
-            if (weeklyLeaders[thisWeek].length > 50) {
-                weeklyLeaders[thisWeek] = weeklyLeaders[thisWeek].slice(-50);
-            }
-
-            localStorage.setItem('dailyLeaders', JSON.stringify(dailyLeaders));
-            localStorage.setItem('weeklyLeaders', JSON.stringify(weeklyLeaders));
-        }
-
-        function getWeekString() {
-            const now = new Date();
-            const yearStart = new Date(now.getFullYear(), 0, 1);
-            const week = Math.ceil(((now - yearStart) / 86400000 + yearStart.getDay() + 1) / 7);
-            return `${now.getFullYear()}-W${week}`;
-        }
-
-        function displayLeaderboard() {
-            const today = new Date().toDateString();
-            const thisWeek = getWeekString();
-
-            const dailyLeaders = JSON.parse(localStorage.getItem('dailyLeaders') || '{}')[today] || [];
-            const weeklyLeaders = JSON.parse(localStorage.getItem('weeklyLeaders') || '{}')[thisWeek] || [];
-
-            // Günlük liderler
-            const dailyContainer = document.getElementById('daily-leaders');
-            dailyContainer.innerHTML = '';
-            
-            if (dailyLeaders.length === 0) {
-                dailyContainer.innerHTML = '<div class="leaderboard-entry">Henüz oyun oynанmadı</div>';
-            } else {
-                const sortedDaily = [...dailyLeaders].sort((a, b) => {
-                    const aMaxScore = Math.max(a.player1.score, a.player2.score);
-                    const bMaxScore = Math.max(b.player1.score, b.player2.score);
-                    return bMaxScore - aMaxScore;
-                }).slice(0, 5);
-
-                sortedDaily.forEach((game, index) => {
-                    const maxScore = Math.max(game.player1.score, game.player2.score);
-                    const topPlayer = game.player1.score >= game.player2.score ? game.player1 : game.player2;
-                    
-                    const entry = document.createElement('div');
-                    entry.className = 'leaderboard-entry';
-                    entry.innerHTML = `
-                        <div>
-                            <span class="trophy">${index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '🏆'}</span>
-                            <strong>${topPlayer.name}</strong> ${topPlayer.character}
-                        </div>
-                        <div><strong>${maxScore}</strong> puan</div>
-                    `;
-                    dailyContainer.appendChild(entry);
-                });
-            }
-
-            // Haftalık liderler
-            const weeklyContainer = document.getElementById('weekly-leaders');
-            weeklyContainer.innerHTML = '';
-            
-            if (weeklyLeaders.length === 0) {
-                weeklyContainer.innerHTML = '<div class="leaderboard-entry">Henüz oyun oynанmadı</div>';
-            } else {
-                const sortedWeekly = [...weeklyLeaders].sort((a, b) => {
-                    const aMaxScore = Math.max(a.player1.score, a.player2.score);
-                    const bMaxScore = Math.max(b.player1.score, b.player2.score);
-                    return bMaxScore - aMaxScore;
-                }).slice(0, 10);
-
-                sortedWeekly.forEach((game, index) => {
-                    const maxScore = Math.max(game.player1.score, game.player2.score);
-                    const topPlayer = game.player1.score >= game.player2.score ? game.player1 : game.player2;
-                    
-                    const entry = document.createElement('div');
-                    entry.className = 'leaderboard-entry';
-                    entry.innerHTML = `
-                        <div>
-                            <span class="trophy">${index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '🏆'}</span>
-                            <strong>${topPlayer.name}</strong> ${topPlayer.character}
-                        </div>
-                        <div><strong>${maxScore}</strong> puan</div>
-                    `;
-                    weeklyContainer.appendChild(entry);
-                });
-            }
-        }
-
-        // Klavye kontrolleri
-        document.addEventListener('keydown', (e) => {
-            if (document.getElementById('game-screen').classList.contains('active') && gameState.gameActive) {
-                if (soundSystem) soundSystem.playClickSound();
-                
-                if (e.key === '1' || e.key.toLowerCase() === 'a') {
-                    document.querySelector('.answer-btn').click();
-                } else if (e.key === '2' || e.key.toLowerCase() === 'b') {
-                    document.querySelectorAll('.answer-btn')[1].click();
-                } else if (e.key === '3' || e.key.toLowerCase() === 'c') {
-                    document.querySelectorAll('.answer-btn')[2].click();
-                } else if (e.key === '4' || e.key.toLowerCase() === 'd') {
-                    document.querySelectorAll('.answer-btn')[3].click();
-                }
-            }
-        });
-
-        // Tüm butonlara ses efekti ekle
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('btn') || e.target.classList.contains('character')) {
-                if (soundSystem) soundSystem.playClickSound();
-            }
-        });
-
-        // Sayfa yüklendiğinde
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('⚽ Futbol Bilgi Arena Hazır!');
-            
-            // Kullanıcı etkileşimi bekleniyor mesajı
-            const welcomeMessage = document.createElement('div');
-            welcomeMessage.style.cssText = `
-                position: fixed;
-                top: 10px;
-                right: 10px;
-                background: rgba(0,0,0,0.8);
-                color: white;
-                padding: 10px 15px;
-                border-radius: 10px;
-                font-size: 0.9em;
-                z-index: 1000;
-                animation: fadeIn 0.5s ease-in;
-            `;
-            welcomeMessage.textContent = '🔊 Ses efektleri oyuna başladığınızda aktifleşecek';
-            document.body.appendChild(welcomeMessage);
-            
-            // 5 saniye sonra mesajı kaldır
-            setTimeout(() => {
-                welcomeMessage.style.opacity = '0';
-                setTimeout(() => welcomeMessage.remove(), 500);
-            }, 5000);
         });
     </script>
 </body>
