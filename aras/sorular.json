@@ -1,0 +1,9002 @@
+[
+  {
+    "soru": "'Old Trafford' hangi kulübün stadyumudur?",
+    "secenekler": {
+      "A": "Manchester United",
+      "B": "Chelsea",
+      "C": "Atletico Madrid",
+      "D": "LA Galaxy"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Avustralya",
+      "B": "Arjantin",
+      "C": "Katar",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Arjantin",
+      "C": "Almanya",
+      "D": "Şili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Top toplayıcılar",
+      "C": "Hakemler",
+      "D": "Yedek oyuncular ve teknik ekip"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Mesut Özil hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Kaleci",
+      "B": "Orta saha",
+      "C": "Defans",
+      "D": "Forvet"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Liverpool kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Madrid",
+      "C": "Amsterdam",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Robert Lewandowski hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Avustralya",
+      "C": "Polonya",
+      "D": "Hırvatistan"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Polonya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Madrid",
+      "C": "Liverpool",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Porto",
+      "C": "Barselona",
+      "D": "Manchester"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Milano",
+      "C": "Barselona",
+      "D": "Liverpool"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "7.5 m",
+      "C": "5 m",
+      "D": "11 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Amsterdam",
+      "C": "Barselona",
+      "D": "Torino"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Norveç",
+      "B": "Fransa",
+      "C": "Fildişi Sahili",
+      "D": "İtalya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Liverpool kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Manchester",
+      "C": "Amsterdam",
+      "D": "Porto"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Luka Modrić hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Kaleci",
+      "B": "Defans",
+      "C": "Forvet",
+      "D": "Orta saha"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hırvatistan",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "İstanbul",
+      "C": "Manchester",
+      "D": "Barselona"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Hollanda",
+      "B": "Fransa",
+      "C": "Polonya",
+      "D": "Avustralya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Manchester United' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Avustralya",
+      "C": "Türkiye",
+      "D": "İngiltere"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Portekiz",
+      "B": "Japonya",
+      "C": "Hırvatistan",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Cristiano Ronaldo hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Forvet",
+      "B": "Kaleci",
+      "C": "Defans",
+      "D": "Orta saha"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Tek elle yandan",
+      "B": "İki elle baş üzerinden",
+      "C": "Dirsekle",
+      "D": "Ayakla"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Amsterdam",
+      "C": "Porto",
+      "D": "Torino"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Manchester",
+      "C": "İstanbul",
+      "D": "Porto"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "İki elle baş üzerinden",
+      "B": "Ayakla",
+      "C": "Tek elle yandan",
+      "D": "Dirsekle"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "1998 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "Şili",
+      "C": "İsviçre",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": 1998,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "1.5 m",
+      "B": "0.5 m",
+      "C": "3 m",
+      "D": "2.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Top toplayıcılar",
+      "B": "Taraftarlar",
+      "C": "Hakemler",
+      "D": "Yedek oyuncular ve teknik ekip"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "10",
+      "C": "9",
+      "D": "12"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Porto",
+      "B": "Paris",
+      "C": "Liverpool",
+      "D": "Madrid"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Porto",
+      "C": "Manchester",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "5 m",
+      "C": "11 m",
+      "D": "7.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Carles Puyol hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Forvet",
+      "B": "Defans",
+      "C": "Orta saha",
+      "D": "Kaleci"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Barselona",
+      "C": "Münih",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Pelé hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Defans",
+      "B": "Orta saha",
+      "C": "Forvet",
+      "D": "Kaleci"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "5 m",
+      "C": "11 m",
+      "D": "7.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Amsterdam",
+      "C": "Barselona",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "İstanbul",
+      "C": "Lizbon",
+      "D": "Manchester"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "10",
+      "B": "11",
+      "C": "9",
+      "D": "12"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "2010 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Meksika",
+      "C": "Güney Afrika",
+      "D": "Katar"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": 2010,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "İtalya",
+      "C": "Arjantin",
+      "D": "Fas"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Erling Haaland hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Hırvatistan",
+      "B": "Mısır",
+      "C": "Norveç",
+      "D": "Suudi Arabistan"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Norveç",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Münih",
+      "C": "Barselona",
+      "D": "Porto"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Porto",
+      "C": "İstanbul",
+      "D": "Manchester"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Iker Casillas hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İtalya",
+      "B": "Norveç",
+      "C": "İngiltere",
+      "D": "İspanya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Hakemler",
+      "C": "Top toplayıcılar",
+      "D": "Yedek oyuncular ve teknik ekip"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Amsterdam",
+      "C": "Porto",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fas",
+      "B": "Rusya",
+      "C": "Japonya",
+      "D": "ABD"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Torino",
+      "C": "Milano",
+      "D": "Liverpool"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "9.15 m",
+      "C": "16.5 m",
+      "D": "5.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Türkiye",
+      "B": "İspanya",
+      "C": "Rusya",
+      "D": "Uruguay"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Rusya",
+      "C": "Japonya",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Paris",
+      "C": "Porto",
+      "D": "Münih"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "16.5 m",
+      "C": "9.15 m",
+      "D": "5.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Madrid",
+      "C": "Paris",
+      "D": "Barselona"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Sahanın orta noktasından",
+      "B": "Taç çizgisinden",
+      "C": "Korner köşesinden",
+      "D": "Ceza sahası içinden"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Almanya",
+      "C": "Fransa",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Paris",
+      "C": "Milano",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Diego Maradona hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Kaleci",
+      "B": "Defans",
+      "C": "Orta saha",
+      "D": "Forvet"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Lizbon",
+      "C": "Barselona",
+      "D": "İstanbul"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Münih",
+      "C": "İstanbul",
+      "D": "Paris"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "7.5 m",
+      "C": "5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "5.5 m",
+      "B": "11 m",
+      "C": "16.5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Lionel Messi hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Nijerya",
+      "B": "Mısır",
+      "C": "Avustralya",
+      "D": "Arjantin"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "10",
+      "B": "9",
+      "C": "12",
+      "D": "11"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Porto",
+      "C": "İstanbul",
+      "D": "Amsterdam"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "İstanbul",
+      "C": "Amsterdam",
+      "D": "Liverpool"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "İstanbul",
+      "C": "Manchester",
+      "D": "Madrid"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Ceza sahası içinden",
+      "B": "Taç çizgisinden",
+      "C": "Sahanın orta noktasından",
+      "D": "Korner köşesinden"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Ceza sahası içinden",
+      "B": "Sahanın orta noktasından",
+      "C": "Taç çizgisinden",
+      "D": "Korner köşesinden"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Carles Puyol hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Güney Kore",
+      "B": "Mısır",
+      "C": "İspanya",
+      "D": "Şili"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Hollanda",
+      "B": "İngiltere",
+      "C": "Mısır",
+      "D": "Almanya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Arsenal' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Polonya",
+      "B": "İngiltere",
+      "C": "Nijerya",
+      "D": "Rusya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "İki elle baş üzerinden",
+      "B": "Tek elle yandan",
+      "C": "Dirsekle",
+      "D": "Ayakla"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "11 m",
+      "C": "9.15 m",
+      "D": "5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Fenerbahçe' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Meksika",
+      "B": "ABD",
+      "C": "Kanada",
+      "D": "Türkiye"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Lizbon",
+      "C": "Paris",
+      "D": "Barselona"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "Hırvatistan",
+      "C": "Güney Kore",
+      "D": "ABD"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "7.5 m",
+      "C": "5 m",
+      "D": "11 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Gana",
+      "B": "Fransa",
+      "C": "Nijerya",
+      "D": "Fas"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Borussia Dortmund' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Nijerya",
+      "B": "Almanya",
+      "C": "Avustralya",
+      "D": "Meksika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "9",
+      "B": "12",
+      "C": "11",
+      "D": "10"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Barselona",
+      "C": "Porto",
+      "D": "Torino"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Top toplayıcılar",
+      "B": "Taraftarlar",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Hakemler"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Penaltı vuruşu hangi noktadan kullanılır?",
+    "secenekler": {
+      "A": "Penaltı noktası",
+      "B": "Korner yayı",
+      "C": "Ceza yayı",
+      "D": "Kale çizgisi"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Manchester",
+      "C": "Amsterdam",
+      "D": "Porto"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1954 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "İsveç",
+      "B": "Almanya",
+      "C": "Uruguay",
+      "D": "İsviçre"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": 1954,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Yardımcı hakem",
+      "B": "Kale hakemi",
+      "C": "Teknik direktör",
+      "D": "Gözlemci"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Porto",
+      "C": "Paris",
+      "D": "Manchester"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "11 m",
+      "C": "16.5 m",
+      "D": "5.5 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Meksika",
+      "B": "Norveç",
+      "C": "Brezilya",
+      "D": "Mısır"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Lizbon",
+      "C": "Torino",
+      "D": "Paris"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Hollanda",
+      "C": "İtalya",
+      "D": "Portekiz"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Zinedine Zidane hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Fransa",
+      "B": "Norveç",
+      "C": "Hırvatistan",
+      "D": "Polonya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "7.5 m",
+      "C": "9.15 m",
+      "D": "5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Hırvatistan",
+      "B": "Portekiz",
+      "C": "Fransa",
+      "D": "Mısır"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Barselona",
+      "C": "Milano",
+      "D": "Lizbon"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "İstanbul",
+      "C": "Barselona",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Torino",
+      "C": "Lizbon",
+      "D": "İstanbul"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Hakemler",
+      "B": "Top toplayıcılar",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Taraftarlar"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "İstanbul",
+      "C": "Paris",
+      "D": "Torino"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "Arjantin",
+      "C": "Kolombiya",
+      "D": "Belçika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "10",
+      "B": "9",
+      "C": "11",
+      "D": "12"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Türkiye'nin en büyük stadyumu hangisidir?",
+    "secenekler": {
+      "A": "Vodafone Park",
+      "B": "Şükrü Saracoğlu",
+      "C": "Atatürk Olimpiyat Stadı",
+      "D": "RAMS Park"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "5.5 m",
+      "C": "11 m",
+      "D": "16.5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Liverpool",
+      "C": "Milano",
+      "D": "Amsterdam"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Milano",
+      "C": "Torino",
+      "D": "Barselona"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Paris",
+      "C": "İstanbul",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Yedek oyuncular ve teknik ekip",
+      "B": "Hakemler",
+      "C": "Taraftarlar",
+      "D": "Top toplayıcılar"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Pelé hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Belçika",
+      "B": "İspanya",
+      "C": "Kolombiya",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Porto",
+      "B": "İstanbul",
+      "C": "Milano",
+      "D": "Paris"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Madrid",
+      "C": "İstanbul",
+      "D": "Liverpool"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Teknik direktör",
+      "B": "Kale hakemi",
+      "C": "Gözlemci",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Neymar hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Forvet",
+      "B": "Defans",
+      "C": "Kaleci",
+      "D": "Orta saha"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Boca Juniors' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Uruguay",
+      "B": "İtalya",
+      "C": "Arjantin",
+      "D": "Almanya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Lizbon",
+      "C": "Milano",
+      "D": "Torino"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Manchester",
+      "C": "Madrid",
+      "D": "Paris"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Madrid",
+      "C": "Lizbon",
+      "D": "Manchester"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Japonya",
+      "B": "Almanya",
+      "C": "İtalya",
+      "D": "Portekiz"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'PSV' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Hollanda",
+      "C": "Suudi Arabistan",
+      "D": "Belçika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "9",
+      "B": "10",
+      "C": "11",
+      "D": "12"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Almanya",
+      "C": "Polonya",
+      "D": "Kolombiya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "16.5 m",
+      "B": "11 m",
+      "C": "5.5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Katar",
+      "B": "Hollanda",
+      "C": "Japonya",
+      "D": "Avustralya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "2018 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "Rusya",
+      "C": "Brezilya",
+      "D": "Katar"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 2018,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "0.5 m",
+      "B": "3 m",
+      "C": "2.5 m",
+      "D": "1.5 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Kylian Mbappé hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Fas",
+      "B": "İngiltere",
+      "C": "İspanya",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Galatasaray hangi şehirde kurulmuştur?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Ankara",
+      "C": "Bursa",
+      "D": "İzmir"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Milano",
+      "C": "Barselona",
+      "D": "Manchester"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Liverpool",
+      "C": "Milano",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Milano",
+      "C": "Münih",
+      "D": "Liverpool"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Hakemler",
+      "B": "Yedek oyuncular ve teknik ekip",
+      "C": "Taraftarlar",
+      "D": "Top toplayıcılar"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Milano",
+      "C": "Barselona",
+      "D": "Liverpool"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "16.5 m",
+      "B": "5.5 m",
+      "C": "11 m",
+      "D": "9.15 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Kolombiya",
+      "B": "Hollanda",
+      "C": "Gana",
+      "D": "Mısır"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Münih",
+      "C": "İstanbul",
+      "D": "Madrid"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Uruguay",
+      "C": "Hollanda",
+      "D": "Brezilya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Katar",
+      "B": "Japonya",
+      "C": "Brezilya",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Norveç",
+      "B": "Arjantin",
+      "C": "Fransa",
+      "D": "Polonya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Torino",
+      "C": "Münih",
+      "D": "İstanbul"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "ABD",
+      "B": "İtalya",
+      "C": "Norveç",
+      "D": "Hollanda"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Barcelona' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "Japonya",
+      "C": "ABD",
+      "D": "Kanada"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Taç çizgisinden",
+      "C": "Sahanın orta noktasından",
+      "D": "Ceza sahası içinden"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Arjantin",
+      "C": "Fildişi Sahili",
+      "D": "Fransa"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Top toplayıcılar",
+      "C": "Hakemler",
+      "D": "Yedek oyuncular ve teknik ekip"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Arjantin kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "2"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Sahanın orta noktasından",
+      "B": "Korner köşesinden",
+      "C": "Ceza sahası içinden",
+      "D": "Taç çizgisinden"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Meksika",
+      "B": "Fransa",
+      "C": "Mısır",
+      "D": "Fildişi Sahili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Liverpool",
+      "C": "Porto",
+      "D": "Paris"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "5.5 m",
+      "C": "16.5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "7.5 m",
+      "C": "11 m",
+      "D": "5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "11 m",
+      "C": "5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Nijerya",
+      "C": "Arjantin",
+      "D": "Almanya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fildişi Sahili",
+      "B": "Belçika",
+      "C": "Brezilya",
+      "D": "Güney Kore"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "Şili",
+      "C": "Katar",
+      "D": "Norveç"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Sahanın orta noktasından",
+      "C": "Ceza sahası içinden",
+      "D": "Taç çizgisinden"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Porto",
+      "C": "İstanbul",
+      "D": "Münih"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Barselona",
+      "C": "Porto",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "İki elle baş üzerinden",
+      "B": "Dirsekle",
+      "C": "Tek elle yandan",
+      "D": "Ayakla"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Ceza sahası içinden",
+      "B": "Korner köşesinden",
+      "C": "Taç çizgisinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Portekiz",
+      "B": "Suudi Arabistan",
+      "C": "Avustralya",
+      "D": "Rusya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Madrid",
+      "C": "Lizbon",
+      "D": "Porto"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "Hollanda",
+      "C": "Şili",
+      "D": "Fas"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Kırmızı kart gören oyuncunun durumu nedir?",
+    "secenekler": {
+      "A": "Uyarı alır",
+      "B": "Kaleye geçer",
+      "C": "Oyundan çıkar",
+      "D": "Korner kullanır"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Brezilya",
+      "C": "Hırvatistan",
+      "D": "Nijerya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "11 m",
+      "C": "5 m",
+      "D": "7.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Lizbon",
+      "C": "İstanbul",
+      "D": "Paris"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "Hollanda",
+      "C": "Norveç",
+      "D": "Fas"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "İki elle baş üzerinden",
+      "B": "Dirsekle",
+      "C": "Ayakla",
+      "D": "Tek elle yandan"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Uruguay",
+      "B": "Suudi Arabistan",
+      "C": "İspanya",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Hırvatistan",
+      "B": "Gana",
+      "C": "ABD",
+      "D": "Hollanda"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Gözlemci",
+      "B": "Yardımcı hakem",
+      "C": "Teknik direktör",
+      "D": "Kale hakemi"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "11 m",
+      "C": "5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'LA Galaxy' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Kanada",
+      "B": "ABD",
+      "C": "Suudi Arabistan",
+      "D": "Hollanda"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "ABD",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Kuzey Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Lizbon",
+      "C": "Amsterdam",
+      "D": "Paris"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Milano",
+      "C": "Madrid",
+      "D": "İstanbul"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Inter Miami' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Fransa",
+      "B": "İtalya",
+      "C": "ABD",
+      "D": "Rusya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "ABD",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Kuzey Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Belçika",
+      "B": "Hollanda",
+      "C": "Kanada",
+      "D": "Japonya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Porto",
+      "B": "Liverpool",
+      "C": "Lizbon",
+      "D": "Münih"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Porto",
+      "C": "Milano",
+      "D": "Lizbon"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Gana",
+      "B": "Almanya",
+      "C": "Fas",
+      "D": "Arjantin"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "Tek elle yandan",
+      "C": "Ayakla",
+      "D": "İki elle baş üzerinden"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Lizbon",
+      "C": "Milano",
+      "D": "Liverpool"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Porto",
+      "C": "Paris",
+      "D": "Amsterdam"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Liverpool kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Porto",
+      "C": "Lizbon",
+      "D": "Manchester"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "10",
+      "C": "12",
+      "D": "9"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "Norveç",
+      "C": "Arjantin",
+      "D": "Kolombiya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "12",
+      "B": "10",
+      "C": "9",
+      "D": "11"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Barselona",
+      "C": "Paris",
+      "D": "Lizbon"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Harry Kane hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Orta saha",
+      "B": "Kaleci",
+      "C": "Forvet",
+      "D": "Defans"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Madrid",
+      "C": "Torino",
+      "D": "İstanbul"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Barselona",
+      "C": "Liverpool",
+      "D": "Lizbon"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Real Madrid' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "İspanya",
+      "C": "Gana",
+      "D": "Almanya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Milano",
+      "C": "Torino",
+      "D": "Madrid"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Porto",
+      "C": "Lizbon",
+      "D": "Paris"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Kevin De Bruyne hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Japonya",
+      "B": "Belçika",
+      "C": "Hırvatistan",
+      "D": "Suudi Arabistan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Belçika",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Porto",
+      "C": "Lizbon",
+      "D": "Madrid"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Uzatma süresi normalde kaç dakikadır?",
+    "secenekler": {
+      "A": "2x15",
+      "B": "2x25",
+      "C": "2x10",
+      "D": "2x20"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "1930 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Meksika",
+      "C": "Uruguay",
+      "D": "Rusya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": 1930,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Lizbon",
+      "C": "Münih",
+      "D": "Barselona"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "Tek elle yandan",
+      "C": "Ayakla",
+      "D": "İki elle baş üzerinden"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Torino",
+      "C": "Liverpool",
+      "D": "Porto"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Barselona",
+      "C": "Liverpool",
+      "D": "Münih"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Amsterdam",
+      "C": "İstanbul",
+      "D": "Madrid"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "İstanbul",
+      "C": "Paris",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Benfica' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Japonya",
+      "B": "İtalya",
+      "C": "Hollanda",
+      "D": "Portekiz"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1982 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "Brezilya",
+      "C": "İsveç",
+      "D": "İspanya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": 1982,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "12",
+      "B": "11",
+      "C": "10",
+      "D": "9"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "1978 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "İspanya",
+      "C": "İsviçre",
+      "D": "İsveç"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": 1978,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Sahanın orta noktasından",
+      "B": "Korner köşesinden",
+      "C": "Ceza sahası içinden",
+      "D": "Taç çizgisinden"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Brezilya",
+      "C": "Rusya",
+      "D": "Kolombiya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Paris Saint-Germain' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Fransa",
+      "B": "İspanya",
+      "C": "ABD",
+      "D": "Mısır"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Yedek oyuncular ve teknik ekip",
+      "C": "Top toplayıcılar",
+      "D": "Hakemler"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "Katar",
+      "C": "Uruguay",
+      "D": "Meksika"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Hollanda",
+      "C": "Japonya",
+      "D": "Şili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "2006 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Şili",
+      "C": "Brezilya",
+      "D": "Rusya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": 2006,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Ajax' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Güney Kore",
+      "B": "Kolombiya",
+      "C": "Hollanda",
+      "D": "Gana"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Madrid",
+      "C": "Barselona",
+      "D": "Milano"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Gözlemci",
+      "B": "Teknik direktör",
+      "C": "Kale hakemi",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "5.5 m",
+      "C": "11 m",
+      "D": "16.5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Liverpool",
+      "C": "Torino",
+      "D": "Lizbon"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Manchester City' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Hollanda",
+      "C": "Nijerya",
+      "D": "Şili"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "Norveç",
+      "C": "Arjantin",
+      "D": "Uruguay"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Luka Modrić hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Belçika",
+      "B": "Norveç",
+      "C": "Portekiz",
+      "D": "Hırvatistan"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hırvatistan",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "10",
+      "B": "9",
+      "C": "12",
+      "D": "11"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Liverpool kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Liverpool",
+      "C": "Barselona",
+      "D": "Paris"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Liverpool",
+      "C": "Barselona",
+      "D": "İstanbul"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "5.5 m",
+      "C": "16.5 m",
+      "D": "11 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "İstanbul",
+      "C": "Liverpool",
+      "D": "Torino"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Lev Yaşin hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Forvet",
+      "B": "Kaleci",
+      "C": "Orta saha",
+      "D": "Defans"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir kaleci topu en fazla kaç saniye elde tutabilir?",
+    "secenekler": {
+      "A": "4",
+      "B": "7",
+      "C": "5",
+      "D": "6"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Milan' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Kanada",
+      "B": "Fildişi Sahili",
+      "C": "Brezilya",
+      "D": "İtalya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Münih",
+      "C": "İstanbul",
+      "D": "Manchester"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Gözlemci",
+      "B": "Yardımcı hakem",
+      "C": "Teknik direktör",
+      "D": "Kale hakemi"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "5 m",
+      "B": "11 m",
+      "C": "9.15 m",
+      "D": "7.5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Amsterdam",
+      "C": "Lizbon",
+      "D": "Liverpool"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Liverpool",
+      "C": "Madrid",
+      "D": "İstanbul"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "16.5 m",
+      "B": "5.5 m",
+      "C": "11 m",
+      "D": "9.15 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fransa",
+      "B": "Güney Kore",
+      "C": "Avustralya",
+      "D": "Katar"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Sergio Ramos hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Forvet",
+      "B": "Defans",
+      "C": "Orta saha",
+      "D": "Kaleci"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Meksika",
+      "B": "Avustralya",
+      "C": "Almanya",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "16.5 m",
+      "C": "9.15 m",
+      "D": "5.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "9",
+      "C": "10",
+      "D": "12"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Ceza sahası içinden",
+      "C": "Taç çizgisinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "2.5 m",
+      "B": "0.5 m",
+      "C": "3 m",
+      "D": "1.5 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Münih",
+      "C": "Porto",
+      "D": "Milano"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Yedek oyuncular ve teknik ekip",
+      "B": "Taraftarlar",
+      "C": "Hakemler",
+      "D": "Top toplayıcılar"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Amsterdam",
+      "C": "Manchester",
+      "D": "Lizbon"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "Mısır",
+      "C": "Hollanda",
+      "D": "Almanya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "11 m",
+      "C": "5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Santos' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Belçika",
+      "B": "Mısır",
+      "C": "İspanya",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Lionel Messi hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Kaleci",
+      "B": "Defans",
+      "C": "Orta saha",
+      "D": "Forvet"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Taç çizgisinden",
+      "C": "Sahanın orta noktasından",
+      "D": "Ceza sahası içinden"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Kolombiya",
+      "B": "Arjantin",
+      "C": "Belçika",
+      "D": "Mısır"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "2.5 m",
+      "B": "3 m",
+      "C": "0.5 m",
+      "D": "1.5 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Madrid",
+      "C": "Lizbon",
+      "D": "Münih"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Gianluigi Buffon hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Orta saha",
+      "B": "Kaleci",
+      "C": "Forvet",
+      "D": "Defans"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Trabzonspor' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Polonya",
+      "C": "Mısır",
+      "D": "Türkiye"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "İstanbul",
+      "C": "Amsterdam",
+      "D": "Lizbon"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Yedek oyuncular ve teknik ekip",
+      "B": "Hakemler",
+      "C": "Taraftarlar",
+      "D": "Top toplayıcılar"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Milano",
+      "C": "Lizbon",
+      "D": "Liverpool"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "İstanbul",
+      "C": "Torino",
+      "D": "Amsterdam"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Teknik direktör",
+      "B": "Kale hakemi",
+      "C": "Yardımcı hakem",
+      "D": "Gözlemci"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "2002 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Güney Afrika",
+      "B": "İngiltere",
+      "C": "Meksika",
+      "D": "Güney Kore & Japonya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": 2002,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Virgil van Dijk hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Polonya",
+      "B": "Rusya",
+      "C": "Hollanda",
+      "D": "Meksika"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Tek elle yandan",
+      "B": "Dirsekle",
+      "C": "İki elle baş üzerinden",
+      "D": "Ayakla"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Şili",
+      "C": "Arjantin",
+      "D": "Brezilya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Paris",
+      "C": "Amsterdam",
+      "D": "İstanbul"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Meksika",
+      "C": "İngiltere",
+      "D": "Mısır"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Amsterdam",
+      "C": "Lizbon",
+      "D": "Paris"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Porto",
+      "C": "Milano",
+      "D": "Paris"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Madrid",
+      "C": "Münih",
+      "D": "İstanbul"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Lev Yaşin hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Rusya",
+      "C": "İtalya",
+      "D": "Brezilya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Yedek oyuncular ve teknik ekip",
+      "C": "Hakemler",
+      "D": "Top toplayıcılar"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "3 m",
+      "B": "1.5 m",
+      "C": "2.5 m",
+      "D": "0.5 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fildişi Sahili",
+      "B": "Hollanda",
+      "C": "Brezilya",
+      "D": "Güney Kore"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Hakemler",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Top toplayıcılar"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Torino",
+      "C": "Paris",
+      "D": "Amsterdam"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Top toplayıcılar",
+      "B": "Taraftarlar",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Hakemler"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Chelsea' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Fildişi Sahili",
+      "B": "İngiltere",
+      "C": "ABD",
+      "D": "Gana"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "2022 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "Katar",
+      "C": "Almanya",
+      "D": "İtalya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 2022,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Virgil van Dijk hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Orta saha",
+      "B": "Defans",
+      "C": "Kaleci",
+      "D": "Forvet"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Hakemler",
+      "B": "Top toplayıcılar",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Taraftarlar"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "9.15 m",
+      "C": "5 m",
+      "D": "11 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Anfield' hangi kulübün stadyumudur?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Paris Saint-Germain",
+      "C": "Inter Miami",
+      "D": "Manchester United"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "Almanya",
+      "C": "Portekiz",
+      "D": "Türkiye"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Ceza sahası içinden",
+      "B": "Korner köşesinden",
+      "C": "Taç çizgisinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "1962 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "Fransa",
+      "C": "Meksika",
+      "D": "Şili"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": 1962,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Allianz Arena' hangi kulübün stadyumudur?",
+    "secenekler": {
+      "A": "Bayern Münih",
+      "B": "Paris Saint-Germain",
+      "C": "LA Galaxy",
+      "D": "Borussia Dortmund"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "7.5 m",
+      "C": "5 m",
+      "D": "11 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Türkiye'nin profesyonel ulusal ligi (1959'da başlayan) hangisidir?",
+    "secenekler": {
+      "A": "1. Lig",
+      "B": "Süper Lig",
+      "C": "TFF 2. Lig",
+      "D": "Bölgesel Amatör Lig"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "10",
+      "C": "12",
+      "D": "9"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Sahanın orta noktasından",
+      "C": "Ceza sahası içinden",
+      "D": "Taç çizgisinden"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Taç çizgisinden",
+      "B": "Ceza sahası içinden",
+      "C": "Sahanın orta noktasından",
+      "D": "Korner köşesinden"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Milano",
+      "C": "Paris",
+      "D": "Amsterdam"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fas",
+      "B": "Rusya",
+      "C": "İspanya",
+      "D": "ABD"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Barselona",
+      "C": "İstanbul",
+      "D": "Münih"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Gana",
+      "B": "Uruguay",
+      "C": "Almanya",
+      "D": "Belçika"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Paris",
+      "C": "Madrid",
+      "D": "Liverpool"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "16.5 m",
+      "B": "5.5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Manchester",
+      "C": "Madrid",
+      "D": "Porto"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Diego Maradona hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İtalya",
+      "B": "Arjantin",
+      "C": "Hollanda",
+      "D": "Fransa"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Nijerya",
+      "B": "Uruguay",
+      "C": "Fransa",
+      "D": "Portekiz"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Gözlemci",
+      "B": "Kale hakemi",
+      "C": "Teknik direktör",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Paris",
+      "C": "Münih",
+      "D": "İstanbul"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Marsilya' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Meksika",
+      "B": "Fas",
+      "C": "Suudi Arabistan",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Norveç",
+      "B": "Nijerya",
+      "C": "ABD",
+      "D": "Hollanda"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "İspanya kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "0",
+      "B": "3",
+      "C": "1",
+      "D": "2"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Kolombiya",
+      "C": "Rusya",
+      "D": "Güney Kore"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışını kim kullanır?",
+    "secenekler": {
+      "A": "Hakem",
+      "B": "Topa en son dokunan takım",
+      "C": "Kaleci",
+      "D": "Topa en son dokunmayan takım"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "Avustralya",
+      "C": "Gana",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Yardımcı hakem",
+      "B": "Teknik direktör",
+      "C": "Gözlemci",
+      "D": "Kale hakemi"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Porto",
+      "C": "Madrid",
+      "D": "Liverpool"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Ayakla",
+      "B": "Tek elle yandan",
+      "C": "İki elle baş üzerinden",
+      "D": "Dirsekle"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Lizbon",
+      "C": "Torino",
+      "D": "Manchester"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Milano",
+      "C": "Porto",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Milano",
+      "C": "Amsterdam",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "16.5 m",
+      "C": "5.5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Milano",
+      "C": "İstanbul",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "Almanya",
+      "C": "Hırvatistan",
+      "D": "Fildişi Sahili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'River Plate' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "Fransa",
+      "C": "İtalya",
+      "D": "ABD"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "ABD",
+      "B": "Brezilya",
+      "C": "Hırvatistan",
+      "D": "Mısır"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "3 m",
+      "B": "2.5 m",
+      "C": "0.5 m",
+      "D": "1.5 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ajax kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "İstanbul",
+      "C": "Lizbon",
+      "D": "Porto"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Galatasaray kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Manchester",
+      "C": "İstanbul",
+      "D": "Liverpool"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Madrid",
+      "C": "Manchester",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "İki elle baş üzerinden",
+      "C": "Ayakla",
+      "D": "Tek elle yandan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Sahanın orta noktasından",
+      "C": "Taç çizgisinden",
+      "D": "Ceza sahası içinden"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Madrid",
+      "C": "Paris",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fransa",
+      "B": "Japonya",
+      "C": "Arjantin",
+      "D": "Norveç"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "İki elle baş üzerinden",
+      "C": "Ayakla",
+      "D": "Tek elle yandan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Mısır",
+      "B": "Fas",
+      "C": "Brezilya",
+      "D": "Suudi Arabistan"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "2.5 m",
+      "B": "0.5 m",
+      "C": "3 m",
+      "D": "1.5 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Mesut Özil hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "Güney Kore",
+      "C": "Arjantin",
+      "D": "Almanya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Porto' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Portekiz",
+      "B": "Fransa",
+      "C": "Belçika",
+      "D": "Fildişi Sahili"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "İtalya kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "6",
+      "B": "4",
+      "C": "5",
+      "D": "3"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fildişi Sahili",
+      "B": "Arjantin",
+      "C": "İngiltere",
+      "D": "Suudi Arabistan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Sahanın orta noktasından",
+      "B": "Korner köşesinden",
+      "C": "Taç çizgisinden",
+      "D": "Ceza sahası içinden"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Gol vuruşu (aut) hangi takım tarafından kullanılır?",
+    "secenekler": {
+      "A": "Hakem",
+      "B": "Savunma",
+      "C": "Hücum",
+      "D": "Her iki takım"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Neymar hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Uruguay",
+      "B": "Güney Kore",
+      "C": "Portekiz",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Bayern Münih' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Gana",
+      "B": "Türkiye",
+      "C": "Almanya",
+      "D": "Kolombiya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "UEFA Şampiyonlar Ligi'ni tarihte en çok kazanan kulüp hangisidir?",
+    "secenekler": {
+      "A": "Bayern Münih",
+      "B": "Liverpool",
+      "C": "Milan",
+      "D": "Real Madrid"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": "UEFA Şampiyonlar Ligi",
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Flamengo' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Hırvatistan",
+      "B": "Brezilya",
+      "C": "Norveç",
+      "D": "Polonya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Benfica kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Madrid",
+      "C": "Lizbon",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "İtalya",
+      "C": "Şili",
+      "D": "Güney Kore"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "5.5 m",
+      "B": "16.5 m",
+      "C": "11 m",
+      "D": "9.15 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Ceza sahası içinden",
+      "B": "Korner köşesinden",
+      "C": "Taç çizgisinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Manchester",
+      "C": "Amsterdam",
+      "D": "Madrid"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Gana",
+      "B": "Fransa",
+      "C": "Katar",
+      "D": "Norveç"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Manchester",
+      "C": "Lizbon",
+      "D": "Münih"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Barselona",
+      "C": "İstanbul",
+      "D": "Milano"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Manchester",
+      "C": "Lizbon",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Spotify Camp Nou' hangi kulübün stadyumudur?",
+    "secenekler": {
+      "A": "Bayern Münih",
+      "B": "Barcelona",
+      "C": "Galatasaray",
+      "D": "Juventus"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1970 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "Meksika",
+      "C": "Uruguay",
+      "D": "İngiltere"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 1970,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Hollanda",
+      "B": "İtalya",
+      "C": "Nijerya",
+      "D": "Arjantin"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Teknik direktör",
+      "B": "Gözlemci",
+      "C": "Kale hakemi",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "7.5 m",
+      "C": "9.15 m",
+      "D": "5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "Tek elle yandan",
+      "C": "Ayakla",
+      "D": "İki elle baş üzerinden"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "İki elle baş üzerinden",
+      "B": "Tek elle yandan",
+      "C": "Dirsekle",
+      "D": "Ayakla"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "11 m",
+      "C": "5 m",
+      "D": "9.15 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Katar",
+      "B": "Rusya",
+      "C": "Hollanda",
+      "D": "Güney Kore"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Futbol maçında her devre kaç dakikadır?",
+    "secenekler": {
+      "A": "40",
+      "B": "45",
+      "C": "35",
+      "D": "50"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Atletico Madrid' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "Katar",
+      "C": "Mısır",
+      "D": "Almanya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Manchester",
+      "C": "Milano",
+      "D": "Amsterdam"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Almanya kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "6",
+      "B": "4",
+      "C": "5",
+      "D": "3"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "İki elle baş üzerinden",
+      "C": "Tek elle yandan",
+      "D": "Ayakla"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Uruguay",
+      "B": "Brezilya",
+      "C": "Almanya",
+      "D": "Fildişi Sahili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Yardımcı hakem",
+      "B": "Teknik direktör",
+      "C": "Kale hakemi",
+      "D": "Gözlemci"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Fas",
+      "C": "ABD",
+      "D": "Portekiz"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Beşiktaş' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "ABD",
+      "B": "Türkiye",
+      "C": "Fas",
+      "D": "Japonya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Harry Kane hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Kolombiya",
+      "C": "Suudi Arabistan",
+      "D": "Avustralya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Münih",
+      "C": "Barselona",
+      "D": "Manchester"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "ABD",
+      "B": "İtalya",
+      "C": "Kanada",
+      "D": "Hollanda"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "9",
+      "C": "10",
+      "D": "12"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Robert Lewandowski hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Orta saha",
+      "B": "Defans",
+      "C": "Kaleci",
+      "D": "Forvet"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Polonya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1958 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Güney Afrika",
+      "B": "Rusya",
+      "C": "İsveç",
+      "D": "Meksika"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": 1958,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "10",
+      "B": "11",
+      "C": "9",
+      "D": "12"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Gianluigi Buffon hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Hırvatistan",
+      "B": "İtalya",
+      "C": "Brezilya",
+      "D": "Belçika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "1.5 m",
+      "B": "0.5 m",
+      "C": "2.5 m",
+      "D": "3 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Brezilya kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "7",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fenerbahçe'nin lakabı nedir?",
+    "secenekler": {
+      "A": "Şimşekler",
+      "B": "Sarı Lacivertliler",
+      "C": "Bordo Mavililer",
+      "D": "Kanaryalar"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Santiago Bernabéu' hangi kulübün stadyumudur?",
+    "secenekler": {
+      "A": "River Plate",
+      "B": "Galatasaray",
+      "C": "Real Madrid",
+      "D": "Milan"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Torino",
+      "C": "Milano",
+      "D": "Barselona"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Gözlemci",
+      "B": "Kale hakemi",
+      "C": "Teknik direktör",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Porto",
+      "B": "İstanbul",
+      "C": "Milano",
+      "D": "Münih"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Inter' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Fas",
+      "B": "İtalya",
+      "C": "Kanada",
+      "D": "Fransa"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "16.5 m",
+      "B": "5.5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Cristiano Ronaldo hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "Nijerya",
+      "B": "ABD",
+      "C": "Portekiz",
+      "D": "Brezilya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Torino",
+      "C": "Barselona",
+      "D": "Porto"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Madrid",
+      "C": "Münih",
+      "D": "Porto"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Ceza sahası içinden",
+      "B": "Korner köşesinden",
+      "C": "Taç çizgisinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Lizbon",
+      "C": "Porto",
+      "D": "Paris"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Madrid",
+      "B": "Milano",
+      "C": "Liverpool",
+      "D": "Barselona"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "İngiltere",
+      "C": "Mısır",
+      "D": "İspanya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fas",
+      "B": "Almanya",
+      "C": "Gana",
+      "D": "Mısır"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "9",
+      "B": "11",
+      "C": "10",
+      "D": "12"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ofsayt hangi durumda olur?",
+    "secenekler": {
+      "A": "Top oyuna taca çıktığında",
+      "B": "Kaleci topu elle tutunca",
+      "C": "Hücum oyuncusu pas anında son savunmanın arkasındaysa",
+      "D": "Hakem düdük çalınca"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Taç çizgisinden",
+      "C": "Ceza sahası içinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Mohamed Salah hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Forvet",
+      "B": "Kaleci",
+      "C": "Orta saha",
+      "D": "Defans"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Mısır",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Afrika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Suudi Arabistan",
+      "B": "Fransa",
+      "C": "Fildişi Sahili",
+      "D": "İtalya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Galatasaray' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Polonya",
+      "B": "Almanya",
+      "C": "Kanada",
+      "D": "Türkiye"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1974 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "ABD",
+      "B": "Almanya",
+      "C": "İtalya",
+      "D": "Güney Kore & Japonya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 1974,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Inter kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Liverpool",
+      "C": "Milano",
+      "D": "Madrid"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1990 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Arjantin",
+      "B": "İtalya",
+      "C": "Şili",
+      "D": "Uruguay"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 1990,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Manchester",
+      "C": "Porto",
+      "D": "Madrid"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "Madrid",
+      "C": "Liverpool",
+      "D": "Münih"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Uruguay kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Uruguay",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Diego Maradona hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Katar",
+      "C": "Arjantin",
+      "D": "Türkiye"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Arjantin",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Kylian Mbappé hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Defans",
+      "B": "Kaleci",
+      "C": "Orta saha",
+      "D": "Forvet"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "10",
+      "C": "9",
+      "D": "12"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Top toplayıcılar",
+      "B": "Hakemler",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Taraftarlar"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "7.5 m",
+      "C": "5 m",
+      "D": "11 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "2.5 m",
+      "B": "1.5 m",
+      "C": "0.5 m",
+      "D": "3 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "İngiltere",
+      "C": "Polonya",
+      "D": "Rusya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İtalya",
+      "B": "Gana",
+      "C": "Fransa",
+      "D": "Uruguay"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "İki elle baş üzerinden",
+      "B": "Dirsekle",
+      "C": "Tek elle yandan",
+      "D": "Ayakla"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "1950 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Almanya",
+      "B": "Brezilya",
+      "C": "ABD",
+      "D": "Meksika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 1950,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Sergio Ramos hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "İtalya",
+      "C": "Türkiye",
+      "D": "Portekiz"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "1.5 m",
+      "B": "3 m",
+      "C": "0.5 m",
+      "D": "2.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Taç çizgisinden",
+      "B": "Korner köşesinden",
+      "C": "Ceza sahası içinden",
+      "D": "Sahanın orta noktasından"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fildişi Sahili",
+      "B": "Kanada",
+      "C": "Uruguay",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "9.15 m",
+      "B": "11 m",
+      "C": "5.5 m",
+      "D": "16.5 m"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "El Clásico hangi iki takım arasında oynanır?",
+    "secenekler": {
+      "A": "Galatasaray – Fenerbahçe",
+      "B": "Real Madrid – Barcelona",
+      "C": "Milan – Inter",
+      "D": "Liverpool – Manchester United"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Kale hakemi",
+      "B": "Gözlemci",
+      "C": "Yardımcı hakem",
+      "D": "Teknik direktör"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Lizbon",
+      "B": "Paris",
+      "C": "İstanbul",
+      "D": "Amsterdam"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "0.5 m",
+      "B": "3 m",
+      "C": "1.5 m",
+      "D": "2.5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Münih",
+      "C": "Manchester",
+      "D": "Liverpool"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Tek elle yandan",
+      "B": "Dirsekle",
+      "C": "İki elle baş üzerinden",
+      "D": "Ayakla"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Milano",
+      "C": "Amsterdam",
+      "D": "Porto"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Güney Kore",
+      "B": "Brezilya",
+      "C": "Gana",
+      "D": "Fransa"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Dirsekle",
+      "B": "İki elle baş üzerinden",
+      "C": "Ayakla",
+      "D": "Tek elle yandan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Taç atışı nasıl kullanılır?",
+    "secenekler": {
+      "A": "Tek elle yandan",
+      "B": "Ayakla",
+      "C": "İki elle baş üzerinden",
+      "D": "Dirsekle"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Güney Kore",
+      "B": "Türkiye",
+      "C": "Hırvatistan",
+      "D": "Fransa"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "2.5 m",
+      "B": "3 m",
+      "C": "1.5 m",
+      "D": "0.5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "7.5 m",
+      "B": "11 m",
+      "C": "9.15 m",
+      "D": "5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "İstanbul",
+      "C": "Münih",
+      "D": "Milano"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "İngiltere kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "2",
+      "B": "3",
+      "C": "1",
+      "D": "0"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Beşiktaş kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Barselona",
+      "C": "Madrid",
+      "D": "Liverpool"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Norveç",
+      "B": "Katar",
+      "C": "Avustralya",
+      "D": "Hollanda"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1986 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Meksika",
+      "B": "Güney Kore & Japonya",
+      "C": "Uruguay",
+      "D": "İspanya"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": 1986,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Amsterdam",
+      "C": "Liverpool",
+      "D": "İstanbul"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Barselona",
+      "C": "Münih",
+      "D": "İstanbul"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "İstanbul",
+      "C": "Paris",
+      "D": "Madrid"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "'Al Hilal' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Hollanda",
+      "B": "ABD",
+      "C": "Fas",
+      "D": "Suudi Arabistan"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Suudi Arabistan",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Asya",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir futbol sahasında kaç korner köşesi vardır?",
+    "secenekler": {
+      "A": "4",
+      "B": "3",
+      "C": "2",
+      "D": "6"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Fenerbahçe kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Amsterdam",
+      "C": "İstanbul",
+      "D": "Liverpool"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Türkiye",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Lizbon",
+      "C": "Münih",
+      "D": "Amsterdam"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Norveç",
+      "B": "Güney Kore",
+      "C": "Avustralya",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Zinedine Zidane hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Defans",
+      "B": "Kaleci",
+      "C": "Forvet",
+      "D": "Orta saha"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Amsterdam",
+      "C": "Paris",
+      "D": "Milano"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Iker Casillas hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Orta saha",
+      "B": "Defans",
+      "C": "Forvet",
+      "D": "Kaleci"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Güney Kore",
+      "B": "Almanya",
+      "C": "Fildişi Sahili",
+      "D": "Suudi Arabistan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "5 m",
+      "B": "7.5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "İngiltere",
+      "B": "Brezilya",
+      "C": "Fransa",
+      "D": "Fildişi Sahili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Gözlemci",
+      "B": "Teknik direktör",
+      "C": "Kale hakemi",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "1.5 m",
+      "B": "3 m",
+      "C": "0.5 m",
+      "D": "2.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Juventus' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Polonya",
+      "B": "İtalya",
+      "C": "İngiltere",
+      "D": "Türkiye"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Milano",
+      "C": "Torino",
+      "D": "Barselona"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Milan kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "İstanbul",
+      "B": "Milano",
+      "C": "Madrid",
+      "D": "Münih"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Top toplayıcılar",
+      "B": "Taraftarlar",
+      "C": "Hakemler",
+      "D": "Yedek oyuncular ve teknik ekip"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Paris",
+      "B": "Barselona",
+      "C": "Manchester",
+      "D": "Milano"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bayern Münih kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Münih",
+      "B": "Paris",
+      "C": "Porto",
+      "D": "Amsterdam"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Manchester",
+      "B": "Amsterdam",
+      "C": "Paris",
+      "D": "Porto"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Torino",
+      "C": "Amsterdam",
+      "D": "Madrid"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Yedek kulübesinde kim oturur?",
+    "secenekler": {
+      "A": "Taraftarlar",
+      "B": "Top toplayıcılar",
+      "C": "Yedek oyuncular ve teknik ekip",
+      "D": "Hakemler"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Teknik direktör",
+      "B": "Kale hakemi",
+      "C": "Gözlemci",
+      "D": "Yardımcı hakem"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Yardımcı hakem",
+      "B": "Teknik direktör",
+      "C": "Gözlemci",
+      "D": "Kale hakemi"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Juventus kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Torino",
+      "C": "Manchester",
+      "D": "Barselona"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "2.5 m",
+      "B": "0.5 m",
+      "C": "1.5 m",
+      "D": "3 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Erling Haaland hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Orta saha",
+      "B": "Defans",
+      "C": "Kaleci",
+      "D": "Forvet"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Norveç",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Porto",
+      "B": "Barselona",
+      "C": "Amsterdam",
+      "D": "Münih"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "11",
+      "B": "9",
+      "C": "12",
+      "D": "10"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Porto kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Milano",
+      "B": "Amsterdam",
+      "C": "Münih",
+      "D": "Porto"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Portekiz",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "2014 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Uruguay",
+      "B": "Brezilya",
+      "C": "ABD",
+      "D": "Meksika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 2014,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "3 m",
+      "B": "0.5 m",
+      "C": "2.5 m",
+      "D": "1.5 m"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'Liverpool' kulübü hangi ülkenindir?",
+    "secenekler": {
+      "A": "Şili",
+      "B": "Suudi Arabistan",
+      "C": "Polonya",
+      "D": "İngiltere"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner atışı nereden kullanılır?",
+    "secenekler": {
+      "A": "Orta yuvarlak",
+      "B": "Sahanın köşe yayından",
+      "C": "Ceza yayı",
+      "D": "Penaltı noktası"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Paris Saint-Germain kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Paris",
+      "C": "Manchester",
+      "D": "İstanbul"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Kevin De Bruyne hangi mevkide oynamasıyla bilinir?",
+    "secenekler": {
+      "A": "Defans",
+      "B": "Orta saha",
+      "C": "Forvet",
+      "D": "Kaleci"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Belçika",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Mohamed Salah hangi ülkenin milli oyuncusudur?",
+    "secenekler": {
+      "A": "İspanya",
+      "B": "Arjantin",
+      "C": "Mısır",
+      "D": "Kolombiya"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Mısır",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Afrika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+    "secenekler": {
+      "A": "5 m",
+      "B": "7.5 m",
+      "C": "9.15 m",
+      "D": "11 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "1994 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Brezilya",
+      "B": "ABD",
+      "C": "İngiltere",
+      "D": "Güney Kore & Japonya"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 1994,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Franz Beckenbauer hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Mısır",
+      "B": "Almanya",
+      "C": "Suudi Arabistan",
+      "D": "Hırvatistan"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Almanya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "1966 FIFA Dünya Kupası'na ev sahipliği yapan ülke/ülkeler hangisiydi?",
+    "secenekler": {
+      "A": "Rusya",
+      "B": "İngiltere",
+      "C": "Almanya",
+      "D": "Şili"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": 1966,
+      "ulke": null,
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": null,
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Fransa kaç FIFA Dünya Kupası kazandı?",
+    "secenekler": {
+      "A": "4",
+      "B": "3",
+      "C": "2",
+      "D": "1"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Fransa",
+      "kupa": "FIFA Dünya Kupası",
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Korner bayrağının yaklaşık yüksekliği nedir?",
+    "secenekler": {
+      "A": "3 m",
+      "B": "0.5 m",
+      "C": "1.5 m",
+      "D": "2.5 m"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Manchester United kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Amsterdam",
+      "B": "İstanbul",
+      "C": "Madrid",
+      "D": "Manchester"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İngiltere",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Fransa",
+      "B": "İngiltere",
+      "C": "Mısır",
+      "D": "Brezilya"
+    },
+    "dogru": "D",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Barcelona kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Barselona",
+      "B": "Manchester",
+      "C": "Torino",
+      "D": "Porto"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+    "secenekler": {
+      "A": "12",
+      "B": "11",
+      "C": "9",
+      "D": "10"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Hakemin yardımcılarına ne denir?",
+    "secenekler": {
+      "A": "Teknik direktör",
+      "B": "Kale hakemi",
+      "C": "Yardımcı hakem",
+      "D": "Gözlemci"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Johan Cruyff hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Hollanda",
+      "B": "Hırvatistan",
+      "C": "Meksika",
+      "D": "Güney Kore"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Hollanda",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Başlama vuruşu nereden yapılır?",
+    "secenekler": {
+      "A": "Korner köşesinden",
+      "B": "Taç çizgisinden",
+      "C": "Sahanın orta noktasından",
+      "D": "Ceza sahası içinden"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "Ceza alanı mesafesi (penaltı noktası) kaleye kaç metredir?",
+    "secenekler": {
+      "A": "11 m",
+      "B": "9.15 m",
+      "C": "16.5 m",
+      "D": "5.5 m"
+    },
+    "dogru": "A",
+    "kategoriler": {
+      "yil": null,
+      "ulke": null,
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": null,
+      "teknik": "kural"
+    }
+  },
+  {
+    "soru": "'San Siro' hangi kulübün stadyumudur?",
+    "secenekler": {
+      "A": "Liverpool",
+      "B": "Galatasaray",
+      "C": "Milan",
+      "D": "Real Madrid"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İtalya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Lev Yaşin hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Uruguay",
+      "B": "Fildişi Sahili",
+      "C": "Rusya",
+      "D": "Türkiye"
+    },
+    "dogru": "C",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Rusya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Efsane futbolcu Pelé hangi ülkeyi temsil eder?",
+    "secenekler": {
+      "A": "Portekiz",
+      "B": "Brezilya",
+      "C": "Fas",
+      "D": "Meksika"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "Brezilya",
+      "kupa": null,
+      "zorluk": "orta",
+      "kita": "Güney Amerika",
+      "teknik": null
+    }
+  },
+  {
+    "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+    "secenekler": {
+      "A": "Torino",
+      "B": "Madrid",
+      "C": "Paris",
+      "D": "Münih"
+    },
+    "dogru": "B",
+    "kategoriler": {
+      "yil": null,
+      "ulke": "İspanya",
+      "kupa": null,
+      "zorluk": "kolay",
+      "kita": "Avrupa",
+      "teknik": null
+    }
+  }
+]

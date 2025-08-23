@@ -747,59 +747,109 @@
             'dangalak', 'budala', 'kıro', 'it', 'köpek', 'eşşek'
         ];
 
-        // Sorular
-        const allQuestions = [
-            {
-                "soru": "'Old Trafford' hangi kulübün stadyumudur?",
-                "secenekler": {
-                    "A": "Manchester United",
-                    "B": "Chelsea",
-                    "C": "Atletico Madrid",
-                    "D": "LA Galaxy"
-                },
-                "dogru": "A"
-            },
-            {
-                "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
-                "secenekler": {
-                    "A": "Avustralya",
-                    "B": "Arjantin",
-                    "C": "Katar",
-                    "D": "Fransa"
-                },
-                "dogru": "D"
-            },
-            {
-                "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
-                "secenekler": {
-                    "A": "11",
-                    "B": "10",
-                    "C": "9",
-                    "D": "12"
-                },
-                "dogru": "A"
-            },
-            {
-                "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
-                "secenekler": {
-                    "A": "9.15 m",
-                    "B": "7.5 m",
-                    "C": "5 m",
-                    "D": "11 m"
-                },
-                "dogru": "A"
-            },
-            {
-                "soru": "Real Madrid kulübü hangi şehirde yer alır?",
-                "secenekler": {
-                    "A": "Madrid",
-                    "B": "İstanbul",
-                    "C": "Manchester",
-                    "D": "Barselona"
-                },
-                "dogru": "A"
+        // Sorular (JSON'dan yüklenecek)
+        let allQuestions = [];
+
+        // JSON dosyasından soruları yükle
+        async function loadQuestions() {
+            try {
+                const response = await fetch('./sorular.json');
+                if (!response.ok) {
+                    throw new Error('Sorular yüklenemedi');
+                }
+                const questions = await response.json();
+                allQuestions = questions;
+                console.log(`✅ ${allQuestions.length} soru yüklendi!`);
+                
+                // Yükleme tamamlandıktan sonra oyunu aktif et
+                document.querySelector('.btn').disabled = false;
+                
+            } catch (error) {
+                console.error('❌ Sorular yüklenirken hata:', error);
+                
+                // Hata durumunda örnek sorularla devam et
+                allQuestions = [
+                    {
+                        "soru": "'Old Trafford' hangi kulübün stadyumudur?",
+                        "secenekler": {
+                            "A": "Manchester United",
+                            "B": "Chelsea", 
+                            "C": "Atletico Madrid",
+                            "D": "LA Galaxy"
+                        },
+                        "dogru": "A"
+                    },
+                    {
+                        "soru": "Efsane futbolcu Zinedine Zidane hangi ülkeyi temsil eder?",
+                        "secenekler": {
+                            "A": "Avustralya",
+                            "B": "Arjantin",
+                            "C": "Katar", 
+                            "D": "Fransa"
+                        },
+                        "dogru": "D"
+                    },
+                    {
+                        "soru": "Bir maçta aynı takımdan sahada kaç oyuncu bulunur?",
+                        "secenekler": {
+                            "A": "11",
+                            "B": "10",
+                            "C": "9",
+                            "D": "12"
+                        },
+                        "dogru": "A"
+                    },
+                    {
+                        "soru": "Serbest vuruşta baraj ile top arası asgari mesafe nedir?",
+                        "secenekler": {
+                            "A": "9.15 m",
+                            "B": "7.5 m",
+                            "C": "5 m",
+                            "D": "11 m"
+                        },
+                        "dogru": "A"
+                    },
+                    {
+                        "soru": "Real Madrid kulübü hangi şehirde yer alır?",
+                        "secenekler": {
+                            "A": "Madrid",
+                            "B": "İstanbul",
+                            "C": "Manchester", 
+                            "D": "Barselona"
+                        },
+                        "dogru": "A"
+                    }
+                ];
+                
+                // Kullanıcıya bilgi ver
+                showErrorMessage('Soru dosyası bulunamadı, örnek sorularla devam ediliyor.');
             }
-        ];
+        }
+
+        // Hata mesajı göster
+        function showErrorMessage(message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 107, 107, 0.9);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                z-index: 10000;
+                font-weight: bold;
+                animation: slideDown 0.5s ease;
+            `;
+            errorDiv.textContent = message;
+            document.body.appendChild(errorDiv);
+            
+            setTimeout(() => {
+                errorDiv.style.opacity = '0';
+                setTimeout(() => errorDiv.remove(), 500);
+            }, 5000);
+        }
 
         // Ses sistemi
         class SoundSystem {
