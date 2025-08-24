@@ -583,42 +583,7 @@
             }
         }
 
-        // Online player name management
-        async function updatePlayerName() {
-            if (!roomRef || !gameState.playerId) return;
-            
-            const nameInput = document.getElementById('online-player-name');
-            const playerName = nameInput.value.trim();
-            
-            if (!playerName) {
-                alert('Lütfen bir isim girin!');
-                return;
-            }
-            
-            // Küfür filtresi (online mod için)
-            if (containsBannedWords(playerName)) {
-                alert('Lütfen uygun bir isim girin!');
-                return;
-            }
-            
-            try {
-                await roomRef.child('players/' + gameState.playerId + '/name').set(playerName);
-                if (soundSystem) soundSystem.playClickSound();
-                alert('İsminiz kaydedildi!');
-            } catch (error) {
-                console.error('Error updating name:', error);
-                alert('İsim güncellenirken hata oluştu!');
-            }
-        }
-
-        function containsBannedWords(text) {
-            const bannedWords = ['aptal', 'salak', 'gerizekalı', 'mal', 'beyinsiz', 'dangalak', 'budala'];
-            const normalizedText = text.toLowerCase()
-                .replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's')
-                .replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c');
-            
-            return bannedWords.some(word => normalizedText.includes(word));
-        }
+        async function leaveRoom() {
             if (soundSystem) soundSystem.playClickSound();
             
             try {
@@ -2069,13 +2034,6 @@
                 
                 <div class="players-waiting" id="players-waiting">
                     <h3 style="margin-bottom: 20px;">Oyuncular (<span id="player-count-waiting">1</span>/8)</h3>
-                    
-                    <!-- İsim girişi alanı -->
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" class="room-input" id="online-player-name" placeholder="İSMİNİZİ GİRİN" maxlength="20" style="margin: 10px 0;">
-                        <button class="btn" onclick="updatePlayerName()" style="width: 100%;">✅ İSMİ KAYDET</button>
-                    </div>
-                    
                     <div id="waiting-players-list"></div>
                 </div>
 
