@@ -583,100 +583,7 @@
             }
         }
 
-        // URL room code handling - Sayfa yüklendiğinde oda kodunu kontrol et
-        function checkURLForRoomCode() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const roomCode = urlParams.get('room');
-            
-            if (roomCode && roomCode.length === 6) {
-                // URL'de oda kodu var, otomatik katılım ekranına git
-                document.getElementById('room-code-input').value = roomCode;
-                selectOnlineMode();
-                
-                // Otomatik katılım için kullanıcıdan onay al
-                setTimeout(() => {
-                    if (confirm(`${roomCode} kodlu odaya katılmak istiyor musunuz?`)) {
-                        joinRoom();
-                    }
-                }, 1000);
-            }
-        }
-
-        // Room sharing functions
-        function shareRoom() {
-            if (!gameState.roomCode) return;
-            
-            const gameUrl = `${window.location.origin}${window.location.pathname}?room=${gameState.roomCode}`;
-            const shareText = `🎮 Futbol Bilgi Arena'da benimle oyna!\n\n🏆 Oda Kodu: ${gameState.roomCode}\n🔗 Direkt Link: ${gameUrl}\n\n⚽ Hemen katıl ve kazanmaya çalış!`;
-            
-            if (navigator.share) {
-                // Mobile native sharing
-                navigator.share({
-                    title: '⚽ Futbol Bilgi Arena',
-                    text: shareText,
-                    url: gameUrl
-                });
-            } else {
-                // Fallback: WhatsApp Web
-                const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
-                window.open(whatsappUrl, '_blank');
-            }
-        }
-
-        function copyRoomLink() {
-            if (!gameState.roomCode) return;
-            
-            const gameUrl = `${window.location.origin}${window.location.pathname}?room=${gameState.roomCode}`;
-            
-            navigator.clipboard.writeText(gameUrl).then(() => {
-                alert('🔗 Oyun linki kopyalandı! Arkadaşlarınla paylaşabilirsin.');
-                if (soundSystem) soundSystem.playClickSound();
-            }).catch(() => {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = gameUrl;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                alert('🔗 Oyun linki kopyalandı!');
-            });
-        }
-        async function updatePlayerName() {
-            if (!roomRef || !gameState.playerId) return;
-            
-            const nameInput = document.getElementById('online-player-name');
-            const playerName = nameInput.value.trim();
-            
-            if (!playerName) {
-                alert('Lütfen bir isim girin!');
-                return;
-            }
-            
-            // Küfür filtresi (online mod için)
-            if (containsBannedWords(playerName)) {
-                alert('Lütfen uygun bir isim girin!');
-                return;
-            }
-            
-            try {
-                await roomRef.child('players/' + gameState.playerId + '/name').set(playerName);
-                if (soundSystem) soundSystem.playClickSound();
-                alert('İsminiz kaydedildi!');
-            } catch (error) {
-                console.error('Error updating name:', error);
-                alert('İsim güncellenirken hata oluştu!');
-            }
-        }
-
-        function containsBannedWords(text) {
-            const bannedWords = ['aptal', 'salak', 'gerizekalı', 'mal', 'beyinsiz', 'dangalak', 'budala'];
-            const normalizedText = text.toLowerCase()
-                .replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's')
-                .replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c');
-            
-            return bannedWords.some(word => normalizedText.includes(word));
-        }
+        async function leaveRoom() {
             if (soundSystem) soundSystem.playClickSound();
             
             try {
@@ -2125,21 +2032,8 @@
                 <h2>Oda Kodu</h2>
                 <div class="room-code-display" id="room-code-display">ABC123</div>
                 
-                <!-- Paylaşım Butonları -->
-                <div style="margin: 15px 0;">
-                    <button class="btn" onclick="shareRoom()" style="width: 48%; margin: 5px 1%;">📱 PAYLAŞ</button>
-                    <button class="btn" onclick="copyRoomLink()" style="width: 48%; margin: 5px 1%;">📋 LİNK KOPYALA</button>
-                </div>
-                
                 <div class="players-waiting" id="players-waiting">
                     <h3 style="margin-bottom: 20px;">Oyuncular (<span id="player-count-waiting">1</span>/8)</h3>
-                    
-                    <!-- İsim girişi alanı -->
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" class="room-input" id="online-player-name" placeholder="İSMİNİZİ GİRİN" maxlength="20" style="margin: 10px 0;">
-                        <button class="btn" onclick="updatePlayerName()" style="width: 100%;">✅ İSMİ KAYDET</button>
-                    </div>
-                    
                     <div id="waiting-players-list"></div>
                 </div>
 
