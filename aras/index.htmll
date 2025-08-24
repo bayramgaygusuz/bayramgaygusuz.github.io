@@ -983,6 +983,12 @@
 
         function showGameSettings() {
             initSoundSystem();
+            
+            // Sorular yüklenmemişse yükle
+            if (allQuestions.length === 0) {
+                loadQuestions();
+            }
+            
             showScreen('settings-screen');
             setupGameSettings();
         }
@@ -1535,6 +1541,33 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             console.log('⚽ Futbol Bilgi Arena v2.0 Hazır!');
+            
+            // Sayfa yüklendiğinde soruları yükle
+            loadQuestions();
+            
+            // Yükleme göstergesi
+            const loadingIndicator = document.createElement('div');
+            loadingIndicator.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 20px 30px;
+                border-radius: 15px;
+                z-index: 10000;
+                font-size: 1.2em;
+                text-align: center;
+            `;
+            loadingIndicator.innerHTML = '⚽ Sorular yükleniyor...';
+            document.body.appendChild(loadingIndicator);
+            
+            // 3 saniye sonra kaldır (ya da sorular yüklendiğinde)
+            setTimeout(() => {
+                loadingIndicator.style.opacity = '0';
+                setTimeout(() => loadingIndicator.remove(), 500);
+            }, 3000);
         });
     </script>
 </body>

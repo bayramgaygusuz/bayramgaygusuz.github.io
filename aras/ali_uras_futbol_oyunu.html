@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Ali Uras'ın Futbol Dünyası - Galatasaraylılar İçin Özel!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, Arial, sans-serif;
+            background: linear-gradient(-45deg, #ff6b35, #f7931e, #ffcc02, #ff6b35);
+            background-size: 400% 400%;
+            animation: gradientShift 6s ease infinite;
+            min-height: 100vh;
+            color: white;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screen {
+            display: none;
+            text-align: center;
+            width: 100%;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .logo {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            animation: bounce 3s ease-in-out infinite;
+            background: linear-gradient(45deg, #ffcc02, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(2deg); }
+            75% { transform: translateY(-5px) rotate(-1deg); }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 20px 0;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.4em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        .players-setup {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .player-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            border: 2px solid rgba(255, 204, 2, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .player-card:hover {
+            border-color: #ffcc02;
+            transform: scale(1.03);
+        }
+
+        .player-input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2em;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-family: inherit;
+            font-weight: bold;
+        }
+
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .character-btn {
+            font-size: 2em;
+            padding: 15px;
+            border: 3px solid transparent;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .character-btn:hover {
+            transform: scale(1.2) rotate(15deg);
+            border-color: #ffcc02;
+        }
+
+        .character-btn.selected {
+            border-color: #ff6b35;
+            background: rgba(255, 107, 53, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+        }
+
+        .question-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 25px;
+            padding: 35px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .question-text {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #ff6b35;
+            line-height: 1.4;
+        }
+
+        .answers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .answer-btn {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 1.3em;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: inherit;
+        }
+
+        .answer-btn:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .answer-btn:hover:before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .answer-btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+        }
+
+        .answer-btn.correct {
+            background: linear-gradient(135deg, #00C851, #00FF88);
+            animation: correctPulse 1s ease;
+        }
+
+        .answer-btn.wrong {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            animation: wrongShake 0.5s ease;
+        }
+
+        @keyframes correctPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); box-shadow: 0 0 30px #00FF88; }
+        }
+
+        @keyframes wrongShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .timer {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ff6b35;
+            animation: timerPulse 1s ease infinite;
+        }
+
+        @keyframes timerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .current-player {
+            background: linear-gradient(135deg, #ffcc02, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: playerGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes playerGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 204, 2, 0.3); }
+            50% { text-shadow: 0 0 20px rgba(255, 204, 2, 0.7); }
+        }
+
+        .score-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .player-score {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid rgba(255, 204, 2, 0.3);
+        }
+
+        .player-score.winner {
+            border-color: #ffcc02;
+            background: rgba(255, 204, 2, 0.2);
+            animation: winnerGlow 2s ease-in-out infinite;
+            transform: scale(1.05);
+        }
+
+        @keyframes winnerGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 204, 2, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(255, 204, 2, 0.6); }
+        }
+
+        .sound-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            padding: 15px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sound-btn:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .galatasaray-special {
+            background: linear-gradient(135deg, #ff6b35, #ffcc02);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            animation: gsSpecial 3s ease-in-out infinite;
+        }
+
+        @keyframes gsSpecial {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        @media (max-width: 600px) {
+            .answers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2.2em;
+            }
+            
+            .question-text {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="sound-btn" id="soundBtn" onclick="toggleSound()">🔊</button>
+    
+    <div class="container">
+        <!-- Ana Menü -->
+        <div id="menu-screen" class="screen active">
+            <div class="logo">⚽ Ali Uras'ın Futbol Dünyası</div>
+            <div class="card">
+                <h2 class="galatasaray-special">🦁 Galatasaraylılar İçin Özel Oyun! 🦁</h2>
+                <p style="font-size: 1.3em; margin: 20px 0;">
+                    Merhaba Ali! Arkadaşlarınla birlikte futbol bilgilerini test etmeye hazır mısın?
+                </p>
+                <div style="font-size: 3em; margin: 20px 0;">⚽🏆🦁</div>
+                <button class="btn" onclick="showPlayerSetup()">🎮 OYUNA BAŞLA</button>
+                <button class="btn" onclick="showScores()">🏆 SKORLAR</button>
+            </div>
+        </div>
+
+        <!-- Oyuncu Kurulumu -->
+        <div id="setup-screen" class="screen">
+            <div class="logo">👥 Oyuncuları Hazırla</div>
+            <div class="card">
+                <p style="font-size: 1.2em; margin-bottom: 25px;">
+                    En az 2, en fazla 6 oyuncu olabilir! İsimlerinizi yazın ve karakterinizi seçin:
+                </p>
+                <div class="players-setup" id="playersSetup">
+                    <!-- Oyuncu kartları buraya eklenecek -->
+                </div>
+                <div style="margin: 30px 0;">
+                    <button class="btn" onclick="addPlayer()" id="addPlayerBtn">➕ OYUNCU EKLE</button>
+                    <button class="btn" onclick="removePlayer()" id="removePlayerBtn">➖ OYUNCU ÇIKAR</button>
+                </div>
+                <button class="btn" onclick="startGame()" style="background: linear-gradient(135deg, #00C851, #00FF88); font-size: 1.6em;">
+                    🚀 OYUNU BAŞLAT
+                </button>
+                <button class="btn" onclick="showMenu()">🔙 GERİ</button>
+            </div>
+        </div>
+
+        <!-- Oyun Ekranı -->
+        <div id="game-screen" class="screen">
+            <div class="current-player" id="currentPlayerDisplay"></div>
+            <div class="timer" id="timer">15</div>
+            
+            <div class="question-card">
+                <div class="question-text" id="questionText"></div>
+                <div class="answers-grid" id="answersGrid">
+                    <!-- Cevap butonları buraya eklenecek -->
+                </div>
+            </div>
+            
+            <div class="score-display" id="scoreDisplay">
+                <!-- Oyuncu skorları buraya eklenecek -->
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <span style="font-size: 1.3em; font-weight: bold;">
+                    Soru: <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Sonuç Ekranı -->
+        <div id="result-screen" class="screen">
+            <div class="logo">🏆 Oyun Bitti!</div>
+            <div class="card">
+                <h2 id="winnerText"></h2>
+                <div class="score-display" id="finalScores">
+                    <!-- Final skorlar buraya eklenecek -->
+                </div>
+                <div style="margin: 30px 0; font-size: 3em;">
+                    🎉🎊⚽🎊🎉
+                </div>
+                <button class="btn" onclick="showMenu()">🏠 ANA MENÜ</button>
+                <button class="btn" onclick="playAgain()">🔄 YENİDEN OYNA</button>
+            </div>
+        </div>
+
+        <!-- Skorlar Ekranı -->
+        <div id="scores-screen" class="screen">
+            <div class="logo">📊 En İyi Skorlar</div>
+            <div class="card">
+                <div id="scoresContent">
+                    <h3>🏆 Bugünün Şampiyonları</h3>
+                    <div id="todayScores"></div>
+                    <h3>📅 Tüm Zamanların En İyileri</h3>
+                    <div id="allTimeScores"></div>
+                </div>
+                <button class="btn" onclick="showMenu()">🔙 GERİ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Oyun verileri
+        let gameData = {
+            players: [],
+            currentPlayer: 0,
+            currentQuestion: 0,
+            questions: [],
+            timer: null,
+            soundEnabled: true,
+            totalQuestions: 10
+        };
+
+        // Karakterler
+        const characters = ['⚽', '🦁', '🏆', '⭐', '🔥', '💎', '🚀', '⚡', '🎯', '🎨', '🎵', '🌟', '👑', '🎪', '🎮', '🎸'];
+
+        // Ali Uras için özel sorular (8 yaş seviyesinde)
+        const questions = [
+            {
+                question: "Galatasaray'ın takma adı nedir?",
+                answers: ["Aslanlar", "Kartallar", "Sarılar", "Kırmızılar"],
+                correct: 0,
+                special: "galatasaray"
+            },
+            {
+                question: "Futbolda kaç kişi oynar?",
+                answers: ["10 kişi", "11 kişi", "12 kişi", "9 kişi"],
+                correct: 1
+            },
+            {
+                question: "Galatasaray'ın renkleri nelerdir?",
+                answers: ["Mavi-Beyaz", "Sarı-Kırmızı", "Siyah-Beyaz", "Yeşil-Beyaz"],
+                correct: 1,
+                special: "galatasaray"
+            },
+            {
+                question: "Futbol maçı kaç dakika sürer?",
+                answers: ["80 dakika", "90 dakika", "100 dakika", "60 dakika"],
+                correct: 1
+            },
+            {
+                question: "Fatih Terim'in lakabı nedir?",
+                answers: ["İmparator", "Kral", "Şef", "Kaptan"],
+                correct: 0,
+                special: "galatasaray"
+            },
+            {
+                question: "Dünya Kupası kaç yılda bir yapılır?",
+                answers: ["2 yılda", "3 yılda", "4 yılda", "5 yılda"],
+                correct: 2
+            },
+            {
+                question: "Hagi hangi ülkenin futbolcusuydu?",
+                answers: ["Romanya", "Bulgaristan", "Macaristan", "Polonya"],
+                correct: 0
+            },
+            {
+                question: "Futbolda kırmızı kart ne anlama gelir?",
+                answers: ["Uyarı", "Oyundan çıkarılma", "Gol", "Faul"],
+                correct: 1
+            },
+            {
+                question: "Türkiye Milli Takımı'nın forma rengi nedir?",
+                answers: ["Mavi", "Kırmızı", "Sarı", "Beyaz"],
+                correct: 1
+            },
+            {
+                question: "Penaltı vuruşu nereden atılır?",
+                answers: ["Korner noktasından", "11 metreden", "16 metreden", "Orta çizgiden"],
+                correct: 1
+            },
+            {
+                question: "Arda Turan hangi takımda oynuyordu?",
+                answers: ["Fenerbahçe", "Beşiktaş", "Galatasaray", "Trabzonspor"],
+                correct: 2,
+                special: "galatasaray"
+            },
+            {
+                question: "Futbol topu hangi şekildir?",
+                answers: ["Kare", "Üçgen", "Yuvarlak", "Dikdörtgen"],
+                correct: 2
+            },
+            {
+                question: "Kaleci topı nasıl tutar?",
+                answers: ["Sadece ayakla", "Elleriyle", "Başıyla", "Omuzla"],
+                correct: 1
+            },
+            {
+                question: "Ofsayt kuralı ne demektir?",
+                answers: ["Çok hızlı koşmak", "Rakip yarı sahada tek kalmak", "Topa vurmak", "Gol atmak"],
+                correct: 1
+            },
+            {
+                question: "UEFA hangi kıtanın futbol federasyonudur?",
+                answers: ["Asya", "Afrika", "Avrupa", "Amerika"],
+                correct: 2
+            }
+        ];
+
+        // Ekranları gösterme
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        function showMenu() {
+            showScreen('menu-screen');
+        }
+
+        function showPlayerSetup() {
+            showScreen('setup-screen');
+            createPlayerSetup();
+        }
+
+        function showScores() {
+            showScreen('scores-screen');
+            displayScores();
+        }
+
+        // Oyuncu kurulum ekranı
+        function createPlayerSetup() {
+            const container = document.getElementById('playersSetup');
+            container.innerHTML = '';
+            
+            gameData.players = [
+                { name: 'Ali Uras', character: '🦁', score: 0 },
+                { name: '', character: '⚽', score: 0 }
+            ];
+            
+            gameData.players.forEach((player, index) => {
+                createPlayerCard(index);
+            });
+            
+            updateButtons();
+        }
+
+        function createPlayerCard(index) {
+            const container = document.getElementById('playersSetup');
+            const playerCard = document.createElement('div');
+            playerCard.className = 'player-card';
+            playerCard.innerHTML = `
+                <h3>🎮 ${index + 1}. Oyuncu</h3>
+                <input type="text" class="player-input" value="${gameData.players[index].name}" 
+                       placeholder="İsim yazın..." onchange="updatePlayerName(${index}, this.value)">
+                <div class="characters-grid">
+                    ${characters.map((char, charIndex) => 
+                        `<div class="character-btn ${gameData.players[index].character === char ? 'selected' : ''}" 
+                              onclick="selectCharacter(${index}, '${char}')">${char}</div>`
+                    ).join('')}
+                </div>
+            `;
+            container.appendChild(playerCard);
+        }
+
+        function updatePlayerName(index, name) {
+            gameData.players[index].name = name || `Oyuncu ${index + 1}`;
+        }
+
+        function selectCharacter(playerIndex, character) {
+            gameData.players[playerIndex].character = character;
+            createPlayerSetup(); // Yeniden oluştur
+        }
+
+        function addPlayer() {
+            if (gameData.players.length < 6) {
+                gameData.players.push({ 
+                    name: '', 
+                    character: characters[gameData.players.length % characters.length], 
+                    score: 0 
+                });
+                createPlayerSetup();
+            }
+        }
+
+        function removePlayer() {
+            if (gameData.players.length > 2) {
+                gameData.players.pop();
+                createPlayerSetup();
+            }
+        }
+
+        function updateButtons() {
+            document.getElementById('addPlayerBtn').style.display = 
+                gameData.players.length >= 6 ? 'none' : 'inline-block';
+            document.getElementById('removePlayerBtn').style.display = 
+                gameData.players.length <= 2 ? 'none' : 'inline-block';
+        }
+
+        // Oyun başlatma
+        function startGame() {
+            // İsimleri kontrol et
+            gameData.players.forEach((player, index) => {
+                if (!player.name.trim()) {
+                    player.name = `Oyuncu ${index + 1}`;
+                }
+                player.score = 0;
+            });
+            
+            // Soruları karıştır ve seç
+            gameData.questions = shuffleArray([...questions]).slice(0, gameData.totalQuestions);
+            gameData.currentQuestion = 0;
+            gameData.currentPlayer = 0;
+            
+            document.getElementById('totalQuestions').textContent = gameData.totalQuestions;
+            
+            showScreen('game-screen');
+            loadQuestion();
+        }
+
+        // Soru yükleme
+        function loadQuestion() {
+            if (gameData.currentQuestion >= gameData.questions.length) {
+                endGame();
+                return;
+            }
+
+            const question = gameData.questions[gameData.currentQuestion];
+            const currentPlayer = gameData.players[gameData.currentPlayer];
+            
+            document.getElementById('currentPlayerDisplay').textContent = 
+                `${currentPlayer.character} ${currentPlayer.name} - Senin Sıran!`;
+            document.getElementById('questionText').textContent = question.question;
+            document.getElementById('questionNumber').textContent = gameData.currentQuestion + 1;
+            
+            // Özel Galatasaray sorusu ise
+            if (question.special === 'galatasaray') {
+                document.getElementById('questionText').classList.add('galatasaray-special');
+            } else {
+                document.getElementById('questionText').classList.remove('galatasaray-special');
+            }
+            
+            // Cevap butonları
+            const answersGrid = document.getElementById('answersGrid');
+            answersGrid.innerHTML = '';
+            
+            question.answers.forEach((answer, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'answer-btn';
+                btn.textContent = `${String.fromCharCode(65 + index)}) ${answer}`;
+                btn.onclick = () => selectAnswer(index);
+                answersGrid.appendChild(btn);
+            });
+            
+            updateScoreDisplay();
+            startTimer();
+        }
+
+        // Timer
+        function startTimer() {
+            let timeLeft = 15;
+            document.getElementById('timer').textContent = timeLeft;
+            
+            gameData.timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer').textContent = timeLeft;
+                
+                if (timeLeft <= 5) {
+                    document.getElementById('timer').style.color = '#ff4444';
+                    if (gameData.soundEnabled) {
+                        playSound('tick');
+                    }
+                } else {
+                    document.getElementById('timer').style.color = '#ff6b35';
+                }
+                
+                if (timeLeft <= 0) {
+                    selectAnswer(-1); // Zaman doldu
+                }
+            }, 1000);
+        }
+
+        // Cevap seçimi
+        function selectAnswer(selectedIndex) {
+            clearInterval(gameData.timer);
+            
+            const question = gameData.questions[gameData.currentQuestion];
+            const currentPlayer = gameData.players[gameData.currentPlayer];
+            const buttons = document.querySelectorAll('.answer-btn');
+            
+            buttons.forEach(btn => btn.disabled = true);
+            
+            if (selectedIndex === question.correct) {
+                // Doğru cevap
+                currentPlayer.score += 10;
+                buttons[selectedIndex].classList.add('correct');
+                if (gameData.soundEnabled) playSound('correct');
+                
+                // Özel Galatasaray tebriği
+                if (question.special === 'galatasaray') {
+                    setTimeout(() => {
+                        alert(`🦁 Harika ${currentPlayer.name}! Galatasaray bilgini çok iyi! +10 puan! 🦁`);
+                    }, 500);
+                }
+            } else {
+                // Yanlış cevap veya zaman doldu
+                if (selectedIndex !== -1) {
+                    buttons[selectedIndex].classList.add('wrong');
+                    currentPlayer.score = Math.max(0, currentPlayer.score - 5);
+                } else {
+                    currentPlayer.score = Math.max(0, currentPlayer.score - 3); // Zaman doldu
+                }
+                buttons[question.correct].classList.add('correct');
+                if (gameData.soundEnabled) playSound('wrong');
+            }
+            
+            setTimeout(() => {
+                nextTurn();
+            }, 2000);
+        }
+
+        // Sonraki tur
+        function nextTurn() {
+            gameData.currentPlayer = (gameData.currentPlayer + 1) % gameData.players.length;
+            
+            if (gameData.currentPlayer === 0) {
+                gameData.currentQuestion++;
+            }
+            
+            loadQuestion();
+        }
+
+        // Skor gösterimi
+        function updateScoreDisplay() {
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            scoreDisplay.innerHTML = '';
+            
+            gameData.players.forEach((player, index) => {
+                const scoreCard = document.createElement('div');
+                scoreCard.className = `player-score ${index === gameData.currentPlayer ? 'current' : ''}`;
+                scoreCard.innerHTML = `
+                    <div style="font-size: 2em;">${player.character}</div>
+                    <div style="font-weight: bold; margin: 5px 0;">${player.name}</div>
+                    <div style="font-size: 1.5em; color: #00C851;">${player.score} puan</div>
+                `;
+                scoreDisplay.appendChild(scoreCard);
+            });
+        }
+
+        // Oyun bitişi
+        function endGame() {
+            // Kazananı bul
+            const winner = gameData.players.reduce((prev, current) => 
+                (prev.score > current.score) ? prev : current
+            );
+            
+            // Skorları kaydet
+            saveScore(winner.name, winner.score);
+            
+            // Sonuç ekranını hazırla
+            document.getElementById('winnerText').textContent = 
+                `🏆 TEBRİKLER ${winner.name.toUpperCase()}! 🏆`;
+            
+            const finalScores = document.getElementById('finalScores');
+            finalScores.innerHTML = '';
+            
+            // Skorları sırala
+            const sortedPlayers = [...gameData.players].sort((a, b) => b.score - a.score);
+            
+            sortedPlayers.forEach((player, index) => {
+                const scoreCard = document.createElement('div');
+                scoreCard.className = `player-score ${index === 0 ? 'winner' : ''}`;
+                scoreCard.innerHTML = `
+                    <div style="font-size: 2em;">${player.character}</div>
+                    <div style="font-weight: bold; margin: 10px 0;">
+                        ${index + 1}. ${player.name}
+                    </div>
+                    <div style="font-size: 1.8em; color: #00C851;">
+                        ${player.score} puan
+                    </div>
+                    ${index === 0 ? '<div style="margin-top: 10px; font-size: 1.2em;">🎉 ŞAMPIYON! 🎉</div>' : ''}
+                `;
+                finalScores.appendChild(scoreCard);
+            });
+            
+            if (gameData.soundEnabled) playSound('win');
+            showScreen('result-screen');
+        }
+
+        // Tekrar oyna
+        function playAgain() {
+            gameData.players.forEach(player => player.score = 0);
+            gameData.currentQuestion = 0;
+            gameData.currentPlayer = 0;
+            gameData.questions = shuffleArray([...questions]).slice(0, gameData.totalQuestions);
+            
+            showScreen('game-screen');
+            loadQuestion();
+        }
+
+        // Skorları kaydetme ve gösterme
+        function saveScore(playerName, score) {
+            const today = new Date().toDateString();
+            let scores = JSON.parse(localStorage.getItem('aliUrasScores') || '{}');
+            
+            if (!scores[today]) {
+                scores[today] = [];
+            }
+            
+            scores[today].push({ name: playerName, score: score, time: new Date().toLocaleTimeString() });
+            
+            // Günlük skorları sırala (en yüksek 5)
+            scores[today].sort((a, b) => b.score - a.score);
+            scores[today] = scores[today].slice(0, 5);
+            
+            localStorage.setItem('aliUrasScores', JSON.stringify(scores));
+        }
+
+        function displayScores() {
+            const scores = JSON.parse(localStorage.getItem('aliUrasScores') || '{}');
+            const today = new Date().toDateString();
+            
+            // Bugünün skorları
+            const todayScores = document.getElementById('todayScores');
+            if (scores[today] && scores[today].length > 0) {
+                todayScores.innerHTML = scores[today].map((score, index) => `
+                    <div style="background: rgba(255,255,255,0.1); margin: 10px 0; padding: 15px; border-radius: 15px;">
+                        <span style="font-size: 1.5em;">${index + 1}. ${score.name}</span>
+                        <span style="float: right; color: #00C851; font-weight: bold;">${score.score} puan</span>
+                        <div style="clear: both; font-size: 0.9em; color: #ccc;">⏰ ${score.time}</div>
+                    </div>
+                `).join('');
+            } else {
+                todayScores.innerHTML = '<p>Henüz bugün kimse oynamadı! 😊</p>';
+            }
+            
+            // Tüm zamanların en iyileri
+            const allTimeScores = document.getElementById('allTimeScores');
+            const allScores = [];
+            
+            Object.values(scores).forEach(dayScores => {
+                allScores.push(...dayScores);
+            });
+            
+            allScores.sort((a, b) => b.score - a.score);
+            const topScores = allScores.slice(0, 10);
+            
+            if (topScores.length > 0) {
+                allTimeScores.innerHTML = topScores.map((score, index) => `
+                    <div style="background: rgba(255,255,255,0.1); margin: 10px 0; padding: 15px; border-radius: 15px;">
+                        <span style="font-size: 1.5em;">${index + 1}. ${score.name}</span>
+                        <span style="float: right; color: #00C851; font-weight: bold;">${score.score} puan</span>
+                        <div style="clear: both;"></div>
+                    </div>
+                `).join('');
+            } else {
+                allTimeScores.innerHTML = '<p>Henüz kimse oynamadı! İlk sen ol! 🚀</p>';
+            }
+        }
+
+        // Ses efektleri
+        function playSound(type) {
+            if (!gameData.soundEnabled) return;
+            
+            // Web Audio API ile basit ses efektleri
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            
+            switch (type) {
+                case 'correct':
+                    // Yükselen ton (do-mi-sol)
+                    playTone(audioContext, 523.25, 0.1); // Do
+                    setTimeout(() => playTone(audioContext, 659.25, 0.1), 100); // Mi
+                    setTimeout(() => playTone(audioContext, 783.99, 0.2), 200); // Sol
+                    break;
+                    
+                case 'wrong':
+                    // Alçalan ton
+                    playTone(audioContext, 300, 0.3);
+                    setTimeout(() => playTone(audioContext, 200, 0.3), 150);
+                    break;
+                    
+                case 'tick':
+                    // Kısa bip
+                    playTone(audioContext, 800, 0.1);
+                    break;
+                    
+                case 'win':
+                    // Zafer fanfarı
+                    const notes = [523, 659, 784, 1047]; // Do-Mi-Sol-Do
+                    notes.forEach((note, index) => {
+                        setTimeout(() => playTone(audioContext, note, 0.2), index * 150);
+                    });
+                    break;
+            }
+        }
+
+        function playTone(audioContext, frequency, duration) {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+            oscillator.type = 'sine';
+            
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + duration);
+        }
+
+        function toggleSound() {
+            gameData.soundEnabled = !gameData.soundEnabled;
+            document.getElementById('soundBtn').textContent = gameData.soundEnabled ? '🔊' : '🔇';
+        }
+
+        // Yardımcı fonksiyonlar
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Sayfa yüklendiğinde
+        window.addEventListener('load', () => {
+            // Hoşgeldin mesajı
+            setTimeout(() => {
+                if (confirm('🦁 Merhaba Ali Uras! Bu oyun sana özel hazırlandı. Arkadaşlarınla beraber oynamaya hazır mısın? 🦁')) {
+                    showPlayerSetup();
+                }
+            }, 1000);
+        });
+
+        // Klavye desteği
+        document.addEventListener('keydown', (event) => {
+            if (document.getElementById('game-screen').classList.contains('active')) {
+                const key = event.key.toUpperCase();
+                if (['A', 'B', 'C', 'D'].includes(key)) {
+                    const index = key.charCodeAt(0) - 65;
+                    const buttons = document.querySelectorAll('.answer-btn');
+                    if (buttons[index] && !buttons[index].disabled) {
+                        selectAnswer(index);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
