@@ -57,7 +57,7 @@ class GameState {
     // Question Management
     async loadQuestions() {
         try {
-            const response = await fetch('./sorular.json');
+            const response = await fetch('./data/sorular.json');
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
