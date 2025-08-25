@@ -57,20 +57,46 @@ class GameState {
     // Question Management
     async loadQuestions() {
         try {
-            const response = await fetch('./data/sorular.json');
+            // Try different possible paths
+            const paths = ['./data/sorular.json', './sorular.json', 'data/sorular.json', 'sorular.json'];
             
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+            let response = null;
+            let loadedPath = null;
+            
+            for (const path of paths) {
+                try {
+                    response = await fetch(path);
+                    if (response.ok) {
+                        loadedPath = path;
+                        break;
+                    }
+                } catch (e) {
+                    continue;
+                }
+            }
+            
+            if (!response || !response.ok) {
+                throw new Error('Soru dosyası hiçbir yolda bulunamadı');
             }
             
             const data = await response.json();
-            this.allQuestions = data.sorular || [];
+            
+            // Handle different JSON structures
+            if (Array.isArray(data)) {
+                this.allQuestions = data;
+            } else if (data.sorular && Array.isArray(data.sorular)) {
+                this.allQuestions = data.sorular;
+            } else if (data.questions && Array.isArray(data.questions)) {
+                this.allQuestions = data.questions;
+            } else {
+                throw new Error('JSON formatı tanınamadı');
+            }
             
             if (this.allQuestions.length === 0) {
                 throw new Error('Soru listesi boş');
             }
             
-            console.log(`📚 ${this.allQuestions.length} soru yüklendi`);
+            console.log(`📚 ${this.allQuestions.length} soru yüklendi (${loadedPath})`);
             return true;
             
         } catch (error) {

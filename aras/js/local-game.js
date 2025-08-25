@@ -1,27 +1,6 @@
 // Local Game Management
 // Created by: Aras Gaygusuz - ArsanaGames
 
-// Game Settings Management
-function setupGameSettings() {
-    // Question count selector
-    document.querySelectorAll('#settings-screen .count-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            soundSystem?.playClickSound();
-            
-            // Remove selected from all buttons
-            document.querySelectorAll('#settings-screen .count-btn').forEach(b => 
-                b.classList.remove('selected'));
-            
-            // Add selected to clicked button
-            btn.classList.add('selected');
-            
-            // Update game state
-            gameState.questionCount = parseInt(btn.dataset.count);
-            console.log(`📊 Question count set to: ${gameState.questionCount}`);
-        });
-    });
-}
-
 // Player Count Management
 function changePlayerCount(delta) {
     soundSystem?.playClickSound();
@@ -469,7 +448,54 @@ function createResultScreen(winnerText, winners, sortedPlayers) {
 }
 
 // Initialize local game settings when page loads
+function setupGameSettings() {
+    // Question count selector
+    document.querySelectorAll('#settings-screen .count-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            soundSystem?.playClickSound();
+            
+            // Remove selected from all buttons
+            document.querySelectorAll('#settings-screen .count-btn').forEach(b => 
+                b.classList.remove('selected'));
+            
+            // Add selected to clicked button
+            btn.classList.add('selected');
+            
+            // Update game state
+            gameState.questionCount = parseInt(btn.dataset.count);
+            console.log(`📊 Question count set to: ${gameState.questionCount}`);
+        });
+    });
+    
+    // Online room question count selector
+    document.querySelectorAll('#waiting-screen .count-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            soundSystem?.playClickSound();
+            
+            // Remove selected from all buttons
+            document.querySelectorAll('#waiting-screen .count-btn').forEach(b => 
+                b.classList.remove('selected'));
+            
+            // Add selected to clicked button
+            btn.classList.add('selected');
+            
+            // Update game state
+            gameState.questionCount = parseInt(btn.dataset.count);
+            
+            // Update online room if host
+            if (gameState.isHost && window.roomRef) {
+                window.roomRef.child('settings/questionCount').set(gameState.questionCount);
+            }
+            
+            console.log(`📊 Online question count set to: ${gameState.questionCount}`);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    setupGameSettings();
-    console.log('🎮 Local game system ready');
+    // Wait a bit for DOM to be fully ready, then setup
+    setTimeout(() => {
+        setupGameSettings();
+        console.log('🎮 Local game system ready');
+    }, 100);
 });

@@ -28,9 +28,6 @@ async function initApp() {
         // Check for room code in URL
         utils.checkURLForRoomCode();
         
-        // Setup game settings
-        setupGameSettings();
-        
         // Optimize performance
         optimizePerformance();
         
