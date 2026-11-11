@@ -4,44 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Baki Grup — tasarım taslakları</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<title>Baki Grup — taslaklar</title>
 <style>
-:root{--paper:#F3F0E9;--ink:#161513;--line:#cfc9bc;--copper:#8F5524;--mute:#6b665d}
+:root{--paper:#F3F0E9;--ink:#161513;--line:#cfc9bc;--copper:#8F5524}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;line-height:1.5}
-main{max-width:1040px;margin:0 auto;padding:clamp(32px,7vw,96px) 20px 64px}
-img.logo{width:132px;height:auto;display:block;margin-bottom:clamp(40px,8vw,88px)}
-.k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(40px,7vw,84px);line-height:1.02;letter-spacing:-.01em;margin:14px 0 20px;text-wrap:balance}
-h1 em{color:var(--copper)}
-p.lead{max-width:56ch;font-size:18px;color:#3a3732;margin:0 0 clamp(40px,7vw,80px)}
-ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-li{border-bottom:1px solid var(--line)}
-a.row{display:grid;grid-template-columns:72px 1fr auto;gap:8px 24px;align-items:baseline;padding:28px 0;color:inherit;text-decoration:none}
-a.row:hover h2,a.row:focus-visible h2{color:var(--copper)}
-a.row:focus-visible{outline:2px solid var(--copper);outline-offset:4px}
-h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0;transition:color .3s}
-.d{grid-column:2;margin:0;color:#3a3732;max-width:60ch}
-.go{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--copper);white-space:nowrap}
-footer{margin-top:48px;color:var(--mute);font-size:14px}
-@media(max-width:560px){a.row{grid-template-columns:44px 1fr}.go{grid-column:2}}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+main{width:100%;max-width:440px;padding:32px 20px}
+img{width:120px;height:auto;display:block;margin:0 auto 32px}
+nav{border-top:1px solid var(--ink)}
+a{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none;font-size:26px}
+a span{font:13px ui-monospace,Menlo,monospace;color:var(--copper)}
+a:hover,a:focus-visible{color:var(--copper)}
+a:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
 </style>
 </head>
 <body>
 <main>
-<img class="logo" src="assets/logo/baki-grup.png" alt="Baki Grup İnşaat">
-<div class="k">Web sitesi · tasarım taslakları</div>
-<h1>Üç <em>yön</em>, aynı cümle.</h1>
-<p class="lead">Üç taslak da aynı fikri anlatıyor: binayı başkası yükseltir, içinde yaşanan yüzeyi Baki Grup yapar. Fark, bunu nasıl gösterdiklerinde.</p>
-<ol>
-<li><a class="row" href="tema1/"><span class="k">01</span><h2>Kesit</h2><span class="go">Aç →</span><p class="d">Açık renk, mimari çizim havasında. Aşağı indikçe bir bölme duvar katman katman kuruluyor.</p></a></li>
-<li><a class="row" href="tema2/"><span class="k">02</span><h2>Yalama Işık</h2><span class="go">Aç →</span><p class="d">Koyu renk, otel havasında. Yüzeyin üzerinden geçen ışık, ustanın duvarı denetlediği anı anlatıyor.</p></a></li>
-<li><a class="row" href="tema3/"><span class="k">03</span><h2>Metraj</h2><span class="go">Aç →</span><p class="d">En sade ve en kurumsal olanı. Büyük sayılar, projeler tablo hâlinde; 1.500.000 m² karo karo doluyor.</p></a></li>
-</ol>
-<footer>Taslaktır; metinler ve görseller değişebilir.</footer>
+<img src="assets/logo/baki-grup.png" alt="Baki Grup İnşaat">
+<nav>
+<a href="tema1/" target="_blank" rel="noopener">Kesit <span>01 ↗</span></a>
+<a href="tema2/" target="_blank" rel="noopener">Yalama Işık <span>02 ↗</span></a>
+<a href="tema3/" target="_blank" rel="noopener">Metraj <span>03 ↗</span></a>
+</nav>
 </main>
 </body>
 </html>
