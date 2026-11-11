@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baki Grup İnşaat — İnce İşler</title>
+<meta name="description" content="Baki Grup İnşaat: havalimanı, hastane, kamu binası ve otellerde bölme duvar, asma tavan, duvar, zemin ve tavan kaplamaları. 2002'den beri ince işler.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --ink:#141210;
+  --ink-2:#1B1815;
+  --ink-3:#24201C;
+  --plaster:#EAE4D9;
+  --plaster-soft:#D3CBBE;
+  --stone:#9C9488;
+  --stone-dim:#6F685F;
+  --copper:#B5763C;
+  --copper-lit:#D39A62;
+  --line:rgba(234,228,217,.13);
+  --line-strong:rgba(234,228,217,.26);
+  --line-cu:rgba(181,118,60,.55);
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --sans:"Albert Sans","Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,4vw,64px);
+  --max:1360px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-io:cubic-bezier(.45,.05,.2,1);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--plaster);font-family:var(--sans);font-size:clamp(16px,1.12vw,18px);line-height:1.62;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1px solid var(--copper-lit);outline-offset:4px}
+::selection{background:var(--copper);color:var(--ink)}
+h1,h2,h3,h4,p,dl,dd,ol,ul,figure{margin:0}
+h1,h2,h3,.disc-num,.sm-num,.r-num,.r-name,.p-names,.c-mail,.city{font-variant-numeric:lining-nums}
+ol,ul{padding:0;list-style:none}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+.label{font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);line-height:1.5}
+.label .cu,.cu{color:var(--copper-lit)}
+.num{font-family:var(--serif);font-variant-numeric:lining-nums tabular-nums;font-weight:400}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+.serif{font-family:var(--serif)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--plaster);color:var(--ink);padding:10px 14px;font-size:14px}
+.skip:focus{top:12px}
+
+/* ---------- light on letters: scroll-linked raking glint ---------- */
+.js .lit{
+  --c:var(--plaster);
+  --s:calc(var(--p,-1) * 170% - 40%);
+  background-image:linear-gradient(104deg,var(--c) 0%,var(--c) calc(var(--s) - 14%),#F2DCC2 calc(var(--s) - 5%),#FFF8EE var(--s),var(--c) calc(var(--s) + 10%),var(--c) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+}
+.js .lit-num{
+  --s:calc(var(--r,1.25) * 128% - 12%);
+  background-image:linear-gradient(100deg,#ECE6DB 0%,#ECE6DB calc(var(--s) - 10%),#FFF7EA calc(var(--s) - 2%),var(--copper-lit) var(--s),#3B352F calc(var(--s) + 11%),#3B352F 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+}
+@media (forced-colors:active){.js .lit,.js .lit-num,.gl .hero-title{background:none!important;color:CanvasText!important;-webkit-text-fill-color:CanvasText!important}}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px var(--gut);transition:background-color .6s var(--ease),border-color .6s var(--ease);border-bottom:1px solid transparent}
+.hdr.is-scrolled{background:rgba(20,18,16,.92);border-bottom-color:var(--line)}
+@supports (backdrop-filter:blur(2px)){.hdr.is-scrolled{background:rgba(20,18,16,.86)}}
+.logo{--w:78px;display:block;width:var(--w);height:calc(var(--w) * .6471);overflow:hidden;flex:none}
+.logo img{display:block;width:calc(var(--w) * 1.2144);max-width:none;height:auto;margin:calc(var(--w) * -.055) 0 0 calc(var(--w) * -.1167)}
+.nav{display:flex;gap:clamp(22px,3vw,44px)}
+.nav a{font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--plaster-soft);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.nav a:hover::after,.nav a:focus-visible::after{transform:scaleX(1)}
+.menu-btn{display:none;background:none;border:0;color:var(--plaster);font:500 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;padding:12px 0 12px 12px;cursor:pointer}
+@media (max-width:760px){
+  .logo{--w:64px}
+  .menu-btn{display:block}
+  .nav{position:fixed;inset:0;z-index:-1;flex-direction:column;justify-content:center;gap:6px;padding:0 var(--gut);background:var(--ink);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
+  .nav a{font-family:var(--serif);font-size:44px;font-weight:300;letter-spacing:0;text-transform:none;color:var(--plaster)}
+  .nav a::after{display:none}
+  .hdr.nav-open .nav{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--ink);isolation:isolate}
+.hero-surface,.hero-gl{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero-surface{
+  background-color:var(--ink);
+  background-image:
+    radial-gradient(ellipse 70% 60% at 28% 62%,rgba(211,154,98,.13),rgba(20,18,16,0) 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeDiffuseLighting surfaceScale='1.8' lighting-color='%23fff'%3E%3CfeDistantLight azimuth='180' elevation='16'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix values='0 0 0 0 .92 0 0 0 0 .87 0 0 0 0 .80 .26 0 0 0 -.09'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:auto,420px 420px;
+}
+.hero-shade{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(0deg,rgba(14,13,11,.88) 0%,rgba(14,13,11,.55) 16%,rgba(14,13,11,0) 36%),linear-gradient(180deg,rgba(14,13,11,.55) 0%,rgba(14,13,11,0) 18%)}
+.hero-gl{opacity:0;transition:opacity 1.2s var(--ease)}
+.hero-gl.on{opacity:1}
+.hero-inner{position:relative;width:100%;padding-top:140px;padding-bottom:clamp(36px,6vh,72px)}
+.hero-kicker{position:absolute;top:clamp(110px,16vh,150px);left:var(--gut);display:flex;gap:18px;align-items:center}
+.hero-kicker::before{content:"";width:44px;height:1px;background:var(--copper)}
+.hero-title{font-family:var(--serif);font-weight:300;font-size:clamp(44px,7.6vw,128px);line-height:.98;letter-spacing:0;max-width:13.2em;color:var(--plaster);padding:.08em 0 .16em;margin-bottom:clamp(26px,5.5vh,70px)}
+.hero-title .ln{display:block}
+.hero-title em{font-style:italic;font-weight:300}
+.gl .hero-title{
+  background-image:radial-gradient(circle 40vw at var(--tx,70%) var(--ty,40%),#FBF5EA 0%,#EAE4D9 34%,#BEB6A9 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+}
+.gl .hero.intro .hero-title{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 var(--rev,0px),transparent calc(var(--rev,0px) + 280px));mask-image:linear-gradient(90deg,#000 0,#000 var(--rev,0px),transparent calc(var(--rev,0px) + 280px))}
+.hero-foot{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end;border-top:1px solid var(--line);padding-top:26px}
+.hero-lede{grid-column:1 / span 5;font-size:clamp(16px,1.25vw,19px);color:var(--plaster-soft);max-width:34em}
+.hero-note{grid-column:8 / span 5;font-size:14px;line-height:1.6;color:var(--stone);max-width:30em}
+.hero-note .label{display:block;margin-bottom:8px;color:var(--copper-lit)}
+.js .hero .late{opacity:0;transition:opacity 1.4s var(--ease)}
+.js .hero.is-ready .late{opacity:1}
+.hero-cue{position:absolute;right:var(--gut);top:clamp(110px,16vh,150px);display:flex;flex-direction:column;align-items:center;gap:14px}
+.hero-cue span{writing-mode:vertical-rl;transform:rotate(180deg)}
+.hero-cue i{display:block;width:1px;height:72px;background:linear-gradient(var(--copper),rgba(181,118,60,0))}
+@media (max-width:860px){
+  .hero-lede{grid-column:1 / -1}
+  .hero-note{grid-column:1 / -1}
+  .hero-cue{display:none}
+}
+
+/* ---------- sections common ---------- */
+.sec{position:relative;padding-block:clamp(96px,13vw,190px)}
+.sec-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-bottom:clamp(64px,9vw,130px)}
+.sec-head .label{grid-column:1 / span 3;padding-top:.9em}
+.sec-head h2{grid-column:4 / span 9;font-family:var(--serif);font-weight:300;font-size:clamp(38px,5.2vw,84px);line-height:1.02;letter-spacing:0}
+.sec-head h2 em{font-style:italic}
+.sec-head p{grid-column:4 / span 6;margin-top:28px;color:var(--plaster-soft);font-size:clamp(16px,1.25vw,19px);max-width:36em}
+@media (max-width:860px){
+  .sec-head{grid-template-columns:1fr;gap:18px}
+  .sec-head .label,.sec-head h2,.sec-head p{grid-column:1}
+  .sec-head p{margin-top:6px}
+}
+
+/* ---------- disciplines ---------- */
+.disc{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start;padding-block:clamp(48px,6vw,88px);border-top:1px solid var(--line)}
+.disc:last-of-type{border-bottom:1px solid var(--line)}
+.disc-num{grid-column:1 / span 1;font-family:var(--serif);font-size:20px;color:var(--copper-lit);padding-top:.4em}
+.disc-txt{grid-column:2 / span 4}
+.disc-txt h3{font-family:var(--serif);font-weight:300;font-size:clamp(30px,2.9vw,46px);line-height:1.05;margin-bottom:22px}
+.disc-txt p{color:var(--plaster-soft);max-width:30em}
+.disc-txt .label{margin-top:22px;display:block}
+.disc figure{grid-column:7 / span 6}
+.disc:nth-of-type(even) .disc-txt{grid-column:8 / span 5;grid-row:1}
+.disc:nth-of-type(even) .disc-num{grid-column:7 / span 1;grid-row:1}
+.disc:nth-of-type(even) figure{grid-column:1 / span 6;grid-row:1}
+.disc figcaption{margin-top:12px;display:flex;justify-content:space-between;gap:12px}
+.d-fig{position:relative;aspect-ratio:16 / 9;background:var(--ink-2);overflow:hidden;outline:1px solid var(--line);outline-offset:-1px}
+.d-fig svg{display:block;width:100%;height:100%}
+.disc-more{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;padding-top:40px}
+.disc-more p{grid-column:2 / span 10;color:var(--stone);font-size:15px}
+@media (max-width:860px){
+  .disc{grid-template-columns:1fr;gap:20px}
+  .disc .disc-num,.disc .disc-txt,.disc figure,
+  .disc:nth-of-type(even) .disc-num,.disc:nth-of-type(even) .disc-txt,.disc:nth-of-type(even) figure{grid-column:1;grid-row:auto}
+  .disc-num{padding-top:0}
+  .disc-more{grid-template-columns:1fr}.disc-more p{grid-column:1}
+}
+
+/* svg drawing styles */
+.sv-line{fill:none;stroke:var(--plaster);stroke-opacity:.62;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.sv-thin{fill:none;stroke:var(--plaster);stroke-opacity:.32;stroke-width:1;vector-effect:non-scaling-stroke}
+.sv-cu{fill:none;stroke:var(--copper-lit);stroke-width:1.4;vector-effect:non-scaling-stroke}
+.sv-board{fill:#2E2924;stroke:var(--plaster);stroke-opacity:.5;stroke-width:1;vector-effect:non-scaling-stroke}
+.sv-txt{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;fill:var(--stone);font-weight:500}
+.sv-txt.cu{fill:var(--copper-lit)}
+@media (max-width:600px){.sv-txt{font-size:15px;letter-spacing:.08em}}
+.sv-lead{fill:none;stroke:var(--stone);stroke-opacity:.6;stroke-width:1;vector-effect:non-scaling-stroke}
+
+/* mastar figure (HTML layers) */
+.fig-mastar .m-rough,.fig-mastar .m-smooth{position:absolute;inset:0}
+.fig-mastar .m-rough{background-color:#2A2622;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Cfilter id='f' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.035 .05' numOctaves='5' seed='11'/%3E%3CfeDiffuseLighting surfaceScale='5' lighting-color='%23fff' diffuseConstant='1'%3E%3CfeDistantLight azimuth='180' elevation='13'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix values='.27 0 0 0 .04 .24 0 0 0 .035 .2 0 0 0 .03 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");background-size:cover}
+.fig-mastar .m-smooth{clip-path:inset(0 36% 0 0);background:linear-gradient(92deg,#4A423A 0%,#3A332D 22%,#2C2723 55%,#221E1B 100%)}
+.fig-mastar .m-smooth::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,240,220,.05),rgba(255,240,220,0) 40%,rgba(0,0,0,.12))}
+.fig-mastar .m-bar{position:absolute;top:-6%;bottom:-6%;left:64%;width:7px;margin-left:-7px;background:linear-gradient(90deg,#7A4F28,var(--copper-lit) 45%,#E7B98A 55%,var(--copper))}
+.fig-mastar .m-tag{position:absolute;bottom:14px}
+.fig-mastar .m-tag-a{right:16px}
+.fig-mastar .m-tag-b{left:16px;top:14px;bottom:auto;color:var(--plaster-soft)}
+.fig-mastar .m-line{position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(234,228,217,.0)}
+
+/* ---------- discipline animations ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js .d-fig [data-a]{opacity:0}
+  .js .d-fig .draw{stroke-dasharray:1;stroke-dashoffset:1}
+  .js .d-fig.play [data-a]{animation:fIn .9s var(--ease) both;animation-delay:var(--d,0ms)}
+  .js .d-fig.play .draw{animation:fDraw 1.1s var(--ease) both;animation-delay:var(--d,0ms)}
+  .js .d-fig.play .draw[data-a]{animation:fDraw 1.1s var(--ease) both,fIn .3s linear both;animation-delay:var(--d,0ms)}
+  .js .d-fig .rise{transform:translateY(-6px)}
+  .js .d-fig.play .rise{animation:fRise .9s var(--ease) both;animation-delay:var(--d,0ms)}
+  .js .d-fig .c-pan{transform-box:fill-box;transform-origin:center}
+  .js .d-fig.play .c-pan{animation:fSettle .8s var(--ease) both;animation-delay:var(--d,0ms)}
+  .js .d-fig.play .c-lum{animation:fLamp 1s var(--ease) both;animation-delay:var(--d,0ms)}
+  .js .fig-mastar .m-smooth{clip-path:inset(0 100% 0 0)}
+  .js .fig-mastar.play .m-smooth{animation:fWipe 2.6s var(--ease-io) .3s both}
+  .js .fig-mastar.play .m-bar{animation:fBar 2.6s var(--ease-io) .3s both}
+  .js .fig-mastar .m-tag-b{opacity:0}
+  .js .fig-mastar.play .m-tag-b{animation:fIn 1s var(--ease) 2.4s both}
+  .js .fig-floor .f-gloss{opacity:0}
+  .js .fig-floor.play .f-gloss{animation:fIn 1.6s var(--ease) both;animation-delay:var(--d,0ms)}
+}
+@keyframes fIn{from{opacity:0}to{opacity:1}}
+@keyframes fDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fRise{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes fSettle{from{opacity:0;transform:scale(1.07)}to{opacity:1;transform:none}}
+@keyframes fLamp{0%{opacity:0}40%{opacity:.55}55%{opacity:.25}100%{opacity:1}}
+@keyframes fWipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 36% 0 0)}}
+@keyframes fBar{0%{left:0;opacity:0}8%{opacity:1}100%{left:64%;opacity:1}}
+
+/* ---------- scale ---------- */
+.scale{padding-top:clamp(40px,6vw,90px);background:linear-gradient(180deg,var(--ink) 0%,#0F0E0C 50%,var(--ink) 100%)}
+.scale-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.scale-grid > .label{grid-column:1 / -1;margin-bottom:clamp(40px,6vw,80px)}
+.big{grid-column:1 / span 12;font-family:var(--serif);font-weight:300;font-size:clamp(70px,14.6vw,236px);line-height:.84;letter-spacing:-.01em;font-variant-numeric:lining-nums;white-space:nowrap}
+.big sup{font-size:.36em;vertical-align:.95em;margin-left:.08em;letter-spacing:0}
+.scale-text{grid-column:1 / span 6;margin-top:clamp(44px,5vw,72px)}
+.scale-text p{font-size:clamp(18px,1.5vw,22px);color:var(--plaster);max-width:30em;line-height:1.5}
+.scale-text p + p{margin-top:20px;font-size:15px;color:var(--stone);max-width:34em;line-height:1.65}
+.facts-side{grid-column:8 / span 5;margin-top:clamp(44px,5vw,72px)}
+.facts-side li{display:grid;grid-template-columns:7.2rem 1fr;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.facts-side li:last-child{border-bottom:1px solid var(--line)}
+.facts-side .num{font-size:clamp(40px,3.6vw,56px);font-weight:300;line-height:1}
+.facts-side .label{color:var(--stone)}
+.facts-side small{display:block;font-size:14px;color:var(--stone);letter-spacing:0;text-transform:none;font-weight:400;margin-top:2px}
+@media (max-width:860px){
+  .scale-text,.facts-side{grid-column:1 / -1}
+  .big{white-space:normal}
+}
+
+/* ---------- projects: scenes ---------- */
+.scene{position:relative;margin-bottom:clamp(110px,14vw,210px)}
+.ph{position:relative;overflow:hidden;background:#0D0C0A;margin:0}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.84) contrast(.98)}
+.js .ph::after{content:"";position:absolute;top:0;bottom:0;left:0;width:250%;pointer-events:none;
+  background:linear-gradient(90deg,rgba(20,18,16,0) 0%,rgba(20,18,16,0) 28%,rgba(255,236,214,.12) 33.5%,rgba(20,18,16,.82) 40%,rgba(20,18,16,.82) 100%);
+  transform:translateX(-40%)}
+.js .ph.is-lit::after{transform:translateX(16%);transition:transform 2.4s var(--ease-io) var(--d,0ms)}
+@media (prefers-reduced-motion:reduce){.js .ph::after{display:none}}
+.ph-main{height:min(86vh,58vw);min-height:300px}
+.scene.full .ph-main{width:100%}
+.scene.offset-r .ph-main{width:calc(100% - var(--gut) - 8vw);margin-left:auto}
+.scene.offset-l .ph-main{width:calc(100% - var(--gut) - 8vw)}
+.ph-main::before{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(14,13,11,.62),rgba(14,13,11,0))}
+.ph-row .ph::before{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(14,13,11,.6),rgba(14,13,11,0))}
+.ph-cap{position:absolute;left:var(--gut);bottom:22px;z-index:2;display:flex;gap:16px;align-items:center;color:var(--plaster);text-shadow:0 1px 10px rgba(0,0,0,.55)}
+.scene.offset-r .ph-cap{left:32px}
+.ph-cap .label{color:var(--plaster)}
+.ph-cap::before{content:"";width:30px;height:1px;background:var(--copper-lit)}
+
+.scene-meta{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;padding-top:clamp(40px,5vw,72px)}
+.sm-num{grid-column:1 / span 1;font-family:var(--serif);font-size:20px;color:var(--copper-lit);padding-top:.5em;font-variant-numeric:lining-nums}
+.sm-head{grid-column:2 / span 6}
+.sm-head h3{font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.2vw,68px);line-height:1.02}
+.sm-head .label{margin-top:16px;display:block}
+.sm-text{grid-column:2 / span 5;color:var(--plaster-soft);max-width:30em;margin-top:6px}
+.facts{grid-column:8 / span 5;grid-row:1 / span 2;align-self:start}
+.facts div{display:grid;grid-template-columns:10.5rem 1fr;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:15px}
+.facts div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);padding-top:3px}
+.facts dd{color:var(--plaster)}
+.facts .scope dd{color:var(--copper-lit)}
+.ph-row{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:clamp(48px,6vw,96px)}
+.ph-row .ph{aspect-ratio:3 / 2}
+.ph-row .ph figcaption{position:absolute;left:16px;bottom:12px;z-index:2;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.ph-row .ph figcaption.label{color:var(--plaster)}
+.ph-row .a{grid-column:2 / span 5}
+.ph-row .b{grid-column:7 / span 4;margin-top:clamp(40px,8vw,120px)}
+.ph-row .a.wide{grid-column:2 / span 6}
+.ph-row .b.narrow{grid-column:9 / span 3}
+.yapi{grid-column:8 / span 5;display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:end;margin-top:28px}
+.yapi .yimg{aspect-ratio:16 / 10;overflow:hidden;background:#0D0C0A}
+.yapi img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) sepia(.32) brightness(.58) contrast(1.08)}
+.yapi p{font-size:12.5px;line-height:1.55;color:var(--stone)}
+.yapi p b{display:block;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);margin-bottom:4px}
+@media (max-width:860px){
+  .scene.offset-r .ph-main,.scene.offset-l .ph-main{width:100%}
+  .scene.offset-r .ph-cap{left:var(--gut)}
+  .ph-main{height:auto;aspect-ratio:4 / 3.2;min-height:0}
+  .scene-meta{grid-template-columns:1fr;gap:16px}
+  .sm-num,.sm-head,.sm-text,.facts,.yapi{grid-column:1;grid-row:auto}
+  .facts{margin-top:14px}
+  .facts div{grid-template-columns:8.6rem 1fr}
+  .ph-row{grid-template-columns:repeat(6,1fr);gap:14px}
+  .ph-row .a,.ph-row .a.wide{grid-column:1 / span 6}
+  .ph-row .b,.ph-row .b.narrow{grid-column:2 / span 5;margin-top:0}
+  .yapi{grid-template-columns:120px 1fr}
+  .ph-row .yapi{grid-column:1 / -1;margin-top:8px}
+}
+
+/* ---------- projects: list ---------- */
+.plist{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.plist-head{grid-column:1 / span 3}
+.plist-head h3{font-family:var(--serif);font-weight:300;font-size:clamp(30px,2.9vw,46px);line-height:1.05;margin-bottom:18px}
+.plist-head p{color:var(--stone);font-size:15px;max-width:22em}
+.plist-body{grid-column:4 / span 9}
+.rows{position:relative}
+.row{position:relative;display:grid;grid-template-columns:2.6rem minmax(0,1.9fr) minmax(0,1fr) minmax(0,.95fr) minmax(0,.8fr) minmax(0,1fr);gap:18px;align-items:baseline;padding:20px 12px 20px 0;border-top:1px solid var(--line);transition:background-color .7s var(--ease)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row.th{padding-block:0 12px;border-top:0}
+.row.th span{font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--stone-dim)}
+.row::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(234,228,217,0) 0%,rgba(234,228,217,.055) 40%,rgba(211,154,98,.04) 70%,rgba(234,228,217,0) 100%);opacity:0;transition:opacity .7s var(--ease);pointer-events:none}
+.row:not(.th):hover::before{opacity:1}
+.r-num{font-family:var(--serif);color:var(--copper-lit);font-size:17px;font-variant-numeric:lining-nums tabular-nums}
+.r-name{font-family:var(--serif);font-size:clamp(21px,1.75vw,27px);line-height:1.15;color:var(--plaster);transition:color .6s var(--ease)}
+.r-cell{font-size:14.5px;color:var(--plaster-soft)}
+.r-stat{font-size:14px;color:var(--stone)}
+.r-img{position:absolute;right:calc(100% + 28px);top:50%;width:170px;aspect-ratio:16 / 10;transform:translateY(-50%);overflow:hidden;opacity:0;clip-path:inset(0 0 0 100%);transition:opacity .6s var(--ease),clip-path .9s var(--ease-io);pointer-events:none}
+.r-img img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) sepia(.3) brightness(.62) contrast(1.06)}
+.row:hover .r-img{opacity:1;clip-path:inset(0 0 0 0)}
+.sub-label{display:flex;align-items:center;gap:14px;margin:56px 0 6px}
+.site-mark{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-lit)}
+.site-mark::before{content:"";width:7px;height:7px;border:1px solid var(--copper-lit);transform:rotate(45deg)}
+.row .site-mark{font-size:10.5px}
+@media (max-width:1100px){
+  .plist-head{grid-column:1 / -1}
+  .plist-body{grid-column:1 / -1}
+  .r-img{display:none}
+}
+@media (max-width:860px){
+  .row{grid-template-columns:2.2rem 1fr;gap:4px 12px;padding:18px 0}
+  .row.th{display:none}
+  .row > .r-cell,.row > .r-stat{grid-column:2}
+  .r-name{margin-bottom:6px}
+  .row .r-cell[data-k]::before{content:attr(data-k) " · ";color:var(--stone-dim);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+}
+
+/* ---------- partners ---------- */
+.partners{padding-block:clamp(90px,11vw,160px) clamp(110px,13vw,190px)}
+.p-names{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,4vw,64px);font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.3vw,52px);line-height:1.1;counter-reset:pn}
+.p-names li{display:flex;align-items:baseline;gap:22px;padding:18px 0 16px;border-top:1px solid var(--line);counter-increment:pn}
+.p-names li::before{content:counter(pn,decimal-leading-zero);font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--copper-lit);transform:translateY(-.9em)}
+@media (max-width:620px){.p-names{grid-template-columns:1fr}}
+.pn-col{grid-column:4 / span 9}
+@media (max-width:860px){.pn-col{grid-column:1}}
+.partners .note{margin-top:44px;color:var(--stone);font-size:15px;max-width:42em}
+
+/* ---------- about (inverted plaster) ---------- */
+.about{background:var(--plaster);color:#1E1B18;position:relative}
+.about::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:clamp(160px,26vh,300px);background:linear-gradient(180deg,rgba(234,228,217,0) 0%,rgba(234,228,217,.04) 30%,rgba(234,228,217,.28) 70%,var(--plaster) 100%);pointer-events:none}
+.about::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeDiffuseLighting surfaceScale='1.4' lighting-color='%23fff'%3E%3CfeDistantLight azimuth='180' elevation='22'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .44 -.2 0 0 0 .2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:360px}
+.about .wrap{position:relative;z-index:1}
+.about .label{color:#6A6157}
+.about .sec-head h2{color:#1A1714}
+.about .sec-head p{color:#3C362F}
+.about .lit{--c:#1A1714}
+.js .about .lit{background-image:linear-gradient(104deg,var(--c) 0%,var(--c) calc(var(--s) - 11%),#8A5528 calc(var(--s) - 3%),#A86C34 var(--s),var(--c) calc(var(--s) + 9%),var(--c) 100%)}
+.tl{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:clamp(30px,4vw,60px)}
+.tl-line{grid-column:4 / span 9;position:relative;height:1px;background:rgba(26,23,20,.22);margin-bottom:34px}
+.tl-line::before,.tl-line::after{content:"";position:absolute;top:-5px;width:1px;height:11px;background:#8A5528}
+.tl-line::before{left:0}.tl-line::after{right:0}
+.tl-line i{position:absolute;left:0;top:0;height:1px;width:100%;background:var(--copper);transform-origin:left}
+@media (prefers-reduced-motion:no-preference){
+  .js .tl-line i{transform:scaleX(0)}
+  .js .tl.play .tl-line i{transform:scaleX(1);transition:transform 1.8s var(--ease-io)}
+}
+.tl-items{grid-column:4 / span 9;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tl-items .num{font-size:clamp(46px,4.8vw,76px);font-weight:300;line-height:1;color:#1A1714;display:block;margin-bottom:14px}
+.tl-items h3{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#8A5528;margin-bottom:8px}
+.tl-items p{font-size:15.5px;color:#3C362F;max-width:20em}
+.about-cols{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:clamp(70px,9vw,130px);padding-top:30px;border-top:1px solid rgba(26,23,20,.16)}
+.about-cols > div{grid-column:span 3}
+.about-cols > div:first-child{grid-column:4 / span 3}
+.about-cols h3{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#6A6157;margin-bottom:14px}
+.about-cols li{font-size:15.5px;color:#2A2622;padding:3px 0}
+@media (max-width:860px){
+  .tl{grid-template-columns:1fr}
+  .tl-line,.tl-items{grid-column:1}
+  .tl-items{grid-template-columns:1fr;gap:34px}
+  .about-cols{grid-template-columns:1fr}
+  .about-cols > div,.about-cols > div:first-child{grid-column:1}
+}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);position:relative;overflow:hidden;padding-bottom:0}
+.contact::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,var(--plaster) 0,rgba(234,228,217,.0) 1px),radial-gradient(ellipse 60% 70% at 12% 0%,rgba(211,154,98,.10),rgba(20,18,16,0) 70%)}
+.c-mail{display:inline-block;font-family:var(--serif);font-weight:300;font-size:clamp(40px,7.4vw,120px);line-height:1;letter-spacing:-.005em;margin-top:6px;word-break:break-word}
+.c-mail-wrap{grid-column:4 / span 9}
+.c-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.c-grid > .label{grid-column:1 / span 3;padding-top:1em}
+.c-rows{grid-column:4 / span 9;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(64px,8vw,110px)}
+.c-rows > div{border-top:1px solid var(--line-strong);padding-top:20px}
+.c-rows h3{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);margin-bottom:12px}
+.c-rows p,.c-rows a{font-size:16px;color:var(--plaster-soft);line-height:1.6}
+.c-rows .city{font-family:var(--serif);font-size:30px;font-weight:300;color:var(--plaster);line-height:1.1;margin-bottom:8px;display:block}
+.c-links a{border-bottom:1px solid var(--line-cu);padding-bottom:2px;transition:border-color .5s var(--ease),color .5s var(--ease)}
+.c-links a:hover{border-color:var(--copper-lit);color:var(--plaster)}
+.c-mail:hover{color:var(--plaster)}
+.foot{border-top:1px solid var(--line);padding-block:34px 40px;margin-top:clamp(90px,11vw,160px);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .logo{--w:70px}
+.foot p{font-size:13px;color:var(--stone-dim)}
+@media (max-width:860px){
+  .c-grid{grid-template-columns:1fr}
+  .c-grid > .label,.c-mail-wrap,.c-rows{grid-column:1}
+  .c-rows{grid-template-columns:1fr;gap:28px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#uzmanlik">İçeriğe geç</a>
+
+<header class="hdr" id="hdr">
+  <a class="logo" href="#top" aria-label="Baki Grup İnşaat, sayfa başı"><img src="../assets/logo/baki-grup-white.png" alt="Baki Grup İnşaat" width="2560" height="1610"></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menü</button>
+  <nav class="nav" id="nav" aria-label="Ana menü">
+    <a href="#uzmanlik">Uzmanlık</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#hakkinda">Hakkında</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============ AÇILIŞ ============ -->
+<section class="hero" id="top" aria-label="Açılış">
+  <div class="hero-surface" aria-hidden="true"></div>
+  <canvas class="hero-gl" id="heroGl" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <p class="label hero-kicker late">Baki Grup İnşaat · İnce işler · 2002'den beri</p>
+  <div class="hero-cue late label" aria-hidden="true"><span>Aşağı</span><i></i></div>
+  <div class="hero-inner wrap">
+    <h1 class="hero-title" id="heroTitle"><span class="ln">Binayı başkası yükseltir.</span> <span class="ln">İçinde yaşanan <em>yüzeyi</em></span> <span class="ln">biz yaparız.</span></h1>
+    <div class="hero-foot late">
+      <p class="hero-lede">Havalimanı, hastane, devlet binası ve otellerde bölme duvar, asma tavan, duvar, zemin ve tavan kaplamaları. Yapının içinde görünen her yüzey.</p>
+      <p class="hero-note"><span class="label">Yalama ışık</span>Usta, yüzeyi denetlerken lambayı duvara neredeyse paralel tutar. Işık yüzeyi sıyırır, en küçük dalga gölge verir. İşimiz o ışıkta da düz kalmak.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NE YAPIYORUZ ============ -->
+<section class="sec" id="uzmanlik" aria-labelledby="uz-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span class="cu">01</span> — Uzmanlık</p>
+      <h2 id="uz-h" class="lit">Strüktürü kimse görmez. <em>Görülen her şey ince iştir.</em></h2>
+      <p>Yolcunun dokunduğu duvar, hastanın baktığı tavan, misafirin yürüdüğü zemin. Kaba yapı bittiğinde biz başlarız; bina açıldığında yüzeyde kalan iş bizimdir.</p>
+    </header>
+
+    <article class="disc">
+      <span class="disc-num">01</span>
+      <div class="disc-txt">
+        <h3>Bölme duvar sistemleri</h3>
+        <p>Galvaniz U ve C profillerden iskelet, arasında taş yünü, iki yüzde çift kat alçı levha. Derzler şaşırtılır, bant ve macunla kapanır. Yangın, ses ve nem şartnamesi levha tipini ve kat sayısını belirler.</p>
+      </div>
+      <figure>
+        <div class="d-fig fig-wall" role="img" aria-label="Bölme duvarın yatay kesiti: C profiller, taş yünü, iki yüzde çift kat alçı levha, derz bandı, macun ve boya; uçta duvara bağlanan U profil.">
+          <svg viewBox="0 0 640 360" aria-hidden="true">
+            <defs>
+              <pattern id="wool" width="28" height="92" patternUnits="userSpaceOnUse" x="0" y="134">
+                <path d="M0 3 C10 3 4 89 14 89 C24 89 18 3 28 3" fill="none" stroke="#B5763C" stroke-opacity=".7" stroke-width="1"/>
+              </pattern>
+              <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="9" stroke="#EAE4D9" stroke-opacity=".28" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <!-- mevcut beton duvar (sağ uç) -->
+            <g data-a style="--d:0ms">
+              <rect x="598" y="70" width="42" height="220" fill="url(#hatch)"/>
+              <line class="sv-line" x1="598" y1="70" x2="598" y2="290"/>
+            </g>
+            <!-- sol kırık çizgi -->
+            <path class="sv-thin" data-a style="--d:0ms" d="M44 90 L44 166 L36 172 L52 186 L44 192 L44 270"/>
+            <!-- taş yünü -->
+            <rect data-a style="--d:900ms" x="46" y="134" width="510" height="92" fill="url(#wool)"/>
+            <!-- profiller -->
+            <path class="sv-line draw" pathLength="1" style="--d:200ms" d="M160 141 V132 H120 V228 H160 V219"/>
+            <path class="sv-line draw" pathLength="1" style="--d:350ms" d="M360 141 V132 H320 V228 H360 V219"/>
+            <path class="sv-line draw" pathLength="1" style="--d:500ms" d="M556 132 H596 V228 H556"/>
+            <!-- iç kat levhalar -->
+            <g class="rise" style="--d:1400ms"><rect class="sv-board" x="46" y="118" width="273" height="14"/><rect class="sv-board" x="321" y="118" width="275" height="14"/></g>
+            <g class="rise" style="--d:1600ms"><rect class="sv-board" x="46" y="228" width="473" height="14"/><rect class="sv-board" x="521" y="228" width="75" height="14"/></g>
+            <!-- dış kat levhalar (derz şaşırtmalı) -->
+            <g class="rise" style="--d:2000ms"><rect class="sv-board" x="46" y="104" width="473" height="14"/><rect class="sv-board" x="521" y="104" width="75" height="14"/></g>
+            <g class="rise" style="--d:2200ms"><rect class="sv-board" x="46" y="242" width="273" height="14"/><rect class="sv-board" x="321" y="242" width="275" height="14"/></g>
+            <!-- vidalar -->
+            <g data-a style="--d:2600ms" stroke="#EAE4D9" stroke-opacity=".7" stroke-width="1.2">
+              <line x1="140" y1="104" x2="140" y2="140"/><line x1="340" y1="104" x2="340" y2="140"/><line x1="540" y1="104" x2="540" y2="140"/>
+              <line x1="140" y1="220" x2="140" y2="256"/><line x1="340" y1="220" x2="340" y2="256"/><line x1="540" y1="220" x2="540" y2="256"/>
+            </g>
+            <!-- derz bandı + macun -->
+            <g data-a style="--d:2900ms">
+              <path d="M496 103.5 Q520 100.5 544 103.5" fill="none" stroke="#EAE4D9" stroke-width="2.2" stroke-opacity=".85"/>
+              <path d="M296 256.5 Q320 259.5 344 256.5" fill="none" stroke="#EAE4D9" stroke-width="2.2" stroke-opacity=".85"/>
+            </g>
+            <!-- boya -->
+            <line class="sv-cu draw" pathLength="1" style="--d:3200ms" x1="46" y1="101" x2="596" y2="101"/>
+            <line class="sv-cu draw" pathLength="1" style="--d:3300ms" x1="46" y1="259" x2="596" y2="259"/>
+            <!-- etiketler -->
+            <g data-a style="--d:3600ms">
+              <path class="sv-lead" d="M520 99 V58 H486"/><text class="sv-txt" x="480" y="62" text-anchor="end">DERZ BANDI + MACUN</text>
+              <path class="sv-lead" d="M250 101 V80 H290"/><text class="sv-txt cu" x="296" y="84">BOYA</text>
+              <path class="sv-lead" d="M90 111 V40 H130"/><text class="sv-txt" x="136" y="44">2 × ALÇI LEVHA · 12,5 MM</text>
+              <path class="sv-lead" d="M140 228 V312 H170"/><text class="sv-txt" x="176" y="316">C PROFİL</text>
+              <path class="sv-lead" d="M250 200 V330 H280"/><text class="sv-txt" x="286" y="334">TAŞ YÜNÜ</text>
+              <path class="sv-lead" d="M576 228 V312 H530"/><text class="sv-txt" x="446" y="316">U PROFİL</text>
+              <path class="sv-thin" d="M22 101 V259 M17 101 H27 M17 259 H27"/>
+              <text class="sv-txt" transform="translate(16 200) rotate(-90)">125 MM</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><span class="label">Yatay kesit · ölçeksiz</span><span class="label">75 mm profil · 2 + 2 levha</span></figcaption>
+      </figure>
+    </article>
+
+    <article class="disc">
+      <span class="disc-num">02</span>
+      <div class="disc-txt">
+        <h3>Asma tavanlar</h3>
+        <p>Askı çubuklarına asılı taşıyıcı ızgara; üzerine karo, metal ya da alçı levha tavan. Armatür, menfez ve sprinkler yerleri tavan planında önceden çözülür; tavan kapandığında aks kaçmaz.</p>
+      </div>
+      <figure>
+        <div class="d-fig fig-ceiling" role="img" aria-label="Asma tavan planı: karolaj ızgarası çizilir, paneller yerine oturur, gömme armatürler sırayla yanar.">
+          <svg viewBox="0 0 640 360" aria-hidden="true" id="svgCeiling"></svg>
+        </div>
+        <figcaption><span class="label">Tavan planı · 600 × 600 karolaj</span><span class="label">Gömme armatür</span></figcaption>
+      </figure>
+    </article>
+
+    <article class="disc">
+      <span class="disc-num">03</span>
+      <div class="disc-txt">
+        <h3>Duvar ve tavan kaplamaları</h3>
+        <p>Kaba yüzey mastarla düzlenir, saten alçı ve macunla kapanır, zımparalanır, boyanır. Ahşap, taş ya da metal kaplama aynı düzlemin üstüne oturur. Son kontrol yalama ışıktadır.</p>
+      </div>
+      <figure>
+        <div class="d-fig fig-mastar" role="img" aria-label="Mastar geçişi: pürüzlü kaba yüzey, üzerinden geçen düz kenarın ardında pürüzsüz bitmiş yüzeye döner.">
+          <div class="m-rough"></div>
+          <div class="m-smooth"></div>
+          <div class="m-bar"></div>
+          <span class="label m-tag m-tag-a">Kaba yüzey</span>
+          <span class="label m-tag m-tag-b">Saten alçı · boya</span>
+        </div>
+        <figcaption><span class="label">Mastar</span><span class="label">Işık soldan, yüzeye paralel</span></figcaption>
+      </figure>
+    </article>
+
+    <article class="disc">
+      <span class="disc-num">04</span>
+      <div class="disc-txt">
+        <h3>Zemin kaplamaları</h3>
+        <p>Seramik, doğal taş, vinil ve epoksi. Derz aksları mekânın aksına bağlanır. Hastanede hijyen şartnamesi, otelde kesintisiz geçişler belirleyicidir.</p>
+      </div>
+      <figure>
+        <div class="d-fig fig-floor" role="img" aria-label="Zemin: derz çizgileri perspektifte çizilir, ardından yüzey parlaklık kazanır.">
+          <svg viewBox="0 0 640 360" aria-hidden="true" id="svgFloor"></svg>
+        </div>
+        <figcaption><span class="label">Derz aksı · perspektif</span><span class="label">Parlak yüzey</span></figcaption>
+      </figure>
+    </article>
+
+    <article class="disc">
+      <span class="disc-num">05</span>
+      <div class="disc-txt">
+        <h3>Akustik ve dekoratif detaylar</h3>
+        <p>Delikli alçı ve ahşap paneller, akustik tavan adaları, gizli ışık bantları, nişler ve profiller. Bir salonun nasıl duyulduğunu da yüzeyi belirler.</p>
+      </div>
+      <figure>
+        <div class="d-fig fig-acoustic" role="img" aria-label="Akustik panel: gelen ses dalgası delikli panele çarpar, yansıyan dalga zayıflar.">
+          <svg viewBox="0 0 640 360" aria-hidden="true" id="svgAcoustic"></svg>
+        </div>
+        <figcaption><span class="label">Delikli akustik panel</span><span class="label">Yansıma azalır</span></figcaption>
+      </figure>
+    </article>
+
+    <div class="disc-more"><p>Her işte: proje ve şantiye yönetimi, malzeme seçimi ve teknik analiz.</p></div>
+  </div>
+</section>
+
+<!-- ============ ÖLÇEK ============ -->
+<section class="sec scale" id="olcek" aria-labelledby="ol-h">
+  <div class="wrap scale-grid">
+    <p class="label"><span class="cu">02</span> — Ölçek</p>
+    <h2 id="ol-h" class="big lit-num"><span class="num">1.500.000</span><sup>m²</sup></h2>
+    <div class="scale-text">
+      <p>Ercan Havalimanı'nda 128.000 m²'lik terminalin içinde yaptığımız ince işler imalatı. Bina büyük; içindeki iş de.</p>
+      <p>Bir metrekare zeminin üstünde duvarların iki yüzü, tavan ve kat kat levha, sıva, boya vardır. İmalat, yüzeyle ölçülür.</p>
+    </div>
+    <ul class="facts-side">
+      <li><span class="num lit">2002</span><span class="label">Kuruluş<small>Ali Baki, MT Yapı</small></span></li>
+      <li><span class="num lit">4</span><span class="label">Ülke<small>Türkiye, KKTC, Hırvatistan, Sırbistan</small></span></li>
+      <li><span class="num lit">3</span><span class="label">Ofis<small>İstanbul, Lefkoşa, Zagreb</small></span></li>
+      <li><span class="num lit">11</span><span class="label">Proje<small>Üçü şantiyede</small></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PROJELER ============ -->
+<section class="sec" id="projeler" aria-labelledby="pr-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span class="cu">03</span> — Projeler</p>
+      <h2 id="pr-h" class="lit">Yapıyı ana yüklenici kurar. <em>İçini biz bitiririz.</em></h2>
+      <p>On bir proje, dört ülke. Her birinde rolümüzü açık yazıyoruz: ana yüklenici kim, bizim kapsamımız ne.</p>
+    </header>
+  </div>
+
+  <!-- 01 Ercan -->
+  <article class="scene full">
+    <figure class="ph ph-main" data-light>
+      <img src="../assets/img/ercan-havalimani-4.jpg" alt="Ercan Havalimanı yeni terminali kapı bekleme salonu: ahşap çıtalı asma tavan, çapraz taşıyıcılı cam cephe ve bekleme koltukları" loading="lazy" decoding="async" width="1600" height="900">
+      <figcaption class="ph-cap"><span class="label">Kapı bekleme salonu · Baki Grup kapsamı: ince işler</span></figcaption>
+    </figure>
+    <div class="wrap">
+      <div class="scene-meta">
+        <span class="sm-num">01</span>
+        <div class="sm-head"><h3 class="lit">Ercan Havalimanı Yeni Terminal</h3><span class="label">Lefkoşa, KKTC · Ulaşım</span></div>
+        <p class="sm-text">Terminalin iç yüzeyleri: bölme, tavan ve kaplama işleri, uluslararası havacılık standartlarına uygun. 128.000 m² kapalı alanın içinde 1.500.000 m²'yi aşan imalat.</p>
+        <dl class="facts">
+          <div class="scope"><dt>Kapsam</dt><dd>İnce işler</dd></div>
+          <div><dt>Ana yüklenici</dt><dd>Taşyapı</dd></div>
+          <div><dt>Yapı alanı</dt><dd>128.000 m² kapalı alan</dd></div>
+          <div><dt>İmalat</dt><dd>1.500.000 m²'yi aşkın</dd></div>
+          <div><dt>Teslim</dt><dd>Temmuz 2023</dd></div>
+        </dl>
+      </div>
+      <div class="ph-row">
+        <figure class="ph a wide" data-light><img src="../assets/img/ercan-havalimani-2.jpg" alt="Ercan Havalimanı check-in salonu, turuncu kaplamalı hacim ve beyaz ağaç kolonlar" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Check-in salonu</figcaption></figure>
+        <figure class="ph b narrow" data-light style="--d:250ms"><img src="../assets/img/ercan-havalimani-3.jpg" alt="Ercan Havalimanı terminal salonunda turuncu kaplamalı kavisli hacim" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Terminal salonu</figcaption></figure>
+        <div class="yapi">
+          <div class="yimg"><img src="../assets/img/ercan-havalimani-1.jpg" alt="Ercan Havalimanı terminal binasının akşam havadan görünümü" loading="lazy" decoding="async" width="1600" height="900"></div>
+          <p><b>Yapı</b>Ercan Havalimanı · Ana yüklenici: Taşyapı</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 02 Cullinan -->
+  <article class="scene offset-r">
+    <figure class="ph ph-main" data-light>
+      <img src="../assets/img/titanic-cullinan-5.jpg" alt="Titanic Cullinan Belek otelinin galerili iç avlusu: bronz kaplamalı kolonlar, ışıklı tavan ve bitkiler" loading="lazy" decoding="async" width="1600" height="900">
+      <figcaption class="ph-cap"><span class="label">Galerili avlu · Baki Grup kapsamı: ince işler</span></figcaption>
+    </figure>
+    <div class="wrap">
+      <div class="scene-meta">
+        <span class="sm-num">02</span>
+        <div class="sm-head"><h3 class="lit">Titanic Cullinan Belek</h3><span class="label">Belek, Antalya · Turizm</span></div>
+        <p class="sm-text">Lobi, restoranlar, spa, süit odalar ve toplantı salonları. Misafirin gördüğü her yüzey.</p>
+        <dl class="facts">
+          <div class="scope"><dt>Kapsam</dt><dd>İnce işler</dd></div>
+          <div><dt>İşveren</dt><dd>Titanic Hotels</dd></div>
+          <div><dt>Yapı alanı</dt><dd>250.000 m² arazi</dd></div>
+          <div><dt>Teslim</dt><dd>Haziran 2022</dd></div>
+        </dl>
+      </div>
+      <div class="ph-row">
+        <figure class="ph a" data-light><img src="../assets/img/titanic-cullinan-4.jpg" alt="Titanic Cullinan süit oturma alanı, deniz manzaralı geniş pencere ve duvarda dekoratif tabaklar" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Süit</figcaption></figure>
+        <figure class="ph b" data-light style="--d:250ms"><img src="../assets/img/titanic-cullinan-6.jpg" alt="Titanic Cullinan dubleks süit, ahşap merdiven ve galeri katı" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Dubleks süit</figcaption></figure>
+        <div class="yapi">
+          <div class="yimg"><img src="../assets/img/titanic-cullinan-ana.jpg" alt="Titanic Cullinan Belek otelinin havadan görünümü" loading="lazy" decoding="async" width="1600" height="900"></div>
+          <p><b>Yapı</b>Titanic Cullinan Belek · İşveren: Titanic Hotels</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 03 Lefkoşa pandemi -->
+  <article class="scene full">
+    <figure class="ph ph-main" data-light>
+      <img src="../assets/img/lefkosa-pandemi-4.jpg" alt="Lefkoşa Acil Durum Hastanesi koridoru: açık renkli zemin, sürgülü hastane kapıları ve gömme tavan armatürleri" loading="lazy" decoding="async" width="1600" height="900">
+      <figcaption class="ph-cap"><span class="label">Hasta koridoru · Baki Grup kapsamı: ince işler</span></figcaption>
+    </figure>
+    <div class="wrap">
+      <div class="scene-meta">
+        <span class="sm-num">03</span>
+        <div class="sm-head"><h3 class="lit">Lefkoşa Acil Durum Hastanesi</h3><span class="label">Lefkoşa, KKTC · Sağlık · Pandemi hastanesi</span></div>
+        <p class="sm-text">Hasta odaları, koridorlar, lobi. Hijyen şartnamesine tabi yüzeyler: silinebilir, derzi az, köşesi temiz.</p>
+        <dl class="facts">
+          <div class="scope"><dt>Kapsam</dt><dd>İnce işler</dd></div>
+          <div><dt>Ana yüklenici</dt><dd>Taşyapı</dd></div>
+          <div><dt>Yapı alanı</dt><dd>11.300 m²</dd></div>
+          <div><dt>Teslim</dt><dd>Kasım 2020</dd></div>
+        </dl>
+      </div>
+      <div class="ph-row">
+        <figure class="ph a wide" data-light><img src="../assets/img/lefkosa-pandemi-3.jpg" alt="Lefkoşa Acil Durum Hastanesi lobisi: halka armatürler, dekoratif duvar paneli ve bekleme koltukları" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Lobi</figcaption></figure>
+        <figure class="ph b narrow" data-light style="--d:250ms"><img src="../assets/img/lefkosa-pandemi-5.jpg" alt="Lefkoşa Acil Durum Hastanesi cam bölmeli hasta odaları" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Hasta odaları</figcaption></figure>
+        <div class="yapi">
+          <div class="yimg"><img src="../assets/img/lefkosa-pandemi-1.jpg" alt="Lefkoşa Acil Durum Hastanesi giriş cephesi" loading="lazy" decoding="async" width="1600" height="900"></div>
+          <p><b>Yapı</b>Lefkoşa Acil Durum Hastanesi · Ana yüklenici: Taşyapı</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 04 Deluxe -->
+  <article class="scene offset-l">
+    <figure class="ph ph-main" data-light>
+      <img src="../assets/img/titanic-delux-3.jpg" alt="Titanic Deluxe Belek lobisi: beyaz kolonlar, kemerli tavan, desenli mermer zemin ve fenerler" loading="lazy" decoding="async" width="1600" height="900">
+      <figcaption class="ph-cap"><span class="label">Lobi · Baki Grup kapsamı: ince işler</span></figcaption>
+    </figure>
+    <div class="wrap">
+      <div class="scene-meta">
+        <span class="sm-num">04</span>
+        <div class="sm-head"><h3 class="lit">Titanic Deluxe Belek</h3><span class="label">Belek, Antalya · Turizm</span></div>
+        <p class="sm-text">600'ü aşkın oda; lobi, restoranlar, toplantı salonları. Aynı detayın yüzlerce kez aynı düzgünlükte tekrarı.</p>
+        <dl class="facts">
+          <div class="scope"><dt>Kapsam</dt><dd>İnce işler</dd></div>
+          <div><dt>İşveren</dt><dd>Titanic Hotels</dd></div>
+          <div><dt>Yapı alanı</dt><dd>170.000 m² arazi · 600+ oda</dd></div>
+          <div><dt>Teslim</dt><dd>2013</dd></div>
+        </dl>
+      </div>
+      <div class="ph-row">
+        <figure class="ph a" data-light><img src="../assets/img/titanic-delux-4.jpg" alt="Titanic Deluxe Belek otel odası, balkon kapısı ve ahşap zemin" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Oda</figcaption></figure>
+        <div class="yapi">
+          <div class="yimg"><img src="../assets/img/titanic-delux-ana.jpg" alt="Titanic Deluxe Belek otelinin nehir kıyısından havadan görünümü" loading="lazy" decoding="async" width="1600" height="900"></div>
+          <p><b>Yapı</b>Titanic Deluxe Belek · İşveren: Titanic Hotels</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 05 Lara -->
+  <article class="scene offset-r">
+    <figure class="ph ph-main" data-light>
+      <img src="../assets/img/titanic-beach-lara6.jpg" alt="Titanic Beach Lara dubleks oda: mavi duvar, ahşap basamaklı merdiven ve asma kat" loading="lazy" decoding="async" width="1600" height="900">
+      <figcaption class="ph-cap"><span class="label">Dubleks oda · Baki Grup kapsamı: ince işler</span></figcaption>
+    </figure>
+    <div class="wrap">
+      <div class="scene-meta">
+        <span class="sm-num">05</span>
+        <div class="sm-head"><h3 class="lit">Titanic Beach Lara</h3><span class="label">Lara, Antalya · Turizm</span></div>
+        <p class="sm-text">Odalar, ıslak hacimler, ortak alanlar. Listemizdeki en eski teslim: 2003.</p>
+        <dl class="facts">
+          <div class="scope"><dt>Kapsam</dt><dd>İnce işler</dd></div>
+          <div><dt>İşveren</dt><dd>Titanic Hotels</dd></div>
+          <div><dt>Yapı alanı</dt><dd>95.000 m² arazi</dd></div>
+          <div><dt>Teslim</dt><dd>2003</dd></div>
+        </dl>
+      </div>
+      <div class="ph-row">
+        <figure class="ph a" data-light><img src="../assets/img/titanic-beach-lara5.jpg" alt="Titanic Beach Lara banyosu: taş kaplama duvarlar ve cam duş bölmesi" loading="lazy" decoding="async" width="1600" height="900"><figcaption class="label">Islak hacim</figcaption></figure>
+        <div class="yapi">
+          <div class="yimg"><img src="../assets/img/titanic-beach-lara3.jpg" alt="Titanic Beach Lara otel binası ve bahçesi" loading="lazy" decoding="async" width="1600" height="900"></div>
+          <p><b>Yapı</b>Titanic Beach Lara · İşveren: Titanic Hotels</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- liste -->
+  <div class="wrap">
+    <div class="plist">
+      <div class="plist-head">
+        <h3>Diğer projeler</h3>
+        <p>Tüm projelerde Baki Grup kapsamı: ince işler. Alanlar yapının ya da arazinin alanıdır.</p>
+      </div>
+      <div class="plist-body">
+        <ol class="rows" aria-label="Tamamlanan diğer projeler">
+          <li class="row th" aria-hidden="true"><span></span><span>Proje</span><span>Yer</span><span>Ana yüklenici</span><span>Yapı alanı</span><span>Durum</span></li>
+          <li class="row"><span class="r-num">06</span><span class="r-name">KKTC Cumhurbaşkanlığı ve Cumhuriyet Meclisi</span><span class="r-cell" data-k="Yer">Lefkoşa, KKTC</span><span class="r-cell" data-k="Ana yüklenici">Siyahkalem</span><span class="r-cell" data-k="Yapı alanı">55.000 m²</span><span class="r-stat">Teslim Nisan 2025</span><span class="r-img"><img src="../assets/img/kktc-saray-ana.jpg" alt="" loading="lazy" decoding="async"></span></li>
+          <li class="row"><span class="r-num">07</span><span class="r-name">Altınözü Acil Durum Hastanesi</span><span class="r-cell" data-k="Yer">Hatay</span><span class="r-cell" data-k="Ana yüklenici">Akfen / Dost</span><span class="r-cell" data-k="Yapı alanı">13.200 m²</span><span class="r-stat">Teslim Ekim 2024</span><span class="r-img"><img src="../assets/img/hatay-banner.jpg" alt="" loading="lazy" decoding="async"></span></li>
+          <li class="row"><span class="r-num">08</span><span class="r-name">Vranje Konutları, 4 blok</span><span class="r-cell" data-k="Yer">Vranje, Sırbistan</span><span class="r-cell" data-k="Ana yüklenici">Taşyapı</span><span class="r-cell" data-k="Yapı alanı">19.450 m²</span><span class="r-stat">Tamamlandı</span><span class="r-img"><img src="../assets/img/vranjekonutlari-1.jpg" alt="" loading="lazy" decoding="async"></span></li>
+        </ol>
+        <p class="sub-label"><span class="site-mark">Şantiyede</span></p>
+        <ol class="rows" aria-label="Devam eden projeler">
+          <li class="row"><span class="r-num">09</span><span class="r-name">KBC Sestre Milosrdnice Hastanesi</span><span class="r-cell" data-k="Yer">Zagreb, Hırvatistan</span><span class="r-cell" data-k="Ana yüklenici">Akfen</span><span class="r-cell" data-k="Yapı alanı">28.700 m²</span><span class="r-stat">Mayıs 2025'ten beri</span><span class="r-img"><img src="../assets/img/zagreb-3.jpg" alt="" loading="lazy" decoding="async"></span></li>
+          <li class="row"><span class="r-num">10</span><span class="r-name">KKTC Yüksek Mahkeme Binası</span><span class="r-cell" data-k="Yer">Lefkoşa, KKTC</span><span class="r-cell" data-k="Ana yüklenici">Siyahkalem</span><span class="r-cell" data-k="Yapı alanı">7.000 m²</span><span class="r-stat">Haziran 2025'ten beri</span><span class="r-img"><img src="../assets/img/yuksek-mahkeme-1.jpg" alt="" loading="lazy" decoding="async"></span></li>
+          <li class="row"><span class="r-num">11</span><span class="r-name">ASELSAN Hava SOJ ve Hangar Binası</span><span class="r-cell" data-k="Yer">Konya</span><span class="r-cell" data-k="Ana yüklenici">Siyahkalem</span><span class="r-cell" data-k="Yapı alanı">—</span><span class="r-stat">Eylül 2024'ten beri</span><span class="r-img"><img src="../assets/img/aselsan-3.jpg" alt="" loading="lazy" decoding="async"></span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BİRLİKTE ÇALIŞILANLAR ============ -->
+<section class="partners" id="referanslar" aria-labelledby="pa-h">
+  <div class="wrap">
+    <header class="sec-head" style="margin-bottom:clamp(40px,5vw,70px)">
+      <p class="label"><span class="cu">04</span> — Birlikte çalıştıklarımız</p>
+      <h2 id="pa-h" class="lit">Ana yükleniciler ve işverenler</h2>
+    </header>
+    <div class="sec-head" style="margin:0">
+      <div class="pn-col">
+        <ul class="p-names">
+          <li>Taşyapı</li><li>Siyahkalem Mühendislik</li><li>Akfen İnşaat</li><li>Dost İnşaat</li><li>Cengiz Holding</li><li>Kalyon</li><li>Titanic Hotels</li>
+        </ul>
+        <p class="note">Yapıyı onlar yükseltti; ince işlerde onlarla çalıştık.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HAKKINDA ============ -->
+<section class="sec about" id="hakkinda" aria-labelledby="ha-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="label"><span style="color:#8A5528">05</span> — Hakkında</p>
+      <h2 id="ha-h" class="lit">2002'den beri aynı iş: <em>son kat.</em></h2>
+      <p>Her şeyin üstünde kalan, herkesin gördüğü kat. Merkezimiz İstanbul Pendik'te; Lefkoşa ve Zagreb'de ofislerimiz var. Türkiye, KKTC, Hırvatistan ve Sırbistan'da iş yaptık.</p>
+    </header>
+    <div class="tl" id="timeline">
+      <div class="tl-line" aria-hidden="true"><i></i></div>
+      <ol class="tl-items">
+        <li><span class="num">2002</span><h3>MT Yapı</h3><p>Ali Baki tarafından kuruldu.</p></li>
+        <li><span class="num">2009</span><h3>MT Baki İnşaat</h3><p>MT Yapı, MT Baki İnşaat adını aldı.</p></li>
+        <li><span class="num">2023</span><h3>Baki Grup İnşaat</h3><p>Firma bugünkü adını aldı. Üç ofis, dört ülke.</p></li>
+      </ol>
+    </div>
+    <div class="about-cols">
+      <div>
+        <h3>Uzmanlık</h3>
+        <ul><li>Bölme sistemleri</li><li>Duvar, zemin ve tavan kaplamaları</li><li>Akustik ve dekoratif detaylar</li><li>İç mekân uygulamaları</li></ul>
+      </div>
+      <div>
+        <h3>Yönetim</h3>
+        <ul><li>Proje ve şantiye yönetimi</li><li>Malzeme seçimi</li><li>Teknik analiz</li></ul>
+      </div>
+      <div>
+        <h3>Ülkeler</h3>
+        <ul><li>Türkiye</li><li>KKTC</li><li>Hırvatistan</li><li>Sırbistan</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ İLETİŞİM ============ -->
+<section class="sec contact" id="iletisim" aria-labelledby="il-h">
+  <div class="wrap">
+    <div class="c-grid">
+      <p class="label"><span class="cu">06</span> — İletişim</p>
+      <div class="c-mail-wrap">
+        <h2 id="il-h" class="label" style="margin-bottom:22px;color:var(--plaster-soft)">Yapı yükseldiğinde, içini konuşalım.</h2>
+        <a class="c-mail lit" href="mailto:info@bakigrup.com">info@bakigrup.com</a>
+      </div>
+      <div class="c-rows">
+        <div>
+          <h3>Merkez</h3>
+          <span class="city">İstanbul</span>
+          <p>Ekinci Residence, Yenişehir Mah.<br>Sümbül Sk. No:8/2 D:601<br>Pendik, İstanbul</p>
+        </div>
+        <div>
+          <h3>Ofisler</h3>
+          <span class="city">Lefkoşa</span>
+          <p>KKTC</p>
+          <span class="city" style="margin-top:18px">Zagreb</span>
+          <p>Hırvatistan</p>
+        </div>
+        <div class="c-links">
+          <h3>Doğrudan</h3>
+          <p><a href="tel:+902168072025">0216 807 20 25</a></p>
+          <p><a href="mailto:info@bakigrup.com">info@bakigrup.com</a></p>
+          <p><a href="https://www.linkedin.com/company/bakigrup" rel="noopener">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+    <footer class="foot">
+      <a class="logo" href="#top" aria-label="Baki Grup İnşaat, sayfa başı"><img src="../assets/logo/baki-grup-white.png" alt="" width="2560" height="1610" loading="lazy"></a>
+      <p>© 2026 Baki Grup İnşaat · İnce işler, 2002'den beri</p>
+    </footer>
+  </div>
+</section>
+</main>
+
+<script>
+(function(){
+'use strict';
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+var root = document.documentElement;
+var NS = 'http://www.w3.org/2000/svg';
+
+/* ---------- header ---------- */
+var hdr = document.getElementById('hdr'), btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
+function onHdr(){ hdr.classList.toggle('is-scrolled', window.scrollY > 40); }
+window.addEventListener('scroll', onHdr, {passive:true}); onHdr();
+btn.addEventListener('click', function(){
+  var open = !hdr.classList.contains('nav-open');
+  hdr.classList.toggle('nav-open', open); btn.setAttribute('aria-expanded', open); btn.textContent = open ? 'Kapat' : 'Menü';
+});
+nav.addEventListener('click', function(e){ if(e.target.tagName === 'A'){ hdr.classList.remove('nav-open'); btn.setAttribute('aria-expanded', false); btn.textContent = 'Menü'; } });
+
+/* ---------- SVG drawings ---------- */
+function f(n){ return Math.round(n*10)/10; }
+
+// Asma tavan (plan)
+(function(){
+  var s = document.getElementById('svgCeiling'); if(!s) return;
+  var h = '<defs><radialGradient id="cg"><stop offset="0" stop-color="#F4E6D0" stop-opacity=".55"/><stop offset=".45" stop-color="#D39A62" stop-opacity=".16"/><stop offset="1" stop-color="#D39A62" stop-opacity="0"/></radialGradient></defs>';
+  h += '<rect x="20" y="0" width="600" height="360" fill="#171411"/>';
+  var c, r, i = 0, lights = {'2,1':1,'5,1':1,'8,1':1,'2,4':1,'5,4':1,'8,4':1};
+  for(r=0;r<6;r++) for(c=0;c<10;c++){
+    var x = 20+c*60, y = r*60, d = 500 + (r*10+c)*24;
+    var lit = lights[c+','+r];
+    h += '<rect class="c-pan" data-a x="'+(x+2)+'" y="'+(y+2)+'" width="56" height="56" fill="'+(lit?'#2A2520':'#221E1A')+'" style="--d:'+d+'ms"/>';
+  }
+  for(c=0;c<=10;c++) h += '<line class="sv-thin draw" pathLength="1" x1="'+(20+c*60)+'" y1="0" x2="'+(20+c*60)+'" y2="360" style="--d:'+(c*40)+'ms"/>';
+  for(r=1;r<6;r++) h += '<line class="sv-line draw" pathLength="1" x1="20" y1="'+(r*60)+'" x2="620" y2="'+(r*60)+'" style="--d:'+(80+r*60)+'ms"/>';
+  h += '<line class="sv-cu draw" pathLength="1" x1="20" y1="0" x2="20" y2="360" style="--d:0ms"/><line class="sv-cu draw" pathLength="1" x1="620" y1="0" x2="620" y2="360" style="--d:0ms"/>';
+  var order = ['2,1','5,1','8,1','8,4','5,4','2,4'];
+  order.forEach(function(k, j){
+    var p = k.split(','), x = 20+(+p[0])*60, y = (+p[1])*60, d = 2300 + j*240;
+    h += '<circle data-a cx="'+(x+30)+'" cy="'+(y+30)+'" r="96" fill="url(#cg)" style="--d:'+(d+200)+'ms"/>';
+    h += '<rect class="c-lum" x="'+(x+9)+'" y="'+(y+9)+'" width="42" height="42" fill="#F1E9DC" style="--d:'+d+'ms"/>';
+    h += '<rect x="'+(x+9)+'" y="'+(y+9)+'" width="42" height="42" fill="none" stroke="#B5763C" stroke-width="1" data-a style="--d:'+d+'ms"/>';
+  });
+  s.innerHTML = h;
+})();
+
+// Zemin (perspektif)
+(function(){
+  var s = document.getElementById('svgFloor'); if(!s) return;
+  var F = 430, CH = 1.55, HY = 24, CX = 320, TOP = 96;
+  function y(Z){ return HY + F*CH/Z; }
+  function x(X,Z){ return CX + F*X/Z; }
+  var Znear = F*CH/(360-HY), Zfar = F*CH/(TOP-HY);
+  var h = '<defs>'+
+    '<linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A1714"/><stop offset="1" stop-color="#2B2622"/></linearGradient>'+
+    '<linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4E8D6" stop-opacity=".0"/><stop offset=".25" stop-color="#F4E8D6" stop-opacity=".22"/><stop offset="1" stop-color="#F4E8D6" stop-opacity=".03"/></linearGradient>'+
+    '<linearGradient id="fgc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D39A62" stop-opacity="0"/><stop offset=".3" stop-color="#D39A62" stop-opacity=".16"/><stop offset="1" stop-color="#D39A62" stop-opacity="0"/></linearGradient>'+
+    '<linearGradient id="fm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000"/><stop offset=".08" stop-color="#000"/><stop offset=".42" stop-color="#fff"/></linearGradient>'+
+    '<mask id="fmask" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="360"><rect x="0" y="0" width="640" height="360" fill="url(#fm)"/></mask>'+
+    '</defs>';
+  h += '<g mask="url(#fmask)">';
+  h += '<rect x="0" y="'+TOP+'" width="640" height="'+(360-TOP)+'" fill="url(#fl)"/>';
+  var T = 0.9, k, j = 0;
+  for(k=-14;k<=14;k++){
+    var X = k*T + T/2;
+    h += '<line class="sv-thin draw" pathLength="1" x1="'+f(x(X,Znear))+'" y1="360" x2="'+f(x(X,Zfar))+'" y2="'+TOP+'" style="--d:'+(Math.abs(k)*45)+'ms"/>';
+  }
+  for(var Z = Math.ceil(Znear/T)*T; Z <= Zfar; Z += T){
+    var yy = f(y(Z));
+    h += '<line class="sv-thin draw" pathLength="1" x1="0" y1="'+yy+'" x2="640" y2="'+yy+'" style="--d:'+(700 + j*70)+'ms"/>';
+    j++;
+  }
+  // parlama: pencere/armatür yansımaları
+  h += '<polygon class="f-gloss" points="'+f(x(0.2,Zfar))+','+TOP+' '+f(x(1.25,Zfar))+','+TOP+' '+f(x(1.25,Znear))+',360 '+f(x(0.2,Znear))+',360" fill="url(#fg)" style="--d:1700ms"/>';
+  h += '<polygon class="f-gloss" points="'+f(x(-2.6,Zfar))+','+TOP+' '+f(x(-2.2,Zfar))+','+TOP+' '+f(x(-2.2,Znear))+',360 '+f(x(-2.6,Znear))+',360" fill="url(#fg)" style="--d:2000ms;opacity:.7"/>';
+  h += '<rect class="f-gloss" x="0" y="'+TOP+'" width="640" height="'+(360-TOP)+'" fill="url(#fgc)" style="--d:2200ms"/>';
+  h += '</g>';
+  h += '<g data-a style="--d:2400ms"><text class="sv-txt" x="24" y="36">DERZ AKSI = MEKÂN AKSI</text><line class="sv-lead" x1="320" y1="44" x2="320" y2="92"/><text class="sv-txt cu" x="328" y="60">AKS</text></g>';
+  s.innerHTML = h;
+})();
+
+// Akustik
+(function(){
+  var s = document.getElementById('svgAcoustic'); if(!s) return;
+  var h = '', c, r, PX = 372, PY = 52;
+  h += '<rect x="360" y="40" width="244" height="280" fill="#201C18" stroke="#EAE4D9" stroke-opacity=".45" vector-effect="non-scaling-stroke"/>';
+  h += '<rect x="604" y="40" width="10" height="280" fill="url(#hatchA)"/>';
+  h += '<defs><pattern id="hatchA" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#B5763C" stroke-opacity=".6"/></pattern></defs>';
+  for(r=0;r<14;r++) for(c=0;c<12;c++){
+    h += '<circle data-a cx="'+(PX+c*20)+'" cy="'+(PY+r*20)+'" r="2.4" fill="#EAE4D9" fill-opacity=".72" style="--d:'+(200+(c+r)*32)+'ms"/>';
+  }
+  var p = 'M28 140', xx;
+  for(xx=30; xx<=352; xx+=3) p += ' L'+xx+' '+f(140 + 34*Math.sin((xx-28)/62*Math.PI*2));
+  h += '<path class="sv-cu draw" pathLength="1" d="'+p+'" style="--d:900ms;stroke-width:1.6"/>';
+  var q = 'M352 236', amp;
+  for(xx=352; xx>=92; xx-=3){ amp = 7*((xx-60)/292); q += ' L'+xx+' '+f(236 + amp*Math.sin((352-xx)/62*Math.PI*2)); }
+  h += '<path class="sv-line draw" pathLength="1" d="'+q+'" style="--d:2200ms"/>';
+  h += '<path class="sv-cu" data-a d="M342 132 L352 140 L342 148" style="--d:1900ms"/>';
+  h += '<path class="sv-line" data-a d="M102 228 L92 236 L102 244" style="--d:3200ms"/>';
+  h += '<g data-a style="--d:3300ms"><text class="sv-txt cu" x="28" y="90">GELEN SES</text><text class="sv-txt" x="28" y="286">YANSIYAN</text><text class="sv-txt" x="372" y="342">DELİKLİ PANEL + TAŞ YÜNÜ</text></g>';
+  s.innerHTML = h;
+})();
+
+/* ---------- one-shot reveals ---------- */
+var shots = document.querySelectorAll('.d-fig, [data-light], #timeline');
+if(RM || !('IntersectionObserver' in window)){
+  shots.forEach(function(el){ el.classList.add('play','is-lit'); });
+} else {
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('play','is-lit'); io.unobserve(e.target); } });
+  }, {threshold:0.3, rootMargin:'0px 0px -6% 0px'});
+  shots.forEach(function(el){ io.observe(el); });
+}
+
+/* ---------- scroll-linked glint on headings & numbers ---------- */
+(function(){
+  var els = Array.prototype.slice.call(document.querySelectorAll('.lit, .lit-num'));
+  if(RM || !els.length || !('IntersectionObserver' in window)) return;
+  var active = new Set(), ticking = false;
+  var vio = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting) active.add(e.target); else active.delete(e.target); });
+    req();
+  }, {rootMargin:'10% 0px 10% 0px'});
+  els.forEach(function(el){ vio.observe(el); });
+  function req(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+  function update(){
+    ticking = false;
+    var vh = window.innerHeight;
+    active.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(el.classList.contains('lit-num')){
+        var v = (vh*0.92 - r.top) / (vh*0.62);
+        el.style.setProperty('--r', Math.max(0, Math.min(1.25, v)).toFixed(3));
+      } else {
+        var p = (vh - r.top) / (vh + r.height);
+        el.style.setProperty('--p', p.toFixed(3));
+      }
+    });
+  }
+  window.addEventListener('scroll', req, {passive:true});
+  window.addEventListener('resize', req);
+  req();
+})();
+
+/* ---------- HERO: raking light over plaster (WebGL) ---------- */
+(function(){
+  var hero = document.querySelector('.hero'), cv = document.getElementById('heroGl'), h1 = document.getElementById('heroTitle');
+  var ready = false;
+  function setReady(){ if(ready) return; ready = true; hero.classList.add('is-ready'); hero.classList.remove('intro'); }
+  setTimeout(setReady, 6000);
+
+  var gl = null;
+  try { gl = cv.getContext('webgl', {antialias:false, alpha:false, depth:false, stencil:false, premultipliedAlpha:false}); } catch(e){}
+  if(!gl){ root.classList.add('no-gl'); setReady(); return; }
+
+  var VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var NOISE =
+    'float hash(vec2 p){vec3 p3=fract(vec3(p.xyx)*.1031);p3+=dot(p3,p3.yzx+33.33);return fract((p3.x+p3.y)*p3.z);}' +
+    'float vn(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.-2.*f);' +
+    'return mix(mix(hash(i),hash(i+vec2(1.,0.)),u.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),u.x),u.y);}';
+  var BAKE = 'precision highp float;uniform vec2 uRes;uniform float uDpr;uniform sampler2D uText;' + NOISE +
+    'float plaster(vec2 q){float h=0.;' +
+    'h+=vn(q/240.)*3.2;h+=vn(q/85.+3.1)*1.0;' +
+    'vec2 r=mat2(.8,-.6,.6,.8)*q;h+=vn(vec2(r.x/150.,r.y/14.))*.34;' +
+    'vec2 s=mat2(.6,.8,-.8,.6)*q;h+=vn(vec2(s.x/120.,s.y/11.)+7.)*.2;' +
+    'h+=vn(q/7.)*.17;h+=vn(q/2.6+11.)*.13;h+=vn(q/1.2+5.)*.075;return h;}' +
+    'float tx(vec2 q){return smoothstep(.12,.88,texture2D(uText,q*uDpr/uRes).a)*2.2;}' +
+    'float H(vec2 q){return plaster(q)+tx(q);}' +
+    'void main(){vec2 q=gl_FragCoord.xy/uDpr;float e=.75;' +
+    'float hx=(H(q+vec2(e,0.))-H(q-vec2(e,0.)))/(2.*e);float hy=(H(q+vec2(0.,e))-H(q-vec2(0.,e)))/(2.*e);' +
+    'vec3 n=normalize(vec3(-hx,-hy,1.));float a=.86+.14*vn(q/55.+19.);' +
+    'gl_FragColor=vec4(n.xy*.5+.5,tx(q)/2.2,a);}';
+  var LIGHT = 'precision highp float;uniform vec2 uRes;uniform float uDpr;uniform sampler2D uN;uniform vec3 uL;uniform float uI;uniform float uR;' + NOISE +
+    'void main(){vec2 uv=gl_FragCoord.xy/uRes;vec4 t=texture2D(uN,uv);' +
+    'vec3 n=vec3(t.xy*2.-1.,0.);n.z=sqrt(max(1.-dot(n.xy,n.xy),.0));' +
+    'vec3 P=vec3(gl_FragCoord.xy/uDpr,0.);vec3 L=uL-P;float d=length(L);vec3 l=L/d;' +
+    'float df=max(dot(n,l),0.);float flat_=max(l.z,0.);' +
+    'float rake=max(df-flat_*.82,0.)*3.2+df*.09;' +
+    'float att=1./(1.+pow(d/uR,2.2));' +
+    'vec3 base=vec3(.078,.070,.062);vec3 alb=vec3(.92,.86,.78)*t.a;vec3 lc=vec3(1.,.87,.72);' +
+    'vec3 lit=alb*lc*rake*att*uI;' +
+    'vec3 hv=normalize(l+vec3(0.,0.,1.));float sp=pow(max(dot(n,hv),0.),28.)*att*uI*.10;' +
+    'vec3 col=base+ (vec3(1.)-exp(-lit*1.25))*.82 + vec3(.83,.6,.38)*sp;' +
+    'col+=vec3(.83,.6,.38)*t.b*att*uI*.02;' +
+    'col+=(hash(gl_FragCoord.xy)-.5)/255.;gl_FragColor=vec4(col,1.);}';
+
+  function sh(type, src){ var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if(!gl.getShaderParameter(s, gl.COMPILE_STATUS)){ throw new Error(gl.getShaderInfoLog(s)); } return s; }
+  function prog(fs){ var p = gl.createProgram(); gl.attachShader(p, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(p, sh(gl.FRAGMENT_SHADER, fs)); gl.bindAttribLocation(p, 0, 'p'); gl.linkProgram(p); if(!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p)); return p; }
+  var pBake, pLight;
+  try { pBake = prog(BAKE); pLight = prog(LIGHT); } catch(err){ root.classList.add('no-gl'); setReady(); return; }
+  root.classList.add('gl');
+
+  var buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+  function mkTex(){ var t = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, t);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); return t; }
+  var texText = mkTex(), texN = mkTex(), fb = gl.createFramebuffer();
+  var tc = document.createElement('canvas');
+  var U = {
+    b:{res:gl.getUniformLocation(pBake,'uRes'), dpr:gl.getUniformLocation(pBake,'uDpr'), text:gl.getUniformLocation(pBake,'uText')},
+    l:{res:gl.getUniformLocation(pLight,'uRes'), dpr:gl.getUniformLocation(pLight,'uDpr'), n:gl.getUniformLocation(pLight,'uN'), L:gl.getUniformLocation(pLight,'uL'), I:gl.getUniformLocation(pLight,'uI'), R:gl.getUniformLocation(pLight,'uR')}
+  };
+
+  var W = 0, Ht = 0, dpr = 1, h1Box = {x:0,y:0,w:0,h:0}, restP = {x:0,y:0};
+  var cur = {x:0,y:0}, intensity = 0, lastTx = null, lastTy = null;
+
+  function drawTextMask(hr){
+    tc.width = cv.width; tc.height = cv.height;
+    var c = tc.getContext('2d');
+    c.setTransform(1,0,0,1,0,0); c.clearRect(0,0,tc.width,tc.height);
+    c.setTransform(dpr,0,0,dpr,0,0);
+    c.fillStyle = '#fff'; c.shadowColor = 'rgba(255,255,255,1)'; c.shadowBlur = 2.2*dpr; c.textBaseline = 'alphabetic';
+    var tw = document.createTreeWalker(h1, NodeFilter.SHOW_TEXT), n, rg = document.createRange();
+    while((n = tw.nextNode())){
+      var cs = getComputedStyle(n.parentElement);
+      c.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+      var re = /\S+/g, m;
+      while((m = re.exec(n.data))){
+        rg.setStart(n, m.index); rg.setEnd(n, m.index + m[0].length);
+        var rects = rg.getClientRects(); if(!rects.length) continue;
+        var rr = rects[0], mt = c.measureText(m[0]);
+        var asc = (mt.fontBoundingBoxAscent != null) ? mt.fontBoundingBoxAscent : parseFloat(cs.fontSize)*.92;
+        c.fillText(m[0], rr.left - hr.left, rr.top - hr.top + asc);
+      }
+    }
+    gl.bindTexture(gl.TEXTURE_2D, texText);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, tc);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+  }
+  function bake(){
+    gl.bindTexture(gl.TEXTURE_2D, texN);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, cv.width, cv.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+    gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texN, 0);
+    gl.viewport(0, 0, cv.width, cv.height);
+    gl.useProgram(pBake);
+    gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, texText);
+    gl.uniform1i(U.b.text, 0); gl.uniform2f(U.b.res, cv.width, cv.height); gl.uniform1f(U.b.dpr, dpr);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+  }
+  function layout(){
+    var hr = hero.getBoundingClientRect();
+    W = hr.width; Ht = hr.height;
+    dpr = Math.min(window.devicePixelRatio || 1, W < 760 ? 1.5 : 2);
+    cv.width = Math.max(1, Math.round(W*dpr)); cv.height = Math.max(1, Math.round(Ht*dpr));
+    var b = h1.getBoundingClientRect();
+    h1Box = {x:b.left - hr.left, y:b.top - hr.top, w:b.width, h:b.height};
+    restP = { x: FINE ? W*0.64 : W*0.86, y: h1Box.y + h1Box.h*0.32 };
+    drawTextMask(hr); bake();
+  }
+  function render(){
+    gl.viewport(0, 0, cv.width, cv.height);
+    gl.useProgram(pLight);
+    gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, texN);
+    gl.uniform1i(U.l.n, 0); gl.uniform2f(U.l.res, cv.width, cv.height); gl.uniform1f(U.l.dpr, dpr);
+    var z = Math.max(56, Math.min(W, Ht)*0.085);
+    gl.uniform3f(U.l.L, cur.x, Ht - cur.y, z);
+    gl.uniform1f(U.l.I, intensity*1.25);
+    gl.uniform1f(U.l.R, Math.max(W, Ht)*0.36);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    var nx = Math.round(cur.x - h1Box.x), ny = Math.round(cur.y - h1Box.y);
+    if(nx !== lastTx || ny !== lastTy){ lastTx = nx; lastTy = ny; h1.style.setProperty('--tx', nx + 'px'); h1.style.setProperty('--ty', ny + 'px'); }
+  }
+
+  // motion state
+  var t0 = 0, INTRO = 3800, introDone = RM, visible = true, raf = 0, last = 0;
+  var ptr = {x:0, y:0, t:-1e9};
+  function ease(p){ return p < .5 ? 4*p*p*p : 1 - Math.pow(-2*p + 2, 3)/2; }
+  function wants(){ return visible && !document.hidden && (!introDone || FINE); }
+  function loop(now){
+    raf = 0;
+    if(!t0) t0 = now;
+    var dt = Math.min(64, now - (last || now)); last = now;
+    if(!introDone){
+      var p = Math.min(1, (now - t0)/INTRO), e = ease(p);
+      cur.x = -0.12*W + (restP.x + 0.12*W)*e;
+      cur.y = restP.y + Ht*0.06*(1 - e);
+      intensity = Math.min(1, p/0.32);
+      h1.style.setProperty('--rev', (cur.x - h1Box.x - 40).toFixed(0) + 'px');
+      if(p > 0.62) setReady();
+      if(p >= 1){ introDone = true; hero.classList.remove('intro'); }
+    } else {
+      intensity = 1;
+      var tx, ty, secs = now/1000;
+      if(FINE && now - ptr.t < 5000){ tx = ptr.x; ty = ptr.y; }
+      else { tx = restP.x + W*0.16*Math.sin(secs*0.15); ty = restP.y + Ht*0.07*Math.sin(secs*0.11 + 1.3); }
+      var k = 1 - Math.pow(1 - 0.035, dt/16.7);
+      cur.x += (tx - cur.x)*k; cur.y += (ty - cur.y)*k;
+    }
+    render();
+    if(wants()) raf = requestAnimationFrame(loop);
+  }
+  function kick(){ if(!raf && wants()){ last = 0; raf = requestAnimationFrame(loop); } }
+
+  function start(){
+    layout();
+    cur.x = RM ? restP.x : -0.12*W; cur.y = restP.y;
+    if(RM){ intensity = 1; render(); cv.classList.add('on'); setReady(); return; }
+    hero.classList.add('intro');
+    h1.style.setProperty('--rev', '-300px');
+    render(); cv.classList.add('on');
+    kick();
+  }
+  var rt = 0;
+  window.addEventListener('resize', function(){
+    clearTimeout(rt);
+    rt = setTimeout(function(){
+      var hr = hero.getBoundingClientRect();
+      if(Math.abs(hr.width - W) < 1 && Math.abs(hr.height - Ht) < 120) return; // mobil adres çubuğu
+      layout(); if(introDone){ if(!FINE){ cur.x = restP.x; cur.y = restP.y; } render(); }
+    }, 180);
+  });
+  window.addEventListener('pointermove', function(e){
+    if(e.pointerType !== 'mouse') return;
+    var hr = hero.getBoundingClientRect();
+    if(e.clientY > hr.bottom) return;
+    ptr.x = e.clientX - hr.left; ptr.y = e.clientY - hr.top; ptr.t = performance.now();
+    kick();
+  }, {passive:true});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ visible = es[0].isIntersecting; kick(); }).observe(hero);
+  }
+  document.addEventListener('visibilitychange', kick);
+  cv.addEventListener('webglcontextlost', function(e){ e.preventDefault(); cv.classList.remove('on'); });
+
+  var go = function(){ requestAnimationFrame(start); };
+  if(document.fonts && document.fonts.load){
+    Promise.race([
+      Promise.all([document.fonts.load('300 100px "Cormorant Garamond"'), document.fonts.load('italic 300 100px "Cormorant Garamond"')]).then(function(){ return document.fonts.ready; }),
+      new Promise(function(r){ setTimeout(r, 2500); })
+    ]).then(go, go);
+  } else go();
+})();
+})();
+</script>
+</body>
+</html>
